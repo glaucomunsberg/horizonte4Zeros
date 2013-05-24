@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clay-model clay-version="2.0.1">
+<database-model author="" begin-script="" end-script="" id="15006c9:13e0e70660f:-7ffc" name="dbModel" sql-dialect-id="jp.azzurri.clay.dialect.MySQL_5_0_Dialect" version="1.0">
+<schema-list>
+<schema id="15006c9:13e0e70660f:-7ff9" name="DEFAULT_SCHEMA">
+<table-list>
+<table id="15006c9:13e0e70660f:-7ffb" name="pessoas">
+<column-list>
+<column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff6" mandatory="true" name="id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff7" mandatory="false" name="sexo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff5" mandatory="false" name="nome">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff4" mandatory="false" name="email">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n) BINARY"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff3" mandatory="false" name="cidade_natal">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff2" mandatory="false" name="cidade_atual">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff4" mandatory="false" name="idade_escolar">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff1" mandatory="false" name="renda_familiar">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff3" mandatory="false" name="dt_nascimento">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n) BINARY"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff2" mandatory="false" name="fb_id">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="1" decimal-digits="0" default-value="N" id="15006c9:13e0e70660f:-7f5c" mandatory="false" name="equipe">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7ff0" mandatory="false" name="dt_cadastro">
+<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
+</column>
+</column-list>
+<primary-key id="15006c9:13e0e70660f:-7ffa" name="PK_PESSOAS">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table id="15006c9:13e0e70660f:-7fef" name="programas">
+<column-list>
+<column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7feb" mandatory="true" name="id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="500" decimal-digits="0" default-value="" id="12d799b:13e55d65a8d:-7ff7" mandatory="false" name="nome">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="500" decimal-digits="0" default-value="" id="12d799b:13e55d65a8d:-7ff0" mandatory="false" name="subtitulo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="500" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fea" mandatory="false" name="resumo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fe9" mandatory="false" name="apresentacao">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="1" decimal-digits="0" default-value="'S'" id="15006c9:13e0e70660f:-7fe7" mandatory="false" name="ativo">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7fe8" mandatory="false" name="dt_cadastro">
+<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
+</column>
+</column-list>
+<primary-key id="15006c9:13e0e70660f:-7fee" name="PK_PROGRAMAS">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table id="15006c9:13e0e70660f:-7fe4" name="projetos">
+<column-list>
+<column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fe0" mandatory="true" name="id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fdf" mandatory="false" name="nome">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n) BINARY"/>
+</column>
+<column auto-increment="false" column-size="300" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fde" mandatory="false" name="resumo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fdd" mandatory="false" name="objetivos">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="c77ce8:13e55bb3174:-7ff7" mandatory="false" name="mapeamento">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="c77ce8:13e55bb3174:-7ff6" mandatory="false" name="problemajustificacao">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="c77ce8:13e55bb3174:-7ff5" mandatory="false" name="fundamentos">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="c77ce8:13e55bb3174:-7ff4" mandatory="false" name="resultados">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fa0" mandatory="false" name="programa_id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7fdc" mandatory="false" name="dt_cadastro">
+<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
+</column>
+</column-list>
+<primary-key id="15006c9:13e0e70660f:-7fe3" name="PK_PROJETOS">
+<primary-key-column name="id"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="15006c9:13e0e70660f:-7f71" name="FK_projetos_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_PROGRAMAS" referenced-table="programas" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="programa_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="15006c9:13e0e70660f:-7fae" name="files_upload">
+<column-list>
+<column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fac" mandatory="true" name="id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fab" mandatory="false" name="filename">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7faa" mandatory="false" name="titulo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fa9" mandatory="false" name="pessoa_id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7fa8" mandatory="false" name="dt_cadastro">
+<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
+</column>
+</column-list>
+<primary-key id="15006c9:13e0e70660f:-7fa7" name="PK_FILES_UPLOAD">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table id="15006c9:13e0e70660f:-7fd7" name="programas_acessos">
+<column-list>
+<column auto-increment="true" column-size="20" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7f99" mandatory="true" name="id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7f98" mandatory="false" name="pessoa_id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7f97" mandatory="false" name="projeto_id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7f96" mandatory="false" name="dt_cadastro">
+<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
+</column>
+</column-list>
+<primary-key id="15006c9:13e0e70660f:-7fd6" name="PK_PROGRAMAS_ACESSOS">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+</table-list>
+</schema>
+</schema-list>
+</database-model>
+<diagram>
+<table-figure refid="15006c9:13e0e70660f:-7ffb" x="41" y="30"/>
+<table-figure refid="15006c9:13e0e70660f:-7fef" x="870" y="252"/>
+<table-figure refid="15006c9:13e0e70660f:-7fe4" x="1098" y="42"/>
+<table-figure refid="15006c9:13e0e70660f:-7fae" x="451" y="53"/>
+<table-figure refid="15006c9:13e0e70660f:-7fd7" x="195" y="298"/>
+</diagram>
+</clay-model>

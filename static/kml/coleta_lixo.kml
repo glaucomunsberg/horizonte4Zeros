@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+  <name><![CDATA[Coleta de lixo.shp]]></name>
+  <open>1</open>
+  <Snippet maxLines="0"><![CDATA[]]></Snippet>
+  <description><![CDATA[Exported from Coleta de lixo.shp on 24/11/2010]]></description>
+  <Style id="1">
+    <LineStyle>
+      <color>CC6E6E6E</color>
+      <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <outline>1</outline>
+      <fill>1</fill>
+      <color>CCBEBEFF</color>
+    </PolyStyle>
+    <BalloonStyle>
+      <text>
+<![CDATA[]]>
+      </text>
+    </BalloonStyle>
+  </Style>
+  <Style id="1_LABELS">
+    <IconStyle>
+      <color>00000000</color>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+      </Icon>
+    </IconStyle>
+    <LabelStyle>
+      <color>FFFFFFFF</color>
+    </LabelStyle>
+  </Style>
+  <Style id="2">
+    <LineStyle>
+      <color>CC6E6E6E</color>
+      <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <outline>1</outline>
+      <fill>1</fill>
+      <color>CCFF73DF</color>
+    </PolyStyle>
+    <BalloonStyle>
+      <text>
+<![CDATA[]]>
+      </text>
+    </BalloonStyle>
+  </Style>
+  <Style id="2_LABELS">
+    <IconStyle>
+      <color>00000000</color>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+      </Icon>
+    </IconStyle>
+    <LabelStyle>
+      <color>FFFFFFFF</color>
+    </LabelStyle>
+  </Style>
+  <Style id="3">
+    <LineStyle>
+      <color>CC6E6E6E</color>
+      <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <outline>1</outline>
+      <fill>1</fill>
+      <color>CC73FFFF</color>
+    </PolyStyle>
+    <BalloonStyle>
+      <text>
+<![CDATA[]]>
+      </text>
+    </BalloonStyle>
+  </Style>
+  <Style id="3_LABELS">
+    <IconStyle>
+      <color>00000000</color>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+      </Icon>
+    </IconStyle>
+    <LabelStyle>
+      <color>FFFFFFFF</color>
+    </LabelStyle>
+  </Style>
+  <Folder>
+    <name>Features (Color)</name>
+    <open>0</open>
+     <Folder>
+       <name><![CDATA[segunda, quarta e sexta]]></name>
+       <Placemark>
+         <name><![CDATA[1]]></name>
+         <Snippet maxLines="0"><![CDATA[]]></Snippet>
+         <styleUrl>#1</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -53.0848944446045,-32.246564356645,0
+               -53.0921693815853,-32.2442023534704,0
+               -53.0923997242633,-32.2450955567108,0
+               -53.0928677321857,-32.2459263742698,0
+               -53.0868884150445,-32.2501958325402,0
+               -53.0850948955217,-32.2487967104653,0
+               -53.0845857104365,-32.2489241963028,0
+               -53.0848944446045,-32.246564356645,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[1]]></name>
+         <Snippet maxLines="0"><![CDATA[]]></Snippet>
+         <styleUrl>#1</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -53.0754068640957,-32.2479884824035,0
+               -53.0674381990718,-32.2382553906678,0
+               -53.070617174073,-32.2360385822451,0
+               -53.0713088739812,-32.2371092808953,0
+               -53.0710379988901,-32.2373757293579,0
+               -53.0712349828127,-32.2376882517992,0
+               -53.0716561385431,-32.2374964937582,0
+               -53.0717835764471,-32.2376884523424,0
+               -53.0723699262007,-32.2374072561985,0
+               -53.0724500567076,-32.2375896862454,0
+               -53.0736371807283,-32.2369707421738,0
+               -53.0748220992399,-32.2363934958529,0
+               -53.0752812093665,-32.2375662440889,0
+               -53.0783608850224,-32.2359260707218,0
+               -53.0789270872373,-32.2368103775178,0
+               -53.080649153098,-32.2361569777153,0
+               -53.0802464440845,-32.235637953785,0
+               -53.0807556220466,-32.2355010363438,0
+               -53.0826761713708,-32.2406602383441,0
+               -53.0825045938565,-32.2406969967709,0
+               -53.0827598522644,-32.2417230432857,0
+               -53.0817097135137,-32.2421555249967,0
+               -53.0808191868758,-32.2430010541036,0
+               -53.0787118992065,-32.2441551046615,0
+               -53.0782759878249,-32.2443608592482,0
+               -53.0793873204735,-32.2460613647154,0
+               -53.0754068640957,-32.2479884824035,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+     </Folder>
+     <Folder>
+       <name><![CDATA[terça, quinta e sábado]]></name>
+       <Placemark>
+         <name><![CDATA[2]]></name>
+         <Snippet maxLines="0"><![CDATA[]]></Snippet>
+         <styleUrl>#2</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -53.0800488237819,-32.2336021852168,0
+               -53.0814955988026,-32.2332499893389,0
+               -53.0854466117916,-32.2323345776187,0
+               -53.0852324289017,-32.2317133730063,0
+               -53.0861616401219,-32.2315089005578,0
+               -53.0882296421024,-32.235053812221,0
+               -53.0917653323569,-32.2333476690601,0
+               -53.0921728803877,-32.2340618945509,0
+               -53.0889532505211,-32.2358390702373,0
+               -53.0903445399143,-32.2373079807276,0
+               -53.0913515894632,-32.2377690968649,0
+               -53.09028307808,-32.238680032723,0
+               -53.0893919470197,-32.2392246770277,0
+               -53.0882192187676,-32.2396020393515,0
+               -53.0884263633171,-32.2401621781449,0
+               -53.0839485630418,-32.2411875136159,0
+               -53.0836833572467,-32.2404019040387,0
+               -53.0826761713708,-32.2406602383441,0
+               -53.0800488237819,-32.2336021852168,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+     </Folder>
+     <Folder>
+       <name><![CDATA[Todos os dias]]></name>
+       <Placemark>
+         <name><![CDATA[3]]></name>
+         <Snippet maxLines="0"><![CDATA[]]></Snippet>
+         <styleUrl>#3</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -53.0851801803868,-32.22100762054,0
+               -53.0884337324579,-32.220683795214,0
+               -53.0881946788925,-32.2217916099019,0
+               -53.0946613847173,-32.2229430064006,0
+               -53.0933038438576,-32.2251579808062,0
+               -53.0844360122704,-32.2233526823149,0
+               -53.0851801803868,-32.22100762054,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+       <Placemark>
+         <name><![CDATA[3]]></name>
+         <Snippet maxLines="0"><![CDATA[]]></Snippet>
+         <styleUrl>#3</styleUrl>
+         <Polygon>
+           <extrude>0</extrude>
+           <altitudeMode>clampedToGround</altitudeMode>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               -53.0882296421024,-32.235053812221,0
+               -53.0861616401216,-32.2315089005574,0
+               -53.0852324289017,-32.2317133730063,0
+               -53.0854466117916,-32.2323345776186,0
+               -53.0800488237819,-32.2336021852169,0
+               -53.0807541477199,-32.2354970755807,0
+               -53.0802464440845,-32.235637953785,0
+               -53.080649153098,-32.2361569777153,0
+               -53.0789270872373,-32.2368103775178,0
+               -53.0783608850224,-32.2359260707218,0
+               -53.0752812093665,-32.2375662440889,0
+               -53.0748220992399,-32.2363934958529,0
+               -53.0736371807296,-32.2369707421731,0
+               -53.0734227779933,-32.2366562316102,0
+               -53.0729992626225,-32.2361727220114,0
+               -53.0739969730408,-32.2355696761814,0
+               -53.0733357843812,-32.2347801705711,0
+               -53.0711941856883,-32.2361252043883,0
+               -53.070617174073,-32.2360385822451,0
+               -53.0700782421649,-32.2354980448138,0
+               -53.0711689301212,-32.2347926880025,0
+               -53.0701000071327,-32.2335895704211,0
+               -53.0723772154543,-32.2302504020865,0
+               -53.0742054193852,-32.2277684946656,0
+               -53.0777610400939,-32.224783969799,0
+               -53.0791660822276,-32.2255994500146,0
+               -53.077956154232,-32.228056998316,0
+               -53.0783972239966,-32.2293120577724,0
+               -53.0792229499821,-32.2291023907446,0
+               -53.0793165092162,-32.229364526114,0
+               -53.0821061146667,-32.2286582737176,0
+               -53.0819171649049,-32.2281190682602,0
+               -53.0827599711826,-32.2262938389846,0
+               -53.0843197966447,-32.2266361225174,0
+               -53.0846417689196,-32.2289700824581,0
+               -53.0861616401216,-32.2315089005574,0
+               -53.0902981333467,-32.2318166608974,0
+               -53.0891335398226,-32.2333070169197,0
+               -53.0882296421024,-32.235053812221,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+     </Folder>
+  </Folder>
+  <Folder>
+    <name>Feature Labels (<![CDATA[Layer]]>)</name>
+    <open>0</open>
+      <Placemark>
+        <name><![CDATA[terça, quinta, sabado]]></name>
+        <styleUrl>#1_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -53.0884301098264,-32.2470811743386,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[terça, quinta, sabado]]></name>
+        <styleUrl>#1_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -53.0757333015499,-32.2409839008116,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[todos os dias]]></name>
+        <styleUrl>#2_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -53.0854940102945,-32.2365199103311,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[segunda, quarta e sexta]]></name>
+        <styleUrl>#3_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -53.0892439844148,-32.2229985431558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[segunda, quarta e sexta]]></name>
+        <styleUrl>#3_LABELS</styleUrl>
+        <Point>
+          <extrude>0</extrude>
+          <altitudeMode>clampedToGround</altitudeMode>
+          <coordinates>
+            -53.0783028925107,-32.2316567348632,0
+          </coordinates>
+        </Point>
+      </Placemark>
+  </Folder>
+</Document>
+</kml>

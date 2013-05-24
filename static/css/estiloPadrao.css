@@ -1,0 +1,34 @@
+/* 
+    Document   : newCascadeStyleSheet
+    Created on : Apr 19, 2013, 1:14:02 PM
+    Author     : glaucoroberto
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.transparecia{
+    filter:opacity(alpha=70); /* para o IE */
+    -moz-opacity:0.70; /* para o FireFox */
+    opacity:0.70; /* para o outros Navegadores */
+    background-color: #fff;
+}
+.caixaFotoMembroEquipe{
+    margin-top:5px;margin-left:1px ;height: 150px; width: 150px; cursor:pointer; background-size:contain ;background-repeat: no-repeat;margin-right:1px; float:left
+}
+
+.caixaDescricaoMembroEquipe{
+    vertical-align: middle !important;display: none; padding-top: 40px; padding-bottom: 5px;text-align: center;height: 110px;width: 150px;cursor:pointer;
+}
+.grid {
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 1px;
+}
+
+.grid div {
+    border: 1px solid #c5c5c5;
+    border-width: 0 1px 1px 0;
+    float: left;
+}
