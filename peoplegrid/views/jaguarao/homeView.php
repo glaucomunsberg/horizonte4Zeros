@@ -5,11 +5,11 @@
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-                <a class="brand active" href="#home"><?lang('horizonteHome')?></a>
+                <a class="brand active" style="margin-top: 3px; font-size: 25px" href="#home"><?=lang('horizonteHome')?></a>
                 <div class="nav-collapse collapse" >
                     <ul class="nav">
                         <li class=""><a href="#projetos"><?=lang('horizonteProjetos')?></a> </li>
-                        <li class=""><a href="#enjoy'?>" target="_blank"><?=lang('horizonteEnjoy')?></a></li>
+                        <li class=""><a href="#enjoy" target="_blank"><?=lang('horizonteEnjoy')?></a></li>
                         <li class=""><a href="#equipe"><?=lang('horizonteEquipe')?></a></li>
                         <li class=""><a href="#news"><?=lang('horizonteLastNews')?></a></li>
                         <li class=""><a href="http://horizonte4zeros.wordpress.com" target="_blank"><?=lang('horizonteBlog')?></a></li>
@@ -51,9 +51,8 @@
                                 
                             }
                         ?>
-                        <br>
-                        <br>
-                        <a href="#enjoy"s><button class="btn btn-info" ><?=lang('horizonteEntrar')?></button></a>
+                        <br style="clear:both;" />
+                        <a href="#enjoy" ><button class="btn btn-info" style="margin-top:10px"><?=lang('horizonteEntrar')?></button></a>
                     </div>
                 </div>
             </div>

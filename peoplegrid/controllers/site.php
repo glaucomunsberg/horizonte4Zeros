@@ -62,8 +62,8 @@ class Site extends CI_Controller {
                   header("Location:".BASE_URL.'administrar/index/'.$idFacebook);
                   
               }else{
-                  header("Location:".BASE_URL.'peopleGrid/projetoJaguarao/');
-                  $this->load->view('grid/welComeGrid',$data);
+                  header("Location:".BASE_URL.'site/index/');
+                  $this->load->view('grid/welComeGridView');
               }
         }
         

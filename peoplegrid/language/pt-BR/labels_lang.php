@@ -67,7 +67,7 @@ $lang['administrar'] = '';
  * PeopleGrid
  */
 $lang['peopleGridPeopleGrid'] = 'peopleGrid';
-$lang['peopleGridVamosComecar'] = 'Vamos começar!';
+$lang['peopleGridVamosComecar'] = 'Quero começar!';
 $lang['peopleGridLembreSe'] = 'Lembre-se';
 $lang['peopleGridProximaQuestao'] = 'Próxima Questão';
 $lang['peopleGridPincel'] = 'Pincel';
@@ -76,7 +76,7 @@ $lang['peopleGridLimparGrid'] = 'Limpar Grid';
 $lang['peopleGridOutrasOpcoes'] = 'Outras Opções';
 $lang['peopleGridAvancar'] = 'Avançar';
 $lang['peopleGridModeladores'] = 'Modeladores';
-$lang['peopleGrid'] = '';
+$lang['peopleGridHome'] = 'Home';
 $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
