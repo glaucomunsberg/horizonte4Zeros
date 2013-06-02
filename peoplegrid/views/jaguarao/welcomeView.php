@@ -1,60 +1,60 @@
-<?$this->load->view('../../static/views/cabecalhoPublicoView')?>
-<link rel="stylesheet" type="text/css" href="<?=BASE_URL?>static/jqcloud/jqcloud-1.0.4.css" />
-<script type="text/javascript" src="<?=BASE_URL?>static/jqcloud/jqcloud-1.0.4.js"></script>
-<div class="container">
-    <div class="row">
-        <div class="span12">
-            <div id="example" style="width: 550px; height: 350px;"></div>
-        </div>
-        
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><?=lang('horizonteDoisMundos')?></title>
+    <script type="text/javascript" src="<?=BASE_URL?>static/js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="<?=BASE_URL?>static/js/plax.js"></script>
+  </head>
+  <body>
+    <div id="shell">
+      <img src="<?=BASE_URL?>static/img/logo_horizonte.png" onClick="paraOMundo('exato')" width="200" height="auto" data-xrange="60" data-yrange="60" id="plax-horizonte"/>
+      <img src="<?=BASE_URL?>static/img/logo_quatro.png" width="100" height="100" data-xrange="10" data-yrange="10" id="plax-logo"/>
+      <img src="<?=BASE_URL?>static/img/logo_desenv_jaguarao.png" onClick="paraOMundo('desenv')" width="200" height="auto" data-xrange="60" data-yrange="60" data-invert="true" id="plax-desenv"/>
     </div>
-    
-</div>
-<script type="text/javascript">
-  /*!
-   * Create an array of word objects, each representing a word in the cloud
-   */
-  var word_array = [
-      {text: "11", weight: 15, html:{"onClick":"on()"},link:"#"},
-      {text: "Horizonte", weight: 9, html:{id:"horizonte"},link:"#"},
-      {text: "11", weight: 6, html: {title: "I can haz any html attribute"}},
-      {text: "0", weight: 7},
-      {text: "0", weight: 3},
-      {text: "0", weight: 5},
-      {text: "0", weight: 10},
-      {text: "0", weight: 3},
-      {text: "0", weight: 5},
-      {text: "0", weight: 12},
-      {text: "0", weight: 5},
-      {text: "0", weight: 5},
-      {text: "0", weight: 8},
-      {text: "0", weight: 11},
-      {text: "0", weight: 12},
-      {text: "0", weight: 1},
-      {text: "0", weight: 7},
-      {text: "0", weight: 8},
-      {text: "0", weight: 6}
-      // ...as many words as you want
-  ];
-
-  $(function() {
-    // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
-    $("#example").jQCloud(word_array,{shape: "rectangular"});
-  });
-  
-  var zeros = 0;
-  /**
-   * Função que faz a montagem do nome
-   * 
-   * @returns {undefined}
-   */
-  function on(){
-      switch(zeros){
-          case 0:
-              
+    <style type="text/css">
+      * {
+        margin: -5px;
+        padding: 0px;
       }
-  }
-</script>
-
-
-<?$this->load->view('../../static/views/rodapeView')?>
+      div#shell {
+        display: block;
+        position: relative;
+        margin: 100px auto;
+        width: 318px;
+        height: 318px;
+      }
+      div#shell{
+        z-index: 1;
+      }
+      img#plax-horizonte {
+        position: absolute;
+        z-index: 4;
+        top: 94px;
+        left: 191px;
+        cursor: pointer;
+      }
+      img#plax-logo {
+        position: absolute;
+        z-index: 1;
+        top: 94px;
+        left: 93px;
+      }
+      img#plax-desenv {
+        position: absolute;
+        top: 185px;
+        left: -60px;
+        z-index: 2;
+        cursor: pointer;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#shell img').plaxify();
+        $.plax.enable();
+      });
+      function paraOMundo($mundo){
+          location.href = '<?=BASE_URL?>site/'+$mundo;
+      }
+    </script>
+  </body>
+</html>

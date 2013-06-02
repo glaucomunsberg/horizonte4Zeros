@@ -27,11 +27,11 @@
             </div>
         </div>
     </div>
-    
-    
+
+
     <br>
-    
-    
+
+
     <section id="home">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -69,7 +69,7 @@
                         </div>  
                     <? } ?>
                 </div>
-                
+
                 <!-- RESUMO DOS PROJETOS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
                     <? foreach ($projetos as $projeto) { ?>
@@ -78,28 +78,30 @@
                         </div> 
                     <? } ?>
                 </div>
-                
+
                 <!-- BOTOES LEIA MAIS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
                     <? foreach ($projetos as $projeto) { ?>
                         <div class="span3 ">
-                            <a href="#projeto<?= $projeto->id ?>"><button class="btn btn<? switch ($projeto->id) {
-                        case 1: echo '-success';
-                            break;
-                        case 2: echo '-warning';
-                            break;
-                        case 3: echo '-danger';
-                            break;
-                        case 4: break;
-                            } ?>"><?= lang('horizonteLerMais') ?></button></a>
+                            <a href="#projeto<?= $projeto->id ?>"><button class="btn btn<?
+                                switch ($projeto->id) {
+                                    case 1: echo '-success';
+                                        break;
+                                    case 2: echo '-warning';
+                                        break;
+                                    case 3: echo '-danger';
+                                        break;
+                                    case 4: break;
+                                }
+                                ?>"><?= lang('horizonteLerMais') ?></button></a>
                         </div>    
-                    <? } ?>
+<? } ?>
                 </div>
             </section>
         </div>
     </section>
-    
-    
+
+
     <section id="news">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -123,7 +125,7 @@
                 </p>
                 <p>
                     <span class="label label-info"><?= lang('horizonteNews') ?></span>
-                    <?= lang('horizonteNewsMensagem') ?>
+<?= lang('horizonteNewsMensagem') ?>
                 </p>
             </div>
             <div class="span8">
@@ -167,8 +169,8 @@
             </div>
         </div>
     </section>
-    
-    
+
+
     <section id="enjoy">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -183,8 +185,8 @@
             </div>
         </div>
     </section>
-    
-    
+
+
     <session id="equipe">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -257,11 +259,11 @@
 
         </div>
     </session>
-    
-    
-        <?
-        foreach ($projetos as $projeto) {
-            ?>
+
+
+    <?
+    foreach ($projetos as $projeto) {
+        ?>
         <section id="projeto<?= $projeto->id ?>">
             <div style="padding-top:35px"></div>
             <div class="page-header">
@@ -270,29 +272,29 @@
             <? if ($projeto->objetivos != '') {
                 ?><p><?= $projeto->objetivos ?></p><?
     }
-    ?>
+            ?>
 
             <? if ($projeto->problemajustificacao != '') {
                 ?>  <h3><?= lang('horizonteProjetoProblemaJustificacao') ?></h3>
                 <p><?= $projeto->problemajustificacao ?></p><?
     }
-    ?>
+            ?>
 
             <? if ($projeto->fundamentos != '') {
                 ?>  <h3><?= lang('horizonteProjetoFundamentos') ?></h3>
                 <p><?= $projeto->fundamentos ?></p><?
     }
-    ?>
+            ?>
 
-        <? if ($projeto->resultados != '') {
-            ?>  <h3><?= lang('horizonteProjetoResultados') ?></h3>
+            <? if ($projeto->resultados != '') {
+                ?>  <h3><?= lang('horizonteProjetoResultados') ?></h3>
                 <p><?= $projeto->resultados ?></p><?
     }
-    ?>
-        </section>
-                <?
-            }
             ?>
+        </section>
+        <?
+    }
+    ?>
     <footer class="footer" >
         <p>
 <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>. <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
@@ -310,19 +312,18 @@
 
 </div>
 <script>
-            
-    $('#membros div').mouseenter(function(){
-        $(this).find('div').show();
-    });
-    $('#membros div').mouseleave(function(){
 
-        $(this).find('div').hide();
-    });
-      
-    function irEnjoy(){
-        location.href = '<?= BASE_URL ?>site/enjoy'
-    }
+                    $('#membros div').mouseenter(function() {
+                        $(this).find('div').show();
+                    });
+                    $('#membros div').mouseleave(function() {
+
+                        $(this).find('div').hide();
+                    });
+
+                    function irEnjoy() {
+                        location.href = '<?= BASE_URL ?>site/enjoy'
+                    }
 
 </script>
-<?
-$this->load->view('../../static/views/rodapeView')?>
+<?$this->load->view('../../static/views/rodapeView')?>
