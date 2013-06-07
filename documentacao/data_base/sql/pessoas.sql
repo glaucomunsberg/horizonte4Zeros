@@ -1,12 +1,16 @@
-CREATE TABLE IF NOT EXISTS `pessoas` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) DEFAULT NULL,
-  `idade` tinyint(4) DEFAULT NULL,
-  `genero` varchar(1) DEFAULT NULL,
-  `nivel_escolaridade` varchar(255) DEFAULT NULL,
-  `renda_familiar` varchar(255) DEFAULT NULL,
-  `dt_cadastro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+CREATE TABLE DEFAULT_SCHEMA.pessoas (
+       id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
+     , genero CHAR(1)
+     , nome VARCHAR(255)
+     , email VARCHAR(255) BINARY
+     , cidade_natal VARCHAR(100)
+     , cidade_atual VARCHAR(100)
+     , nivel_escolaridade VARCHAR(100)
+     , renda_familiar VARCHAR(255)
+     , dt_nascimento VARCHAR(255) BINARY
+     , fb_id VARCHAR(255)
+     , equipe CHAR(1) DEFAULT 'N'
+     , dt_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     , PRIMARY KEY (id)
+);
 
-)

@@ -9,8 +9,8 @@
 <column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff6" mandatory="true" name="id">
 <data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
 </column>
-<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff7" mandatory="false" name="sexo">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+<column auto-increment="false" column-size="1" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff7" mandatory="false" name="genero">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
 </column>
 <column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff5" mandatory="false" name="nome">
 <data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
@@ -24,10 +24,10 @@
 <column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff2" mandatory="false" name="cidade_atual">
 <data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
 </column>
-<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff4" mandatory="false" name="idade_escolar">
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff4" mandatory="false" name="nivel_escolaridade">
 <data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
 </column>
-<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff1" mandatory="false" name="renda_familiar">
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff1" mandatory="false" name="renda_familiar">
 <data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
 </column>
 <column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff3" mandatory="false" name="dt_nascimento">
@@ -158,15 +158,112 @@
 <primary-key-column name="id"/>
 </primary-key>
 </table>
+<table id="87623d:13f1f8be859:-7ff5" name="questionario">
+<column-list>
+<column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7ff1" mandatory="true" name="id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7ff0" mandatory="false" name="questao_1">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fef" mandatory="false" name="questao_2">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fee" mandatory="false" name="questao_3">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fed" mandatory="false" name="questao_4">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fec" mandatory="false" name="questao_5">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7feb" mandatory="false" name="questao_6">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fea" mandatory="false" name="questao_7">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe9" mandatory="false" name="questao_8">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe8" mandatory="false" name="questao_9">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe7" mandatory="false" name="questao_10">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe6" mandatory="false" name="questao_11">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe5" mandatory="false" name="questao_12">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe4" mandatory="false" name="questao_13">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe3" mandatory="false" name="questao_14">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe2" mandatory="false" name="questao_15">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe1" mandatory="false" name="questao_16">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fe0" mandatory="false" name="questao_17">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fdf" mandatory="false" name="questao_18">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fde" mandatory="false" name="questao_19">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fdd" mandatory="false" name="questao_20">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fdc" mandatory="false" name="questao_21">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fdb" mandatory="false" name="questao_22">
+<data-type name="BLOB" selected-variant-pattern="BLOB"/>
+</column>
+<column auto-increment="false" column-size="50" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fda" mandatory="false" name="cidade">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="1" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fd9" mandatory="false" name="participou_atividade_parecida">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="50" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fd8" mandatory="false" name="voce_pensou_como">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fd7" mandatory="false" name="pessoa_id">
+<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="87623d:13f1f8be859:-7f25" mandatory="false" name="dt_cadastro">
+<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
+</column>
+</column-list>
+<primary-key id="87623d:13f1f8be859:-7ff4" name="PK_QUESTIONARIO">
+<primary-key-column name="id"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="87623d:13f1f8be859:-7fca" name="FK_questionario_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_PESSOAS" referenced-table="pessoas" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="pessoa_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+</table>
 </table-list>
 </schema>
 </schema-list>
 </database-model>
 <diagram>
-<table-figure refid="15006c9:13e0e70660f:-7ffb" x="41" y="30"/>
-<table-figure refid="15006c9:13e0e70660f:-7fef" x="870" y="252"/>
+<table-figure refid="15006c9:13e0e70660f:-7ffb" x="124" y="238"/>
+<table-figure refid="15006c9:13e0e70660f:-7fef" x="461" y="201"/>
 <table-figure refid="15006c9:13e0e70660f:-7fe4" x="1098" y="42"/>
-<table-figure refid="15006c9:13e0e70660f:-7fae" x="451" y="53"/>
-<table-figure refid="15006c9:13e0e70660f:-7fd7" x="195" y="298"/>
+<table-figure refid="15006c9:13e0e70660f:-7fae" x="538" y="53"/>
+<table-figure refid="15006c9:13e0e70660f:-7fd7" x="200" y="66"/>
+<table-figure refid="87623d:13f1f8be859:-7ff5" x="483" y="350"/>
 </diagram>
 </clay-model>
