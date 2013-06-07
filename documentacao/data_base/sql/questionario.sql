@@ -1,30 +1,35 @@
-CREATE TABLE questionario (
-id int AUTO_INCREMENT primary key not null,
-questao_1 blob(1600),
-questao_2 blob(1600),
-questao_3 blob(1600),
-questao_4 blob(1600),
-questao_5 blob(1600),
-questao_6 blob(1600),
-questao_7 blob(1600),
-questao_8 blob(1600),
-questao_9 blob(1600),
-questao_10 blob(1600),
-questao_11 blob(1600),
-questao_12 blob(1600),
-questao_13 blob(1600),
-questao_14 blob(1600),
-questao_15 blob(1600),
-questao_16 blob(1600),
-questao_17 blob(1600),
-questao_18 blob(1600),
-questao_19 blob(1600),
-questao_20 blob(1600),
-questao_21 blob(1600),
-questao_22 blob(1600),
-cidade varchar(50),
-participou_atividade_parecida char(1),
-voce_pensou_como varchar(50),
-pessoa_id int,
-FOREIGN KEY (pessoa_id) REFERENCES pessoas(id)
+CREATE TABLE DEFAULT_SCHEMA.questionario (
+       id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
+     , questao_1 BLOB
+     , questao_2 BLOB
+     , questao_3 BLOB
+     , questao_4 BLOB
+     , questao_5 BLOB
+     , questao_6 BLOB
+     , questao_7 BLOB
+     , questao_8 BLOB
+     , questao_9 BLOB
+     , questao_10 BLOB
+     , questao_11 BLOB
+     , questao_12 BLOB
+     , questao_13 BLOB
+     , questao_14 BLOB
+     , questao_15 BLOB
+     , questao_16 BLOB
+     , questao_17 BLOB
+     , questao_18 BLOB
+     , questao_19 BLOB
+     , questao_20 BLOB
+     , questao_21 BLOB
+     , questao_22 BLOB
+     , cidade VARCHAR(50)
+     , participou_atividade_parecida CHAR(1)
+     , voce_pensou_como VARCHAR(50)
+     , pessoa_id BIGINT(20) UNSIGNED
+     , dt_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     , PRIMARY KEY (id)
+     , INDEX (pessoa_id)
+     , CONSTRAINT FK_questionario_1 FOREIGN KEY (pessoa_id)
+                  REFERENCES DEFAULT_SCHEMA.pessoas (id)
+);
 
