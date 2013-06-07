@@ -15,7 +15,7 @@ class PeopleGrid extends CI_Controller {
         
 	public function index($userFbid = 0)
 	{
-            $this->loadLinguage();
+            $this->loadLanguage();
             $data['$userOn'] = 'off';
             if($userFbid != 0){
                 if($this->pessoaModel->getPessoaByUserIdFacebook($userFbid) != null){
@@ -26,7 +26,7 @@ class PeopleGrid extends CI_Controller {
 	}
                 
         public function jaguarao($userFbid = 0){
-            $this->loadLinguage();
+            $this->loadLanguage();
             $data['$userOn'] = 'off';
             if($userFbid != 0){
                 if($this->pessoaModel->getPessoaByUserIdFacebook($userFbid) != null){
@@ -34,7 +34,7 @@ class PeopleGrid extends CI_Controller {
                 }
             }
             $data['totalDePergunts'] = $this->perguntasModel->totalPerguntasJaguarao();
-            $this->load->view('grid/jaguarraoGridView',$data);
+            $this->load->view('grid/jaguaraoGridView',$data);
         }
         
 
@@ -46,7 +46,7 @@ class PeopleGrid extends CI_Controller {
         /**
          * Função responsável pelo load da linguagem
          */
-        private function loadLinguage(){
+        private function loadLanguage(){
 
             if( isset($_GET['lang']) ){
                 $this->lang->is_loaded = array();

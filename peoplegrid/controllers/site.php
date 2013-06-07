@@ -14,7 +14,7 @@ class Site extends CI_Controller {
         }
 	public function index()
 	{
-                $this->loadLinguage();
+                $this->loadLanguage();
                 $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
                 $data['programa'] = $this->programaModel->getPrograma(1);
                 $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
@@ -70,7 +70,7 @@ class Site extends CI_Controller {
         /**
          * Função responsável pelo load da linguagem
          */
-        private function loadLinguage(){
+        private function loadLanguage(){
 
             if( isset($_GET['lang']) ){
                 $this->lang->is_loaded = array();
