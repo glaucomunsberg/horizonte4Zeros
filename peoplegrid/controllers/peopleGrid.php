@@ -39,7 +39,7 @@ class PeopleGrid extends CI_Controller {
         
 
         
-        public function getPerguntaJaguarrao(){
+        public function getPerguntaJaguarao(){
             print json_encode($this->perguntasModel->perguntaJaguarao($_GET['questaoId']));
         }
         

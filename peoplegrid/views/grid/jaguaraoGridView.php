@@ -1,5 +1,5 @@
 <?$this->load->view('../../static/views/cabecalhoPublicoView')?>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
 <div class="container">
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -17,80 +17,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <section id="home">
-        <div class="row" style="margin-top: 10px">
-            <div class="span12">
-                <div class="page-header">
-                    <h1><?=lang('peopleGridPeopleGrid')?> <small><?=lang('peopleGridMundoDiferenteJaguarao')?></small></h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Área de login Usuário-->
-    <section id="usuarioLogin">
-        <div class="row">
-            <?
-                if(@$userOn != ''){
-                    ?>
-                        <div class="span12">
-                            <div class="hero-unit">
-                                <p>
-                                    <div style="float:left; margin:2px; width:60px; height: 60px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?=@$userOn->fb_id?>/picture')"></div>
-                                    <h2>
-                                        <?=@$userOn->nome?><small><?=lang('peopleGridBomTever')?></small>
-                                    </h2>  
-                                </p>
-                                    <?=lang('peopleGridAntesDe1').$totalDePergunts.lang('peopleGridAntesDe2')?>
-                                <p>
-
-                                </p>
-                            </div>
-                        </div>
-                        <div class="span12">
-                            <button class="btn btn-success pull-right" href="#" onClick="exibirPeopleGrid()"><?=lang('peopleGridAvancar')?></button>
-                        </div>
-                    <?
-                    
-                }else{
-                    ?>  
-                        <div class='span12'>
-                            <p>
-                                <?=lang('peopleGridUsuarioPraComecar')?>
-                            </p>
-                            <div class='row'>
-                                <div class='span6'>
-                                    <div style="margin-left: 35%;margin-top:35%">
-                                        <button onClick="logarComFacebookId()" class="btn btn-primary btn-large"><?=lang('horizonteJaSouMembro')?></button>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div id="fb-root"></div>
-                                    <script src="//connect.facebook.net/en_US/all.js"></script>
-                                    <p>
-                                        <iframe src="https://www.facebook.com/plugins/registration?
-                                                     client_id=<?=$this->config->item('app_fb_id')?>&
-                                                     redirect_uri=http%3A%2F%2Fglaucomunsberg.com%2Fhorizonte0000%2Fenjoy%2FcadatroPessoa&
-                                                     fields=name,birthday,gender,location,email,captcha"
-                                                scrolling="auto"
-                                                frameborder="no"
-                                                style="border:none"
-                                                allowTransparency="true"
-                                                width="100%"
-                                                height="395">
-                                        </iframe>
-                                        <br>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    <?
-                }
-            ?>
-        </div>
-    </section>
+    </div> 
     <!-- Informações gerais do usuário -->
-    <section id="questionGrid" style="display: none">
+    <section id="questionGrid" style="margin-top: 40px">
         <div class="row">
             <div class="span5">
                 <h3><?=lang('peopleGridQuestao1')?></h3>
@@ -114,16 +43,18 @@
                         <dt><?=lang('peopleGridOutrasOpcoes')?></dt>
                         <dd>
                             <button class="btn btn-danger" href="#" onClick="limparGrid()"><?=lang('peopleGridLimparGrid')?></button>
+                            
                         </dd>
                 </dl>
+                <hr>
+                <button class="btn btn-success pull-right" href="#" onClick="trazerProximaQuestao()"><?=lang('peopleGridProximaQuestao')?></button>
+                
             </div>
             <div class="span7">
-              <?=form_getGrid('peopleGridPai1','peopleGrid1',30,2,'black')?> 
+              <?=form_getGrid('peopleGridPai1','peopleGrid1',34,2,'black')?> 
             </div>
-            <div class='span12'>
-                <p>
-                    <button class="btn btn-success pull-right" href="#" onClick="proxQuestao()"><?=lang('peopleGridProximaQuestao')?></button> 
-                </p>
+            <div class="span12">
+                
             </div>
         </div>
     </section>
@@ -182,11 +113,11 @@
         function trazerProximaQuestao(){
             var data={
              questaoId:$questaoInicial
-            };
+            }; 
             $.ajax({
-                    method: "get",
+                    method: "post",
                     data:data,
-                    url: BASE_URL+"/peopleGrid/getPerguntaJaguarrao/",
+                    url: BASE_URL+"peopleGrid/getPerguntaJaguarao/",
                     beforeSend: function(){
                         
                     },
@@ -196,10 +127,10 @@
                     error: function(){
                         
                     },
-                    success: function(data){
+                    success: function(resultado){
                        // var resposta = JSON.parse(data);
-                        alert(data);
-                        //$questaoInicial++;
+                        console.log(resultado);
+                        $questaoInicial++;
                     }
                 });
         }
@@ -207,16 +138,6 @@
         function enviarResposta(){
         
         }
-        FB.init({
-            appId      : '<?=$this->config->item('app_fb_id')?>',                        // App ID from the app dashboard
-            status : true, // check login status
-            cookie : true, // enable cookies to allow the server to access the session
-            xfbml  : true  // parse XFBML
-        });
-        function logarComFacebookId(){
-            FB.api('/me', function(response) {
-              location.href = '<?=BASE_URL?>peopleGrid/jaguarao/'+response.id;
-            });
-        }
+        
 </script>
 <?$this->load->view('../../static/views/rodapeView')?>
