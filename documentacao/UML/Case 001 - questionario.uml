@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_nkwywM-qEeKx3ZLS9Bthkg" name="model">
+  <ownedComment xmi:id="_0qXsMM-sEeKx3ZLS9Bthkg" annotatedElement="_JdmVcM-rEeKx3ZLS9Bthkg">
+    <body>Começa com uma tela que contém informações sobre o peopleGrid e a pessoa é convida a partir da pesquisa, ou seja, é uma explicação de como funciona o questionário propriamente dito.</body>
+  </ownedComment>
+  <ownedComment xmi:id="__M3akM-sEeKx3ZLS9Bthkg" annotatedElement="_OCKFwM-rEeKx3ZLS9Bthkg">
+    <body> O internauta deve preencher a grid conforma deseja respeitando o espaço delimitado. O usuário poderá usar o pincel e borracha para edição. Ao finalizar sua resposta clica em &quot;Próxima Questão&quot;
+
+Cenário Alternativo
+ O usuário decide não responder e deixar a gird em branco e clica em &quot;Próxima Questão&quot;</body>
+  </ownedComment>
+  <ownedComment xmi:id="_YJ8jMM-tEeKx3ZLS9Bthkg" annotatedElement="_RmPbEM-sEeKx3ZLS9Bthkg">
+    <body>O internauta deve preencher a grid conforma deseja respeitando o espaço delimitado. O usuário poderá usar o pincel e borracha para edição. Ao finalizar sua resposta clica em &quot;Próxima Questão&quot;
+
+Cenário Alternativo
+ O usuário decide não responder e deixar a gird em branco e clica em &quot;Próxima Questão&quot;</body>
+  </ownedComment>
+  <ownedComment xmi:id="_fRcKUM-tEeKx3ZLS9Bthkg" annotatedElement="_Vs018M-sEeKx3ZLS9Bthkg">
+    <body>O internauta deve preencher a grid conforma deseja respeitando o espaço delimitado. O usuário poderá usar o pincel e borracha para edição. Ao finalizar sua resposta clica em &quot;Próxima Questão&quot;
+
+Cenário Alternativo
+ O usuário decide não responder e deixar a gird em branco e clica em &quot;Próxima Questão&quot;</body>
+  </ownedComment>
+  <ownedComment xmi:id="_sSRjYM-tEeKx3ZLS9Bthkg" annotatedElement="_XtuWsM-sEeKx3ZLS9Bthkg">
+    <body>Questão Identificação
+O internauta é solicitado para que se identifique, informando os dados Nome, Email, Cidade, Nivel de Escolaridade, Renda Familiar e Idade. Então ao clicar no &quot;Enviar&quot; os dados das questões serão enviados ao servido e devidamente armazenados. 
+E enviado para a tela de finalização
+
+Cenário Alternativo
+O usuário pode não responder, ou seja, não se identificar para o sistema. Neste caso o internauta será adicionado no banco de dados como usuário anônimo, previamente já estabelecido no banco. 
+E enviado para a tela de finalização
+</body>
+  </ownedComment>
+  <ownedComment xmi:id="_y9NKUM-tEeKx3ZLS9Bthkg" annotatedElement="_d_sEAM-sEeKx3ZLS9Bthkg">
+    <body>Finalizar Questionário
+É feito um agradecimento pela participação e o usuário é redirecionado para a tela de &quot;Acompanhe&quot; no site principal</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uWlr4M-qEeKx3ZLS9Bthkg" name="internauta" clientDependency="_hiWH4M-rEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JdmVcM-rEeKx3ZLS9Bthkg" name="Quero Começar"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_OCKFwM-rEeKx3ZLS9Bthkg" name="Questão 1"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_hiWH4M-rEeKx3ZLS9Bthkg" name="" supplier="_JdmVcM-rEeKx3ZLS9Bthkg" client="_uWlr4M-qEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DbOG0M-sEeKx3ZLS9Bthkg" name="A_internauta_quero começar" memberEnd="_DbOG0c-sEeKx3ZLS9Bthkg _DbOG1M-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_DbOG0c-sEeKx3ZLS9Bthkg" name="internauta" type="_uWlr4M-qEeKx3ZLS9Bthkg" association="_DbOG0M-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DbOG0s-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DbOG08-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_DbOG1M-sEeKx3ZLS9Bthkg" name="quero começar" type="_JdmVcM-rEeKx3ZLS9Bthkg" association="_DbOG0M-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DbOG1c-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DbOG1s-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OuYdIM-sEeKx3ZLS9Bthkg" name="A_quero começar_questão 1" memberEnd="_OuYdIc-sEeKx3ZLS9Bthkg _OuYdJM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_OuYdIc-sEeKx3ZLS9Bthkg" name="quero começar" type="_JdmVcM-rEeKx3ZLS9Bthkg" association="_OuYdIM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OuYdIs-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OuYdI8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_OuYdJM-sEeKx3ZLS9Bthkg" name="questão 1" type="_OCKFwM-rEeKx3ZLS9Bthkg" association="_OuYdIM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OuYdJc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OuYdJs-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_RmPbEM-sEeKx3ZLS9Bthkg" name="Questão..."/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Vs018M-sEeKx3ZLS9Bthkg" name="Questão 22"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XtuWsM-sEeKx3ZLS9Bthkg" name="Questão de Identificação" clientDependency="_lM54oM-sEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_d_sEAM-sEeKx3ZLS9Bthkg" name="Finalizar"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gdFTgM-sEeKx3ZLS9Bthkg" name="A_questão 1_questão..." memberEnd="_gdFTgc-sEeKx3ZLS9Bthkg _gdFThM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_gdFTgc-sEeKx3ZLS9Bthkg" name="questão 1" type="_OCKFwM-rEeKx3ZLS9Bthkg" association="_gdFTgM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gdFTgs-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gdFTg8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_gdFThM-sEeKx3ZLS9Bthkg" name="questão..." type="_RmPbEM-sEeKx3ZLS9Bthkg" association="_gdFTgM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gdFThc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gdFThs-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hEUSoM-sEeKx3ZLS9Bthkg" name="A_questão..._questão 22" memberEnd="_hEUSoc-sEeKx3ZLS9Bthkg _hEUSpM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_hEUSoc-sEeKx3ZLS9Bthkg" name="questão..." type="_RmPbEM-sEeKx3ZLS9Bthkg" association="_hEUSoM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hEUSos-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hEUSo8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_hEUSpM-sEeKx3ZLS9Bthkg" name="questão 22" type="_Vs018M-sEeKx3ZLS9Bthkg" association="_hEUSoM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hEUSpc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hEUSps-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iozkMM-sEeKx3ZLS9Bthkg" name="A_questão 22_questão de identificação" memberEnd="_iozkMc-sEeKx3ZLS9Bthkg _iozkNM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_iozkMc-sEeKx3ZLS9Bthkg" name="questão 22" type="_Vs018M-sEeKx3ZLS9Bthkg" association="_iozkMM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iozkMs-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iozkM8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_iozkNM-sEeKx3ZLS9Bthkg" name="questão de identificação" type="_XtuWsM-sEeKx3ZLS9Bthkg" association="_iozkMM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iozkNc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iozkNs-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_lM54oM-sEeKx3ZLS9Bthkg" name="" supplier="_d_sEAM-sEeKx3ZLS9Bthkg" client="_XtuWsM-sEeKx3ZLS9Bthkg"/>
+</uml:Model>
