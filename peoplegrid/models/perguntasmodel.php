@@ -136,6 +136,20 @@
         }
         
         /**
+         * Retorna um array contendo todas as perguntas
+         * @return array
+         */
+        public function getPerguntas(){
+            $perguntas = array();
+            
+            for ($a = 1; $a <= $this->totalPerguntasJaguarao(); $a++){
+                array_push($perguntas, $this->perguntaJaguarao($a));
+            }
+            
+            return $perguntas;
+        }
+        
+        /**
          * Retorna o total de Peguntas que há para responder
          * @return string{numerico}
          */

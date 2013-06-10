@@ -25,15 +25,10 @@ class PeopleGrid extends CI_Controller {
             $this->load->view('grid/welComeGridView',$data);
 	}
                 
-        public function jaguarao($userFbid = 0){
+        public function jaguarao(){
             $this->loadLanguage();
-            $data['$userOn'] = 'off';
-            if($userFbid != 0){
-                if($this->pessoaModel->getPessoaByUserIdFacebook($userFbid) != null){
-                    $data['userOn'] = $this->pessoaModel->getPessoaByUserIdFacebook($userFbid);
-                }
-            }
             $data['totalDePergunts'] = $this->perguntasModel->totalPerguntasJaguarao();
+            $data['perguntas'] = $this->perguntasModel->getPerguntas();
             $this->load->view('grid/jaguaraoGridView',$data);
         }
         

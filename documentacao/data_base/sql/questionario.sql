@@ -22,6 +22,7 @@ CREATE TABLE DEFAULT_SCHEMA.questionario (
      , questao_20 BLOB
      , questao_21 BLOB
      , questao_22 BLOB
+     , questao_23 BLOB
      , cidade VARCHAR(50)
      , participou_atividade_parecida CHAR(1)
      , voce_pensou_como VARCHAR(50)

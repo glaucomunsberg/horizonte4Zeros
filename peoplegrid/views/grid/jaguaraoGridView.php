@@ -1,5 +1,4 @@
 <?$this->load->view('../../static/views/cabecalhoPublicoView')?>
-
 <div class="container">
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -22,10 +21,9 @@
     <section id="questionGrid" style="margin-top: 40px">
         <div class="row">
             <div class="span5">
-                <h3><?=lang('peopleGridQuestao1')?></h3>
-                <p>
-                    <?=lang('peopleGridQuestao1Def')?>
-                </p>
+                <h3><div id="questao_area"></div></h3>
+                <p><div id="questao_def">
+                </p></div>
                 <dl class="dl-horizontal">
                     <dt><?=lang('peopleGridModeladores')?></dt>
                         <dd>
@@ -58,11 +56,79 @@
             </div>
         </div>
     </section>
+    <section id="formulario" style="margin-top: 40px; display:none"> 
+    <div class="row">
+        <div class="span6">
+            <p>Identifique-se</p>
+            <hr>
+            <form class="well">
+                
+                <p><label>Informações Pessoais</label></p>
+                <?=lang('formNome')?>
+                <input type="text" class="span3" placeholder="Digite seu nome">
+                <br>
+                
+                <?=lang('formEmail')?>
+                <input type="text" class="span3" placeholder="Digite sua cidade">
+                
+                <br>
+                <?=lang('formGenero')?>
+                <label class="radio">
+                    <input type="radio" name="genero" id="genero1" value="option1">
+                    Masculino
+                </label>
+                <label class="radio">
+                    <input type="radio" name="genero" id="genero2" value="option2">
+                    Feminino
+                </label>
+                
+                <br>
+                <?=lang('formDtNascimento')?>
+                <input type="text" class="span3" placeholder="Digite a sua data de nascimento">
+                
+                <br>
+                <?=lang('formCidade')?>
+                <input type="text" class="span3" placeholder="Digite sua cidade">
+                
+                <br>
+                <?=lang('formNivelEscolaridade')?>
+                <label class="radio">
+                    <input type="radio" name="nivelEscolaridade" id="nivel1" value="option1">
+                    Fundamental
+                </label>
+                
+                <label class="radio">
+                    <input type="radio" name="nivelEscolaridade" id="nivel2" value="option2">
+                    Ensino Médio
+                </label>
+                
+                <label class="radio">
+                    <input type="radio" name="nivelEscolaridade" id="nivel3" value="option3">
+                    Graduação
+                </label>
+                
+                <label class="radio">
+                    <input type="radio" name="nivelEscolaridade" id="nivel4" value="option4">
+                    Pós-Graduado
+                </label>
+                
+                <button type="submit" class="btn">Submit</button>
+                
+            </form>
+        </div>
+        <div class="span6">
+            <p></p>    
+        </div>
+    </div>
     
+    </section>
     
 </div>
 <script>
-       $questaoInicial = 1;
+       var cont = 1;
+       var perguntas = <?php echo json_encode($perguntas); ?>;
+       
+       
        /**
         * 
         * Limpa a grid,ou seja, remove qualquer cor
@@ -106,33 +172,38 @@
             $('#usuarioLogin').hide();
             $('#questionGrid').show();
         }
+
+         
         /**
-         * Pega a pergunta e leva 
-         * @returns {undefined}
+         * Função init já carrega a primeira pergunta
+         *
+         */       
+        function init(){
+            $("#questionGrid").hide();
+            $("#formulario").show();
+            //$("#questao_area").html(perguntas[cont-1]['questaoSobre']); 
+            //$("#questao_def").html(perguntas[cont-1]['questao']);
+        }
+       
+        init();
+        /**
+         * Trás a proxima questão a ser repsondida
+         * 
          */
         function trazerProximaQuestao(){
-            var data={
-             questaoId:$questaoInicial
-            }; 
-            $.ajax({
-                    method: "post",
-                    data:data,
-                    url: BASE_URL+"peopleGrid/getPerguntaJaguarao/",
-                    beforeSend: function(){
-                        
-                    },
-                    complete: function(){
-                        //$("#carregando").hide("slow");
-                    },
-                    error: function(){
-                        
-                    },
-                    success: function(resultado){
-                       // var resposta = JSON.parse(data);
-                        console.log(resultado);
-                        $questaoInicial++;
-                    }
-                });
+            if (cont == 23){
+                form_identificacao();
+            }
+            
+            $("#questao_area").html(perguntas[cont]['questaoSobre']);
+            $("#questao_def").html(perguntas[cont]['questao']); 
+            cont++;
+        }
+        
+        function form_identificacao(){
+            
+            $("#questionGrid").hide();
+            $("#formulario").show();
         }
         
         function enviarResposta(){
