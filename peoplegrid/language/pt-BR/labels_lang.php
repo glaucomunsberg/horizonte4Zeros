@@ -88,4 +88,40 @@ $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
 
+$lang['sim'] = 'Sim';
+$lang['nao'] = 'Não';
+/**
+ * FORMULARIO
+ * 
+ */
+$lang['formIdentifiquese'] = 'Identifique-se';
+$lang['formJaParticipouAtividadeParecida'] = 'Já participou de atividade que discute questões urbanas na sua cidade?';
+$lang['formPensouComo'] = 'Ao responder o questionário você pensou como?';
+$lang['formPensouComoOpt1'] = 'Representante da população.';
+$lang['formPensouComoOpt2'] = 'Um líder comunitario e/ou ativista.';
+$lang['formPensouComoOpt3'] = 'Representante politico e/ou/gestor.';
+$lang['formPensouComoOpt4'] = 'Um técnico municipal e/ou planejador urbano.';
+$lang['formPensouComoOpt5'] = 'Um investidor e/ou empresário.';
+$lang['formInformacoesPessoais'] = 'Informações Pessoais';
+$lang['formNome'] = 'Nome';
+$lang['formEmail'] = 'Email';
+$lang['formDtNascimento'] = 'Data de Nascimento';
+$lang['formCidade'] = 'Cidade';
+$lang['formGenero'] = 'Gênero';
+$lang['formMasculino'] = 'Masculino';
+$lang['formFeminino'] = 'Feminino';
+$lang['formNivelEscolaridade'] = 'Nivel de Escolaridade';
+$lang['formNivelEscolaridadeOpt1'] = 'Fundamental';
+$lang['formNivelEscolaridadeOpt2'] = 'Ensino Médio';
+$lang['formNivelEscolaridadeOpt3'] = 'Graduação';
+$lang['formNivelEscolaridadeOpt4'] = 'Pós-Graduado';
+$lang['formRendaFamiliar'] = 'Renda Familiar';
+$lang['formRendaFamiliarOpt1'] = '1 á 3 salários mínimos.';
+$lang['formRendaFamiliarOpt2'] = '3 á 5 salários mínimos.';
+$lang['formRendaFamiliarOpt3'] = '5 á 10 salários mínimos.';
+$lang['formRendaFamiliarOpt4'] = 'Mais de 10 salários mínimos.';
+
+
+
+
 ?>
