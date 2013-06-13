@@ -21,11 +21,17 @@
     <section id="questionGrid" style="margin-top: 40px">
         <div class="row">
             <div class="span5">
+                <br>
                 <h3><div id="questao_area"></div></h3>
-                <p><div id="questao_def">
-                    </p></div>
+                <div id="questao_def"></div>
+                <br>
+                <div id="row"><button class="btn btn-success pull-right" href="#" onClick="trazerProximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button></div>
+                <br>
+                <br>
+                <hr>
                 <dl class="dl-horizontal">
                     <dt><?= lang('peopleGridModeladores') ?></dt>
+                    <br>
                     <dd>
                         <div class="control-group">
                             <label class="control radio">
@@ -38,14 +44,12 @@
                             </label>
                         </div>
                     </dd>
-                    <dt><?= lang('peopleGridOutrasOpcoes') ?></dt>
                     <dd>
                         <button class="btn btn-danger" href="#" onClick="limparGrid()"><?= lang('peopleGridLimparGrid') ?></button>
 
                     </dd>
                 </dl>
-                <hr>
-                <button class="btn btn-success pull-right" href="#" onClick="trazerProximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button>
+                
 
             </div>
             <div class="span7">
@@ -108,72 +112,72 @@
                                 <?= lang('formPensouComoOpt5') ?>
                             </label>
                         </div>
-</div>
-                        <div class="span6">
-                            <p><label><?= lang('formInformacoesPessoais') ?></label></p>
+                    </div>
+                    <div class="span6">
+                        <p><label><?= lang('formInformacoesPessoais') ?></label></p>
 
-                            <?= lang('formNome') ?>
+                        <?= lang('formNome') ?>
 
-                            <div class="control-group">
-                                <input type="text" class="span3" id="txtNome" placeholder="Digite seu nome">
-                                <br>
-                            </div>
-
-                            <div class="control-group">
-                                <?= lang('formEmail') ?>
-                                <input type="text" class="span3" id="txtEmail" placeholder="Digite sua cidade">
-                            </div>
-
+                        <div class="control-group">
+                            <input type="text" class="span3" id="txtNome" placeholder="Digite seu nome">
                             <br>
+                        </div>
 
-                            <?= lang('formGenero') ?>
-                            <div class="control-group">
-                                <label class="radio">
-                                    <input type="radio" name="genero" id="genero" value="option1">
-                                    <?= lang('formMasculino') ?>
-                                </label>
-                                <label class="radio">
-                                    <input type="radio" name="genero" id="genero" value="option2">
-                                    <?= lang('formFeminino') ?>
-                                </label>
-                            </div>
+                        <div class="control-group">
+                            <?= lang('formEmail') ?>
+                            <input type="text" class="span3" id="txtEmail" placeholder="Digite sua cidade">
+                        </div>
 
-                            <br>
+                        <br>
 
-                            <div class="control-group">
-                                <?= lang('formDtNascimento') ?>
-                                <input type="text" class="span3" id="txtDtNascimento" placeholder="Digite a sua data de nascimento">
-                            </div>
+                        <?= lang('formGenero') ?>
+                        <div class="control-group">
+                            <label class="radio">
+                                <input type="radio" name="genero" id="genero" value="option1">
+                                <?= lang('formMasculino') ?>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="genero" id="genero" value="option2">
+                                <?= lang('formFeminino') ?>
+                            </label>
+                        </div>
 
-                            <br>
-                            <?= lang('formCidade') ?>
-                            <input type="text" class="span3" id="txtCidade" placeholder="Digite sua cidade">
+                        <br>
 
-                            <br>
-                            <div class="control-group">
-                                <?= lang('formNivelEscolaridade') ?>
-                                <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option1">
-                                    <?= lang('formNivelEscolaridadeOpt1') ?>
-                                </label>
+                        <div class="control-group">
+                            <?= lang('formDtNascimento') ?>
+                            <input type="text" class="span3" id="txtDtNascimento" placeholder="Digite a sua data de nascimento">
+                        </div>
 
-                                <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option2">
-                                    <?= lang('formNivelEscolaridadeOpt2') ?>
-                                </label>
+                        <br>
+                        <?= lang('formCidade') ?>
+                        <input type="text" class="span3" id="txtCidade" placeholder="Digite sua cidade">
 
-                                <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option3">
-                                    <?= lang('formNivelEscolaridadeOpt3') ?>
-                                </label>
+                        <br>
+                        <div class="control-group">
+                            <?= lang('formNivelEscolaridade') ?>
+                            <label class="radio">
+                                <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option1">
+                                <?= lang('formNivelEscolaridadeOpt1') ?>
+                            </label>
 
-                                <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option4">
-                                    <?= lang('formNivelEscolaridadeOpt4') ?>
-                                </label>
-                            </div>    
+                            <label class="radio">
+                                <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option2">
+                                <?= lang('formNivelEscolaridadeOpt2') ?>
+                            </label>
 
-                            <button type="submit" class="btn" onClick="enviar()" margin="right">Enviar</button>
+                            <label class="radio">
+                                <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option3">
+                                <?= lang('formNivelEscolaridadeOpt3') ?>
+                            </label>
+
+                            <label class="radio">
+                                <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option4">
+                                <?= lang('formNivelEscolaridadeOpt4') ?>
+                            </label>
+                        </div>    
+
+                        <button type="submit" class="btn" onClick="enviar()" margin="right">Enviar</button>
                     </div>
                 </fieldset>
             </form>
@@ -236,13 +240,13 @@
      *
      */       
     function init(){
-        $("#questionGrid").hide();
-        $("#formulario").show();
+        $("#questionGrid").show();
+        $("#formulario").hide();
         $("#questao_area").html(perguntas[cont-1]['questaoSobre']); 
         $("#questao_def").html(perguntas[cont-1]['questao']);
     }
        
-    init();
+    this.init();
     /**
      * Trás a proxima questão a ser repsondida
      * 
@@ -251,9 +255,16 @@
         if (cont == 23){
             form_identificacao();
         }
-            
+        
+        // DEVANEIOS
+        //peopleGrid = new jsGrid.js("peopleGrid1");
+        //peopleGrid.setTextMatrix(0,0, "0-0");
+        //console.log(peopleGrid.getTextMatrix(0,0));
+        //---
+        
         $("#questao_area").html(perguntas[cont]['questaoSobre']);
         $("#questao_def").html(perguntas[cont]['questao']); 
+        this.limparGrid();
         cont++;
     }
         
@@ -265,7 +276,8 @@
         
     function enviar(){
         
-
+        formQuestionario_submit();
+        
     }
         
 </script>

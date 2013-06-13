@@ -27,6 +27,44 @@
         }
 
         /**
+         *  Insere no novo questionario
+         * 
+         */
+        function inserir_new($parametros){
+            
+            $this->db->trans_start();
+                $this->db->set('nome', $parametros['nome']);
+                $this->db->set('email', $parametros['email']);
+                $this->db->set('dt_nascimento',$parametros['dt_nascimento']);
+                $this->db->set('genero',$parametros['genero']);
+                $this->db->set('cidade_natal',$parametros['cidade']);
+                $this->db->set('nivel_escolaridade', $parametros['nivel_escolaridade']);
+                $this->db->set('renda_familiar', $parametros['renda_familiar']);
+                $this->db->set('equipe', 'N');
+                $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP'); 
+                $this->db->insert('pessoas'); 
+            $this->db->trans_complete();
+            
+            if($this->db->trans_status() === FALSE){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        /**
+         *  Busca pessoa através do Id
+         * 
+         */
+        function getPessoa($id){
+             $this->db->select('*',false);
+             $this->db->from('pessoas');
+             $this->db->where('id',$id);
+             return $this->db->get()->row();
+        }
+        
+        
+        /**
          *  Retorna a pessoa pelo Id do facebook
          * @param type $id
          * @return type
