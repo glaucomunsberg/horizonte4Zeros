@@ -14,13 +14,33 @@ class Site extends CI_Controller {
         }
 	public function index()
 	{
-                $this->loadLanguage();
-                $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
-                $data['programa'] = $this->programaModel->getPrograma(1);
-                $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
-		$this->load->view('jaguarao/homeView',$data);
+              $this->load->view('jaguarao/welcomeView');  
 	}
         
+        
+        public function site_desenv(){
+            $this->loadLanguage();
+            $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
+            $data['programa'] = $this->programaModel->getPrograma(1);
+            $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
+            $data['projeto1'] = $this->projetoModel->getProjeto(1);
+            $data['projeto2'] = $this->projetoModel->getProjeto(2);
+            $data['projeto3'] = $this->projetoModel->getProjeto(3);
+            $data['projeto4'] = $this->projetoModel->getProjeto(4);
+            $this->load->view('jaguarao/desenvView',$data);
+        }
+        
+        public function site_horizonte(){
+            $this->loadLanguage();
+            $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
+            $data['programa'] = $this->programaModel->getPrograma(1);
+            $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
+            $data['projeto1'] = $this->projetoModel->getProjeto(1);
+            $data['projeto2'] = $this->projetoModel->getProjeto(2);
+            $data['projeto3'] = $this->projetoModel->getProjeto(3);
+            $data['projeto4'] = $this->projetoModel->getProjeto(4);
+            $this->load->view('jaguarao/horizonteView',$data);
+        }
         public function enjoy(){
                 $this->load->view('enjoy/enjoyFiltroView');
         }
@@ -135,10 +155,6 @@ class Site extends CI_Controller {
             return base64_decode(strtr($input, '-_', '+/'));
         }
         
-        
-        public function teste(){
-            $this->load->view('jaguarao/welcomeView');
-        }
 }
 
 /* End of file welcome.php */

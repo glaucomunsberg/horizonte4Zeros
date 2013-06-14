@@ -1,11 +1,10 @@
 <? $this->load->view('../../static/views/cabecalhoPublicoView') ?>
-
 <div id="container" style="margin-left: 30px !important;margin-right: 10px">
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-                <a class="brand active" style="margin-top: 3px; font-size: 25px" href="#home"><?= lang('horizonteHome') ?></a>
+                <a class="brand active" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?= lang('horizonteHome') ?></a>
                 <div class="nav-collapse collapse" >
                     <ul class="nav">
                         <li class=""><a href="#projetos"><?= lang('horizonteProjetos') ?></a> </li>
@@ -28,9 +27,7 @@
         </div>
     </div>
 
-
     <br>
-
 
     <section id="home">
         <div style="padding-top:35px"></div>
@@ -72,11 +69,18 @@
 
                 <!-- RESUMO DOS PROJETOS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
-                    <? foreach ($projetos as $projeto) { ?>
-                        <div class="span3 ">
-                            <p style="text-align: justify"><?= $projeto->resumo ?></p>
-                        </div> 
-                    <? } ?>
+                    <div class="span3 ">
+                        <p style="text-align: justify"><?= $projeto1->resumo ?></p>
+                    </div>
+                    <div class="span3 ">
+                        <p style="text-align: justify"><?= $projeto2->resumo ?></p>
+                    </div>
+                    <div class="span3 ">
+                        <p style="text-align: justify"><?= $projeto3->resumo ?></p>
+                    </div>
+                    <div class="span3 ">
+                        <p style="text-align: justify"><?= $projeto4->resumo ?></p>
+                    </div>
                 </div>
 
                 <!-- BOTOES LEIA MAIS-->
@@ -95,12 +99,11 @@
                                 }
                                 ?>"><?= lang('horizonteLerMais') ?></button></a>
                         </div>    
-<? } ?>
+                    <? } ?>
                 </div>
             </section>
         </div>
     </section>
-
 
     <section id="news">
         <div style="padding-top:35px"></div>
@@ -125,7 +128,7 @@
                 </p>
                 <p>
                     <span class="label label-info"><?= lang('horizonteNews') ?></span>
-<?= lang('horizonteNewsMensagem') ?>
+                    <?= lang('horizonteNewsMensagem') ?>
                 </p>
             </div>
             <div class="span8">
@@ -170,7 +173,6 @@
         </div>
     </section>
 
-
     <section id="enjoy">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -185,7 +187,6 @@
             </div>
         </div>
     </section>
-
 
     <session id="equipe">
         <div style="padding-top:35px"></div>
@@ -260,7 +261,6 @@
         </div>
     </session>
 
-
     <?
     foreach ($projetos as $projeto) {
         ?>
@@ -271,25 +271,25 @@
             </div>
             <? if ($projeto->objetivos != '') {
                 ?><p><?= $projeto->objetivos ?></p><?
-    }
+            }
             ?>
 
             <? if ($projeto->problemajustificacao != '') {
                 ?>  <h3><?= lang('horizonteProjetoProblemaJustificacao') ?></h3>
                 <p><?= $projeto->problemajustificacao ?></p><?
-    }
+            }
             ?>
 
             <? if ($projeto->fundamentos != '') {
                 ?>  <h3><?= lang('horizonteProjetoFundamentos') ?></h3>
                 <p><?= $projeto->fundamentos ?></p><?
-    }
+            }
             ?>
 
             <? if ($projeto->resultados != '') {
                 ?>  <h3><?= lang('horizonteProjetoResultados') ?></h3>
                 <p><?= $projeto->resultados ?></p><?
-    }
+            }
             ?>
         </section>
         <?
@@ -297,8 +297,8 @@
     ?>
     <footer class="footer" >
         <p>
-<?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>. <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
-<?= lang('horizonteVisitantes') ?>
+        <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>. <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
+        <?= lang('horizonteVisitantes') ?>
             <a href="#" target="blank" >
                 <img alt="Website counter" hspace="0" vspace="0" border="0" src="http://legitfreecounters.com/6554002-EE2D826E78DDFC18F85ACE62DA35116F/counter.img?theme=7&digits=5&siteId=6"/>
             </a>
@@ -309,21 +309,21 @@
         </p>
     </footer>
 
-
+    
 </div>
 <script>
 
-                    $('#membros div').mouseenter(function() {
-                        $(this).find('div').show();
-                    });
-                    $('#membros div').mouseleave(function() {
+        $('#membros div').mouseenter(function() {
+            $(this).find('div').show();
+        });
+        $('#membros div').mouseleave(function() {
 
-                        $(this).find('div').hide();
-                    });
+            $(this).find('div').hide();
+        });
 
-                    function irEnjoy() {
-                        location.href = '<?= BASE_URL ?>site/enjoy'
-                    }
+        function irEnjoy() {
+            location.href = '<?= BASE_URL ?>site/enjoy'
+        }
 
 </script>
 <?$this->load->view('../../static/views/rodapeView')?>
