@@ -262,6 +262,11 @@
         //console.log(peopleGrid.getTextMatrix(0,0));
         //---
         
+        $('#peopleGrid1 div').each(function(){
+            
+           console.log($(this.id).css('background-color'));
+        });
+        
         $("#questao_area").html(perguntas[cont]['questaoSobre']);
         $("#questao_def").html(perguntas[cont]['questao']); 
         this.limparGrid();

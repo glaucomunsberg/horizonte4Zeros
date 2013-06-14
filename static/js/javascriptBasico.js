@@ -17,7 +17,7 @@
  */
 function createGrid(name,size,nomePai,rate) {
     var ratioW = size,
-        ratioH = size;
+        ratioH = size, cont = 0;
     var parent = $('<div />', {
         class: 'grid',
         id: name,
@@ -28,10 +28,11 @@ function createGrid(name,size,nomePai,rate) {
     for (var i = 0; i < ratioH; i++) {
         for(var p = 0; p < ratioW; p++){
             $('<div />', {
-                id: i+' - '+p,
+                id: cont,
                 width: (ratioW / rate) - 1,
                 height: (ratioH / rate) -1
             }).appendTo(parent);
+            cont++;
         }
     }
 }
