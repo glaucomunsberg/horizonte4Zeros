@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_nkwywM-qEeKx3ZLS9Bthkg" name="model">
+  <ownedComment xmi:id="_0qXsMM-sEeKx3ZLS9Bthkg" annotatedElement="_JdmVcM-rEeKx3ZLS9Bthkg">
+    <body>Começa com uma tela que contém informações sobre o peopleGrid e a pessoa é convida a partir da pesquisa, ou seja, é uma explicação de como funciona o questionário propriamente dito.</body>
+  </ownedComment>
+  <ownedComment xmi:id="__M3akM-sEeKx3ZLS9Bthkg" annotatedElement="_OCKFwM-rEeKx3ZLS9Bthkg">
+    <body> O internauta deve preencher a grid conforma deseja respeitando o espaço delimitado. O usuário poderá usar o pincel e borracha para edição. Ao finalizar sua resposta clica em &quot;Próxima Questão&quot;
+
+Cenário Alternativo
+ O usuário decide não responder e deixar a gird em branco e clica em &quot;Próxima Questão&quot;</body>
+  </ownedComment>
+  <ownedComment xmi:id="_YJ8jMM-tEeKx3ZLS9Bthkg" annotatedElement="_RmPbEM-sEeKx3ZLS9Bthkg">
+    <body>O internauta deve preencher a grid conforma deseja respeitando o espaço delimitado. O usuário poderá usar o pincel e borracha para edição. Ao finalizar sua resposta clica em &quot;Próxima Questão&quot;
+
+Cenário Alternativo
+ O usuário decide não responder e deixar a gird em branco e clica em &quot;Próxima Questão&quot;</body>
+  </ownedComment>
+  <ownedComment xmi:id="_fRcKUM-tEeKx3ZLS9Bthkg" annotatedElement="_Vs018M-sEeKx3ZLS9Bthkg">
+    <body>O internauta deve preencher a grid conforma deseja respeitando o espaço delimitado. O usuário poderá usar o pincel e borracha para edição. Ao finalizar sua resposta clica em &quot;Próxima Questão&quot;
+
+Cenário Alternativo
+ O usuário decide não responder e deixar a gird em branco e clica em &quot;Próxima Questão&quot;</body>
+  </ownedComment>
+  <ownedComment xmi:id="_sSRjYM-tEeKx3ZLS9Bthkg" annotatedElement="_XtuWsM-sEeKx3ZLS9Bthkg">
+    <body>Questão Identificação
+O internauta é solicitado para que se identifique, informando os dados Nome, Email, Cidade, Nivel de Escolaridade, Renda Familiar e Idade. Então ao clicar no &quot;Enviar&quot; os dados das questões serão enviados ao servido e devidamente armazenados. 
+E enviado para a tela de finalização
+
+Cenário Alternativo
+O usuário pode não responder, ou seja, não se identificar para o sistema. Neste caso o internauta será adicionado no banco de dados como usuário anônimo, previamente já estabelecido no banco. 
+E enviado para a tela de finalização
+</body>
+  </ownedComment>
+  <ownedComment xmi:id="_y9NKUM-tEeKx3ZLS9Bthkg" annotatedElement="_d_sEAM-sEeKx3ZLS9Bthkg">
+    <body>Finalizar Questionário
+É feito um agradecimento pela participação e o usuário é redirecionado para a tela de &quot;Acompanhe&quot; no site principal</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_uWlr4M-qEeKx3ZLS9Bthkg" name="internauta" clientDependency="_hiWH4M-rEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JdmVcM-rEeKx3ZLS9Bthkg" name="Quero Começar"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_OCKFwM-rEeKx3ZLS9Bthkg" name="Questão 1"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_hiWH4M-rEeKx3ZLS9Bthkg" name="" supplier="_JdmVcM-rEeKx3ZLS9Bthkg" client="_uWlr4M-qEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DbOG0M-sEeKx3ZLS9Bthkg" name="A_internauta_quero começar" memberEnd="_DbOG0c-sEeKx3ZLS9Bthkg _DbOG1M-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_DbOG0c-sEeKx3ZLS9Bthkg" name="internauta" type="_uWlr4M-qEeKx3ZLS9Bthkg" association="_DbOG0M-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DbOG0s-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DbOG08-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_DbOG1M-sEeKx3ZLS9Bthkg" name="quero começar" type="_JdmVcM-rEeKx3ZLS9Bthkg" association="_DbOG0M-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DbOG1c-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DbOG1s-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OuYdIM-sEeKx3ZLS9Bthkg" name="A_quero começar_questão 1" memberEnd="_OuYdIc-sEeKx3ZLS9Bthkg _OuYdJM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_OuYdIc-sEeKx3ZLS9Bthkg" name="quero começar" type="_JdmVcM-rEeKx3ZLS9Bthkg" association="_OuYdIM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OuYdIs-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OuYdI8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_OuYdJM-sEeKx3ZLS9Bthkg" name="questão 1" type="_OCKFwM-rEeKx3ZLS9Bthkg" association="_OuYdIM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OuYdJc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OuYdJs-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_RmPbEM-sEeKx3ZLS9Bthkg" name="Questão..."/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Vs018M-sEeKx3ZLS9Bthkg" name="Questão 22"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XtuWsM-sEeKx3ZLS9Bthkg" name="Questão de Identificação" clientDependency="_lM54oM-sEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_d_sEAM-sEeKx3ZLS9Bthkg" name="Finalizar"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gdFTgM-sEeKx3ZLS9Bthkg" name="A_questão 1_questão..." memberEnd="_gdFTgc-sEeKx3ZLS9Bthkg _gdFThM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_gdFTgc-sEeKx3ZLS9Bthkg" name="questão 1" type="_OCKFwM-rEeKx3ZLS9Bthkg" association="_gdFTgM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gdFTgs-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gdFTg8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_gdFThM-sEeKx3ZLS9Bthkg" name="questão..." type="_RmPbEM-sEeKx3ZLS9Bthkg" association="_gdFTgM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gdFThc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gdFThs-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hEUSoM-sEeKx3ZLS9Bthkg" name="A_questão..._questão 22" memberEnd="_hEUSoc-sEeKx3ZLS9Bthkg _hEUSpM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_hEUSoc-sEeKx3ZLS9Bthkg" name="questão..." type="_RmPbEM-sEeKx3ZLS9Bthkg" association="_hEUSoM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hEUSos-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hEUSo8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_hEUSpM-sEeKx3ZLS9Bthkg" name="questão 22" type="_Vs018M-sEeKx3ZLS9Bthkg" association="_hEUSoM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hEUSpc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hEUSps-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iozkMM-sEeKx3ZLS9Bthkg" name="A_questão 22_questão de identificação" memberEnd="_iozkMc-sEeKx3ZLS9Bthkg _iozkNM-sEeKx3ZLS9Bthkg">
+    <ownedEnd xmi:id="_iozkMc-sEeKx3ZLS9Bthkg" name="questão 22" type="_Vs018M-sEeKx3ZLS9Bthkg" association="_iozkMM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iozkMs-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iozkM8-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_iozkNM-sEeKx3ZLS9Bthkg" name="questão de identificação" type="_XtuWsM-sEeKx3ZLS9Bthkg" association="_iozkMM-sEeKx3ZLS9Bthkg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iozkNc-sEeKx3ZLS9Bthkg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iozkNs-sEeKx3ZLS9Bthkg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_lM54oM-sEeKx3ZLS9Bthkg" name="" supplier="_d_sEAM-sEeKx3ZLS9Bthkg" client="_XtuWsM-sEeKx3ZLS9Bthkg"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_hxzNENIEEeKbs8qKPfKKVg" name="Internauta"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_jDQN4NIEEeKbs8qKPfKKVg" name="Sistema  PROEXT">
+    <packagedElement xmi:type="uml:Package" xmi:id="_kZ7s8NIEEeKbs8qKPfKKVg" name="Horizonte4Zeros">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_CG3P4NIFEeKbs8qKPfKKVg" name="ver Infromações (Video)"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_DCnGcNIFEeKbs8qKPfKKVg" name="Cadastrar-se"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_D-p38NIFEeKbs8qKPfKKVg" name="Ver informaçoes (Audio)"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Lxm24NIFEeKbs8qKPfKKVg" name="Ver Imagens (Imagens)"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_OuNK4NIFEeKbs8qKPfKKVg" name="Interagir"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_DE894NIHEeKbs8qKPfKKVg" name="Internauta"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_PhKm8NIHEeKbs8qKPfKKVg" name="Cadastrado"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Ski4YNIHEeKbs8qKPfKKVg" name="Horizonte4zeros"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_070K4NIEEeKbs8qKPfKKVg" name="Desenvolvimento Urbano de Jaguarão" useCase="_5AEDcNIEEeKbs8qKPfKKVg">
+      <ownedUseCase xmi:id="_5AEDcNIEEeKbs8qKPfKKVg" name="Ver informações" subject="_070K4NIEEeKbs8qKPfKKVg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8msL4NIEEeKbs8qKPfKKVg" name="Desev. em Jaguarão">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_-SuP4NIEEeKbs8qKPfKKVg" name="Ver Informações (texto)"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="__6p3ANIEEeKbs8qKPfKKVg" name="Cadastrar-se"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_SDwxcNIFEeKbs8qKPfKKVg" name="Ver formações (imagens)"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_drKSYNIFEeKbs8qKPfKKVg" name="Responder Questionário"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_cU304NIFEeKbs8qKPfKKVg" name="Receber Email"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_YUJKYNIFEeKbs8qKPfKKVg" name="Cadastrado">
+    <generalization xmi:id="_-NswgNIFEeKbs8qKPfKKVg" general="_nUTW4NIFEeKbs8qKPfKKVg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_nUTW4NIFEeKbs8qKPfKKVg" name="Internauta"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_A9taANIGEeKbs8qKPfKKVg" name="A_cadastrado_responder questionário" memberEnd="_A9taAdIGEeKbs8qKPfKKVg _A9taBNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_A9taAdIGEeKbs8qKPfKKVg" name="cadastrado" type="_YUJKYNIFEeKbs8qKPfKKVg" association="_A9taANIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A9taAtIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A9taA9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_A9taBNIGEeKbs8qKPfKKVg" name="responder questionário" type="_drKSYNIFEeKbs8qKPfKKVg" association="_A9taANIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A9taBdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A9taBtIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BplokNIGEeKbs8qKPfKKVg" name="A_cadastrado_reseber email" memberEnd="_BplokdIGEeKbs8qKPfKKVg _BpmPodIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_BplokdIGEeKbs8qKPfKKVg" name="cadastrado" type="_YUJKYNIFEeKbs8qKPfKKVg" association="_BplokNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BploktIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BpmPoNIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_BpmPodIGEeKbs8qKPfKKVg" name="reseber email" type="_cU304NIFEeKbs8qKPfKKVg" association="_BplokNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BpmPotIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BpmPo9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_B4zwUNIGEeKbs8qKPfKKVg" name="package"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EqU1sNIGEeKbs8qKPfKKVg" name="A_internauta_cadastrar-se" memberEnd="_EqU1sdIGEeKbs8qKPfKKVg _EqU1tNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_EqU1sdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_EqU1sNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EqU1stIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EqU1s9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_EqU1tNIGEeKbs8qKPfKKVg" name="cadastrar-se" type="__6p3ANIEEeKbs8qKPfKKVg" association="_EqU1sNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EqU1tdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EqU1ttIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Fg87sNIGEeKbs8qKPfKKVg" name="A_internauta_ver informações (texto)" memberEnd="_Fg87sdIGEeKbs8qKPfKKVg _Fg87tNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_Fg87sdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_Fg87sNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fg87stIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fg87s9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Fg87tNIGEeKbs8qKPfKKVg" name="ver informações (texto)" type="_-SuP4NIEEeKbs8qKPfKKVg" association="_Fg87sNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fg87tdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fg87ttIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_HDhhsNIGEeKbs8qKPfKKVg" name="A_internauta_responder questionário" memberEnd="_HDhhsdIGEeKbs8qKPfKKVg _HDhhtNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_HDhhsdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_HDhhsNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HDhhstIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HDhhs9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_HDhhtNIGEeKbs8qKPfKKVg" name="responder questionário" type="_drKSYNIFEeKbs8qKPfKKVg" association="_HDhhsNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HDhhtdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HDhhttIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_HkA_oNIGEeKbs8qKPfKKVg" name="A_internauta_ver formações (imagens)" memberEnd="_HkA_odIGEeKbs8qKPfKKVg _HkA_pNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_HkA_odIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_HkA_oNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HkA_otIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HkA_o9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_HkA_pNIGEeKbs8qKPfKKVg" name="ver formações (imagens)" type="_SDwxcNIFEeKbs8qKPfKKVg" association="_HkA_oNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HkA_pdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HkA_ptIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_H9vHMNIGEeKbs8qKPfKKVg" name="A_internauta_ver informaçoes (audio)" memberEnd="_H9vHMdIGEeKbs8qKPfKKVg _H9vHNNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_H9vHMdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_H9vHMNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H9vHMtIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H9vHM9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_H9vHNNIGEeKbs8qKPfKKVg" name="ver informaçoes (audio)" type="_D-p38NIFEeKbs8qKPfKKVg" association="_H9vHMNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H9vHNdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H9vHNtIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IlnmkNIGEeKbs8qKPfKKVg" name="A_internauta_cadastrar-se" memberEnd="_IlnmkdIGEeKbs8qKPfKKVg _IlnmlNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_IlnmkdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_IlnmkNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IlnmktIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ilnmk9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_IlnmlNIGEeKbs8qKPfKKVg" name="cadastrar-se" type="_DCnGcNIFEeKbs8qKPfKKVg" association="_IlnmkNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IlnmldIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IlnmltIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JrJEMNIGEeKbs8qKPfKKVg" name="A_internauta_ver imagens (imagens)" memberEnd="_JrJEMdIGEeKbs8qKPfKKVg _JrJENNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_JrJEMdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_JrJEMNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JrJEMtIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JrJEM9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JrJENNIGEeKbs8qKPfKKVg" name="ver imagens (imagens)" type="_Lxm24NIFEeKbs8qKPfKKVg" association="_JrJEMNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JrJENdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JrJENtIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KJudoNIGEeKbs8qKPfKKVg" name="A_internauta_interagir" memberEnd="_KJudodIGEeKbs8qKPfKKVg _KJudpNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_KJudodIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_KJudoNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KJudotIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KJudo9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_KJudpNIGEeKbs8qKPfKKVg" name="interagir" type="_OuNK4NIFEeKbs8qKPfKKVg" association="_KJudoNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KJudpdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KJudptIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_LoIVUNIGEeKbs8qKPfKKVg" name="A_internauta_ver infromações (video)" memberEnd="_LoIVUdIGEeKbs8qKPfKKVg _LoIVVNIGEeKbs8qKPfKKVg">
+    <ownedEnd xmi:id="_LoIVUdIGEeKbs8qKPfKKVg" name="internauta" type="_nUTW4NIFEeKbs8qKPfKKVg" association="_LoIVUNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LoIVUtIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LoIVU9IGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_LoIVVNIGEeKbs8qKPfKKVg" name="ver infromações (video)" type="_CG3P4NIFEeKbs8qKPfKKVg" association="_LoIVUNIGEeKbs8qKPfKKVg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LoIVVdIGEeKbs8qKPfKKVg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LoIVVtIGEeKbs8qKPfKKVg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

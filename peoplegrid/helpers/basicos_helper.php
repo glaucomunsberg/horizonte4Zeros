@@ -416,33 +416,61 @@ function jTableEnd(){
     $GLOBALS['temp'] = '';
     return $retorno;
 }
-    function form_getGrid($nomePai,$id,$size,$rate,$corBase ){
-        $retorno = "<div id='$nomePai' class='$nomePai'></div>";
-        $retorno .= "<script>
-                        createGrid('$id',$size,'$nomePai','$rate');
-                        ";
-        $retorno .= '$corBase'.$id.' = \''.$corBase.'\'
-                     $desenhar'.$id.' = false;
-                     $cor'.$id.' = $corAnterior'.$id.' = $corBase'.$id.';
+function form_getGrid($nomePai,$id,$size,$rate,$corBase ){
+    $retorno = "<div id='$nomePai' class='$nomePai'></div>";
+    $retorno .= "<script>
+                    createGrid('$id',$size,'$nomePai','$rate');
+                    ";
+    $retorno .= '$corBase'.$id.' = \''.$corBase.'\'
+                 $desenhar'.$id.' = false;
+                 $cor'.$id.' = $corAnterior'.$id.' = $corBase'.$id.';
 
-                     $("#'.$id.'").selectable();
-                     $("#'.$id.'").css(\'cursor\',\'url('.BASE_URL.'static/img/pen.cur)\');
-                     $("#'.$id.' div").mousedown(function(){
-                       $desenhar'.$id.' =  true;  
-                     });
-                     $("#'.$id.' div").mouseup(function(){
-                        $desenhar'.$id.' =  false;
-                    });
-                    $("#'.$id.' div").mousemove(function(){
-                        if( $desenhar'.$id.'){
-                            $(this).css(\'background-color\',$cor'.$id.'); 
-                        }
-                    });
-                    $("#desenhar'.$id.' div").click(function(){
-                            $(this).css(\'background-color\',$cor'.$id.'); 
-                    });
-                    </script>';
+                 $("#'.$id.'").selectable();
+                 $("#'.$id.'").css(\'cursor\',\'url('.BASE_URL.'static/img/pen.cur)\');
+                 $("#'.$id.' div").mousedown(function(){
+                   $desenhar'.$id.' =  true;  
+                 });
+                 $("#'.$id.' div").mouseup(function(){
+                    $desenhar'.$id.' =  false;
+                });
+                $("#'.$id.' div").mousemove(function(){
+                    if( $desenhar'.$id.'){
+                        $(this).css(\'background-color\',$cor'.$id.'); 
+                    }
+                });
+                $("#desenhar'.$id.' div").click(function(){
+                        $(this).css(\'background-color\',$cor'.$id.'); 
+                });
+                </script>';
+
+    return $retorno;
+}
+if( ! function_exists('getCalendario') ){
+
+    function getCalendario($name = 'calendario', $value = '', $isDesabled = false){
+        $retorno = '
+         <script>
+	$(function() {
+		$( "#'.$name.'" ).datepicker({
+			showOn: "button",
+			buttonImage: "'.BASE_URL.'static/img/calendar.gif",
+			buttonImageOnly: true
+                        
+		});
+                ';
+        if($isDesabled)
+           $retorno = $retorno.'$( "'.$name.'" ).datepicker("disable");';
         
+        $retorno = $retorno.'
+	});
+	</script>
+        <input id="'.$name.'" type="text"  value="'.$value.'" class=" ui-state-default">
+        ';
         return $retorno;
+        
+        
     }
+    
+    
+}
 ?>

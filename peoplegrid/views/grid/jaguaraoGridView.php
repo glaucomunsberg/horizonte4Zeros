@@ -23,7 +23,7 @@
             <div class="span5">
                 <br>
                 <h3><div id="questao_area"></div></h3>
-                <div id="questao_def"></div>
+                <div id="questao_def" style="min-height: 60px"></div>
                 <br>
                 <div id="row"><button class="btn btn-success pull-right" href="#" onClick="trazerProximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button></div>
                 <br>
@@ -145,8 +145,8 @@
                         <br>
 
                         <div class="control-group">
-                            <?= lang('formDtNascimento') ?>
-                            <input type="text" class="span3" id="txtDtNascimento" placeholder="Digite a sua data de nascimento">
+                            <?=lang('formDtNascimento') ?>
+                            <?=getCalendario('caledario')?>
                         </div>
 
                         <br>

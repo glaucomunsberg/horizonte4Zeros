@@ -87,17 +87,20 @@
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
                     <? foreach ($projetos as $projeto) { ?>
                         <div class="span3 ">
-                            <a href="#projeto<?= $projeto->id ?>"><button class="btn btn<?
+                            <a href="#projeto<?= $projeto->id ?>"><?
                                 switch ($projeto->id) {
-                                    case 1: echo '-success';
+                                    case 1:
+                                        echo '<button class="btn btn-success">'.lang('horizonteLerMais').'</button>';
+                                        echo '<button onClick="participarPeopleGrid()" class="btn btn-primary pull-right">'.lang('horizonteParticipar').'</button>';
                                         break;
-                                    case 2: echo '-warning';
+                                    case 2: echo '<button class="btn btn-warning">'.lang('horizonteLerMais').'</button>';
                                         break;
-                                    case 3: echo '-danger';
+                                    case 3: echo '<button class="btn btn-danger">'.lang('horizonteLerMais').'</button>';
                                         break;
-                                    case 4: break;
+                                    case 4: echo '<button class="btn">'.lang('horizonteLerMais').'</button>';
+                                        break;
                                 }
-                                ?>"><?= lang('horizonteLerMais') ?></button></a>
+                                ?></a>
                         </div>    
                     <? } ?>
                 </div>
@@ -320,9 +323,11 @@
 
             $(this).find('div').hide();
         });
-
+        function participarPeopleGrid(){
+            location.href = '<?= BASE_URL ?>peopleGrid/';
+        }
         function irEnjoy() {
-            location.href = '<?= BASE_URL ?>site/enjoy'
+            location.href = '<?= BASE_URL ?>site/enjoy';
         }
 
 </script>

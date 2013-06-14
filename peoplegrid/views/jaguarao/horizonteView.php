@@ -54,7 +54,7 @@
 
     <br>
     
-    <div id="ola" style="margin-top:40px">
+    <div id="row-fluid" style="margin-top:40px">
         <div class="row-fluid">
             <div class="span12" class="zoomTarget" data-targetsize="0.45" data-duration="600" >é 1</div>
         </div>
