@@ -421,6 +421,7 @@ function form_getGrid($nomePai,$id,$size,$rate,$corBase ){
     $retorno .= "<script>
                     createGrid('$id',$size,'$nomePai','$rate');
                     ";
+    
     $retorno .= '$corBase'.$id.' = \''.$corBase.'\'
                  $desenhar'.$id.' = false;
                  $cor'.$id.' = $corAnterior'.$id.' = $corBase'.$id.';
@@ -434,6 +435,11 @@ function form_getGrid($nomePai,$id,$size,$rate,$corBase ){
                     $desenhar'.$id.' =  false;
                 });
                 $("#'.$id.' div").mousemove(function(){
+                    if( $desenhar'.$id.'){
+                        $(this).css(\'background-color\',$cor'.$id.'); 
+                    }
+                });
+                $("#'.$id.' div").mousedown(function(){
                     if( $desenhar'.$id.'){
                         $(this).css(\'background-color\',$cor'.$id.'); 
                     }
