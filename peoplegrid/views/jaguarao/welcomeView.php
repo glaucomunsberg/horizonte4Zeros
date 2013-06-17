@@ -6,7 +6,12 @@
     <script type="text/javascript" src="<?=BASE_URL?>static/js/plax.js"></script>
   </head>
   <body>
-    <div id="carregaar" ><?=lang('horizonteCarregando')?></div>
+    <div id="loading" class="row-fluid">
+        <div class="span12">
+            <img src="<?=BASE_URL?>static/img/ajax-loader.gif" width="16" height="11" alt="ajax-loader"/>
+            <?=lang('horizonteCarregando')?>
+        </div>
+    </div>
     <div id="shell">
       <img src="<?=BASE_URL?>static/img/logo_horizonte.png" onClick="paraOMundo('site_horizonte')" width="200" height="auto" data-xrange="90" data-yrange="90" id="plax-horizonte"/>
       <img src="<?=BASE_URL?>static/img/logo_quatro.png" width="100" height="100" data-xrange="10" data-yrange="10" id="plax-logo"/>
@@ -50,9 +55,11 @@
     </style>
     <script type="text/javascript">
       var mundoEscolhido= '';
-
+      $(document).load(function(){
+        $('#loading').show();
+      });
       $(document).ready(function () {
-        $('#carregaar').hide();
+        $('#loading').hide();
         $('#shell img').plaxify();
         $.plax.enable();
       });

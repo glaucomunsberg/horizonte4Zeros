@@ -1,26 +1,4 @@
-<!doctype html>
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
-    <head>
-      <link rel="shortcut icon" href="<?=IMG?>/favicon.ico">
-      <meta name="author" content="Glauco Roberto Munsberg">
-        <meta charset="UTF-8">
-        <meta name="author" content="Glauco Roberto">
-        <meta name="description" content="<?=lang('cabecalhoTitle');?>">
-        <title><?=lang('horizonte0000');?></title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-        <script>
-            var BASE_URL = '<?=BASE_URL?>';
-            var CSS = '<?=CSS?>';
-            var IMG = '<?=IMG?>';
-            var JS = '<?=JS?>';
-        </script>
-        <link rel="stylesheet" href="<?=CSS?>/metro-bootstrap.css">
-        <link rel="stylesheet" href="<?=CSS?>/estiloPadrao.css">
-        <script type="text/javascript" src="<?=JS?>/jquery-1.8.2.js"></script>
-         </head>
-    <body data-spy="scroll" data-target=".subnav" data-offset="50" screen_capture_injected="true">
-
+<? $this->load->view('../../static/views/cabecalhoPublicoView') ?>
 <script src="<?=BASE_URL?>static/js/jquery.zoomooz-helpers.js"></script>
 <script src="<?=BASE_URL?>static/js/jquery.zoomooz-anim.js"></script>
 <script src="<?=BASE_URL?>static/js/jquery.zoomooz-core.js"></script>
@@ -51,25 +29,37 @@
             </div>
         </div>
     </div>
-
-    <br>
-    
     <div id="row-fluid" style="margin-top:40px">
         <div class="row-fluid">
-            <div class="span12" class="zoomTarget" data-targetsize="0.45" data-duration="600" >é 1</div>
-        </div>
-        <div class="row">
-            <div class="span3 shape shape-rotation zoomTarget" data-targetsize="0.15" data-duration="600">é 2</div>
-            <div class="span3 shape shape-rotation zoomTarget" data-targetsize="0.60" data-duration="600" style="-webkit-transform: rotate(10deg) translate(0px,0px);-moz-transform: rotate(10deg) translate(0px,0px);-o-transform: rotate(10deg) translate(0px,0px)">é 3 </div>
-            <div class="span3 shape shape-rotation zoomTarget" data-targetsize="0.45" data-duration="600" style="-webkit-transform: rotate(60deg) translate(0px,0px);-moz-transform: rotate(60deg) translate(0px,0px);-o-transform: rotate(60deg) translate(0px,0px)">é 4</div>
-            <div class="span3 shape shape-rotation zoomTarget" data-targetsize="0.25" data-duration="600" style="-webkit-transform: rotate(40deg) translate(0px,0px);-moz-transform: rotate(40deg) translate(0px,0px);-o-transform: rotate(40deg) translate(0px,0px)">é 5</div>
+            <div id="loading" class="row-fluid">
+                <div class="span12" style="text-align: center">
+                    <img src="<?=BASE_URL?>static/img/ajax-loader.gif" width="16" height="11" alt="ajax-loader"/>
+                    <?=lang('horizonteCarregando')?>
+                </div>
+            </div>
         </div>
     </div>
-
+    <div class="row" style="text-align: center">
+        <div class="span5">
+            <? $this->load->view('jaguarao/horizonteEsquerdaView') ?>
+        </div>
+        <div class="span1">
+                <!-- CENTRO -->
+        </div>
+        <div class="span5">
+            <? $this->load->view('jaguarao/horizonteDireitaView') ?>
+        </div>
+    </div>
 </div>
 <script>
     
-   
-
+  $(document).load(function(){
+    $('#loading').show();
+  });
+  
+  $(document).ready(function () {
+    $('#loading').hide();
+  });
+  
 </script>
 <?$this->load->view('../../static/views/rodapeView')?>
