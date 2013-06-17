@@ -13,7 +13,7 @@ root {
     filter:opacity(alpha=70); /* para o IE */
     -moz-opacity:0.70; /* para o FireFox */
     opacity:0.70; /* para o outros Navegadores */
-    background-color: #fff;
+    background-color: #ffff;
 }
 .caixaFotoMembroEquipe{
     margin-top:5px;margin-left:1px ;height: 150px; width: 150px; cursor:pointer; background-size:contain ;background-repeat: no-repeat;margin-right:1px; float:left

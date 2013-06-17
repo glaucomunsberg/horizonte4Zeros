@@ -144,7 +144,6 @@ CREATE TABLE IF NOT EXISTS `questionario` (
   `questao_21` blob,
   `questao_22` blob,
   `questao_23` blob,
-  `cidade` varchar(50) DEFAULT NULL,
   `participou_atividade_parecida` char(1) DEFAULT NULL,
   `voce_pensou_como` varchar(50) DEFAULT NULL,
   `pessoa_id` bigint(20) unsigned DEFAULT NULL,

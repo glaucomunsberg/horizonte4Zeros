@@ -61,7 +61,6 @@
         </div>
     </section>
 
-
     <section id="formulario" style="margin-top: 40px; display:none"> 
         <div class="row">
             <form class="well">
@@ -84,19 +83,23 @@
                         </div>
 
                         <br>
+                         <div class="control-group">  
+                         <label class="control-label">
+                            <?= lang('formPensouComo') ?>
+                                <div class="controls">
+                                <ul><input type="radio" name="pensouComo" id="pensouComo" value="option1">
+                                
+                                    <?= lang('formPensouComoOpt1') ?>
+                                    </ul>
 
-                        <?= lang('formPensouComo') ?>
-                        <div class="control-group">
-                            <label class="radio">
-                                <input type="radio" name="pensouComo" id="pensouComo" value="option1">
-                                <?= lang('formPensouComoOpt1') ?>
+                                    </div>
+                                    
                             </label>
-
+                        </div>
                             <label class="radio">
                                 <input type="radio" name="pensouComo" id="pensouComo" value="option2">
                                 <?= lang('formPensouComoOpt2') ?>
                             </label>
-
                             <label class="radio">
                                 <input type="radio" name="pensouComo" id="pensouComo" value="option3">
                                 <?= lang('formPensouComoOpt3') ?>
@@ -187,6 +190,7 @@
 
 <script>
     var cont = 1;
+    var questao = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
        
     
@@ -251,21 +255,29 @@
      * Trás a proxima questão a ser repsondida
      * 
      */
+    
+    
     function trazerProximaQuestao(){
+        
+        var grid = ''; 
+
         if (cont == 23){
             form_identificacao();
+            for (var i = 0; i < 23; i++){
+                console.log(questao[i]);
+            }
         }
-        
-        // DEVANEIOS
-        //peopleGrid = new jsGrid.js("peopleGrid1");
-        //peopleGrid.setTextMatrix(0,0, "0-0");
-        //console.log(peopleGrid.getTextMatrix(0,0));
-        //---
-        
-        $('#peopleGrid1 div').each(function(){
-            
-           console.log($(this.id).css('background-color'));
+        $('#peopleGrid1 div').each(function(){ 
+          if (($(this).css('background-color')) == "rgba(0, 0, 0, 0)"){
+            grid += '0';
+          } else {
+            grid += '1';  
+          }  
         });
+        
+        questao[cont] = grid;
+        
+        //console.log(questao[cont]);
         
         $("#questao_area").html(perguntas[cont]['questaoSobre']);
         $("#questao_def").html(perguntas[cont]['questao']); 
@@ -280,6 +292,8 @@
     }
         
     function enviar(){
+        
+        
         
         formQuestionario_submit();
         
