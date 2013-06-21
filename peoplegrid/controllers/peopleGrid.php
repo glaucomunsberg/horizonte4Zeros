@@ -14,6 +14,7 @@ class PeopleGrid extends CI_Controller {
 
         $this->load->model('pessoaModel', 'pessoaModel');
         $this->load->model('perguntasModel', 'perguntasModel');
+        $this->load->model('questionarioModel', 'questionarioModel');
     }
 
     public function index($userFbid = 0) {
@@ -72,8 +73,10 @@ class PeopleGrid extends CI_Controller {
 
     //verificar esse tratamento
     function salvar() {
-
-        $this->questionarioModel->inserir($_POST);
+        
+        
+        
+       $this->questionarioModel->inserir($_POST);
        // $this->pessoaModel->inserir($_POST);
         echo json_encode( 'sucessototal');
     }

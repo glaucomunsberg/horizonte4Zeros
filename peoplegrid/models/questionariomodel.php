@@ -38,7 +38,7 @@
                 $this->db->set('questao_22', $array['21']);
                 $this->db->set('questao_23', $array['22']);
 
-                $this->db->set('pessia_id', '6');        // vem da primeira insercao
+                $this->db->set('pessoa_id', '6');        // vem da primeira insercao
                 $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP'); 
                 $this->db->insert('questionario'); 
             $this->db->trans_complete();
