@@ -84,7 +84,11 @@
                                     <input type="radio" name="atividadeParecida" id="atividadeParecida" value="<?= lang('nao')?>">
                                     <?= lang('nao') ?>
                                     </ul></ul></ul>
-                               </label>
+                                </label>
+                                
+                                <label class="control-group">
+                                    <input type="radio" name="genero" id="genero" hidden="true" value="null" checked>
+                                </label>
                             </div>
                         </div>
                         <hr>
@@ -126,6 +130,11 @@
                                         <?= lang('formPensouComoOpt5') ?>
                                     </ul>
                                 </label>
+                                
+                                <label class="control-group">
+                                    <input type="radio" name="pensouComo" id="genero" hidden="true" value="null" checked>
+                                </label>
+                                
                             </div>
                         </div>
                     </div>
@@ -175,15 +184,18 @@
                         <div class="control-group">
                             <label class="control-group">
                                 <ul>
-                                    <input type="radio" name="genero" id="genero" value="option1">
+                                    <input type="radio" name="genero" id="genero" value="<?=lang('formMasculino')?>">
                                     <?= lang('formMasculino') ?>
                                 </ul>
                             </label>
                             <label class="control-group">
                                 <ul>
-                                    <input type="radio" name="genero" id="genero" value="option2">
+                                    <input type="radio" name="genero" id="genero"  value="<?=lang('formFeminino')?>" >
                                     <?= lang('formFeminino') ?>
                                 </ul>
+                            </label>
+                            <label class="control-group">
+                                    <input type="radio" name="genero" id="genero" hidden="true" value="null" checked>
                             </label>
                         </div>
 
@@ -216,7 +228,7 @@
                         <div class="control-group">
                             <label class="control-group">
                                 <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option1">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt1')?>">
                                     <?= lang('formNivelEscolaridadeOpt1') ?>
                                 </ul>
                             </label>
@@ -224,7 +236,7 @@
 
                             <label class="control-group">
                                 <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option2">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt2')?>">
                                     <?= lang('formNivelEscolaridadeOpt2') ?>
                                 </ul>
                             </label>
@@ -232,16 +244,20 @@
 
                             <label class="control-group">
                                 <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option3">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt3')?>">
                                     <?= lang('formNivelEscolaridadeOpt3') ?>
                                 </ul>
                             </label>
 
                             <label class="control-group">
                                 <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="option4">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt4')?>">
                                     <?= lang('formNivelEscolaridadeOpt4') ?>
                                 </ul>
+                            </label>
+                            
+                            <label class="control-group">
+                                    <input type="radio" name="nivelEscolaridade" id="genero" hidden="true" value="null" checked>
                             </label>
                         </div>    
 
@@ -360,18 +376,54 @@
         }
         cont++;
     }
-        
+    
+
+
     function enviar(){
-        var identifiquese,identifiquese2;
+        var pensouComo;
+        var atividadeParecida;
+        var identifiquese = [];
         
-         identifiquese = document.getElementById("pensouComo").value;
-         identifiquese2 = document.getElementById("atividadeParecida").value;
-         
-         
-         console.log(identifiquese);
-         console.log(identifiquese2);
-         alert(identifiquese);
-         alert(identifiquese2);
+
+        
+        pensouComo = document.getElementById("pensouComo").value;
+        atividadeParecida = document.getElementById("atividadeParecida").value;
+        
+        identifiquese[0] = document.getElementById("txtNome").value;
+        identifiquese[1] = document.getElementById("txtEmail").value;
+        identifiquese[2] = document.getElementById("genero").value;
+        identifiquese[3] = document.getElementById("txtCidade").value;
+        identifiquese[4] = document.getElementById("nivelEscolaridade").value;
+        identifiquese[5] = $("#calendario").val();
+        
+        $.ajax(
+        {
+            method: "post", 
+            url: BASE_URL+"peopleGrid/salvar/",
+            data: {resportasGrids: questao[1], pensouComo: pensouComo,
+                    atividadeParecida: atividadeParecida,
+                    identifiquese: identifiquese},
+            beforeSend: function(){
+                // glauco develops here
+                           },
+            complete: function(){
+                //alert('complete');
+            },
+            error: function(){
+                alert('error');
+            },
+            success: function(conteudo){
+
+                var resposta = JSON.parse(conteudo);
+                alert(resposta);
+            }
+        }
+        );
+        console.log(questao[1]);
+        console.log(identifiquese);
+        console.log(pensouComo);
+        console.log(atividadeParecida);
+        
 }
         
 </script>

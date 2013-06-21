@@ -73,42 +73,10 @@ class PeopleGrid extends CI_Controller {
     //verificar esse tratamento
     function salvar() {
 
-        $pessoa->nome = $_POST['txtNome'];
-        $pessoa->email = $_POST['txtEmail'];
-        $pessoa->genero = $_POST['rdGenero'];
-        $pessoa->dt_nascimento = $_POST['txtDtNascimento'];
-        $pessoa->cidade = $_POST['txtCidade'];
-        $pessoa->nivel_escolaridade = $_POST['rdNivelEscolaridade'];
-        $pessoa->renda_familiar = $_POST['rdRendaFamiliar'];
-
-        $questionario->questao_1 = $_POST['questao_1'];
-        $questionario->questao_2 = $_POST['questao_2'];
-        $questionario->questao_3 = $_POST['questao_3'];
-        $questionario->questao_4 = $_POST['questao_4'];
-        $questionario->questao_5 = $_POST['questao_5'];
-        $questionario->questao_6 = $_POST['questao_6'];
-        $questionario->questao_7 = $_POST['questao_7'];
-        $questionario->questao_8 = $_POST['questao_8'];
-        $questionario->questao_9 = $_POST['questao_9'];
-        $questionario->questao_10 = $_POST['questao_10'];
-        $questionario->questao_11 = $_POST['questao_11'];
-        $questionario->questao_12 = $_POST['questao_12'];
-        $questionario->questao_13 = $_POST['questao_13'];
-        $questionario->questao_14 = $_POST['questao_14'];
-        $questionario->questao_15 = $_POST['questao_15'];
-        $questionario->questao_16 = $_POST['questao_16'];
-        $questionario->questao_17 = $_POST['questao_17'];
-        $questionario->questao_18 = $_POST['questao_18'];
-        $questionario->questao_19 = $_POST['questao_19'];
-        $questionario->questao_20 = $_POST['questao_20'];
-        $questionario->questao_21 = $_POST['questao_21'];
-        $questionario->questao_22 = $_POST['questao_22'];
-        $questionario->questao_23 = $_POST['questao_23'];
-        $questionario->pap = $_POST['ja_participou_atividade_parecida'];
-        $questionario->vpc = $_POST['voce_pensou_como'];
-
-        $this->questionarioModel->inserir($questionario);
-        $this->pessoaModel->inserir($pessoa);
+        log_message('error', $_POST['pensouComo']);
+       // $this->questionarioModel->inserir($_POST);
+       // $this->pessoaModel->inserir($_POST);
+        print json_encode('sucessototal');
     }
 
 }
