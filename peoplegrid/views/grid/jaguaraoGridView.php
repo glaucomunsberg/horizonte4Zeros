@@ -204,7 +204,7 @@
                         <div class="control-group">
                             <ul>
                                 <?=lang('formDtNascimento') ?> 
-                                <?=getCalendario('caledario')?>
+                                <?=getCalendario('calendario')?>
                             </ul>
                         </div>
 
@@ -257,7 +257,7 @@
                             </label>
                             
                             <label class="control-group">
-                                    <input type="radio" name="nivelEscolaridade" id="genero" hidden="true" value="null" checked>
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" hidden="true" value="null" checked>
                             </label>
                         </div>    
 
@@ -396,36 +396,16 @@
         identifiquese[4] = document.getElementById("nivelEscolaridade").value;
         identifiquese[5] = $("#calendario").val();
         
-        $.ajax(
-        {
-            method: "post", 
-            url: BASE_URL+"peopleGrid/salvar/",
-            data: {resportasGrids: questao[1], pensouComo: pensouComo,
+        $.post( '<?=BASE_URL?>peopleGrid/salvar',{resportasGrids: questao, pensouComo: pensouComo,
                     atividadeParecida: atividadeParecida,
-                    identifiquese: identifiquese},
-            beforeSend: function(){
-                // glauco develops here
-                           },
-            complete: function(){
-                //alert('complete');
-            },
-            error: function(){
-                alert('error');
-            },
-            success: function(conteudo){
-
-                var resposta = JSON.parse(conteudo);
-                alert(resposta);
-            }
-        }
-        );
-        console.log(questao[1]);
+                    identifiquese: identifiquese});
+       
+        //console.log(questao[1]);
         console.log(identifiquese);
         console.log(pensouComo);
         console.log(atividadeParecida);
         
 }
-        
 </script>
 <?
 $this->load->view('../../static/views/rodapeView')?>

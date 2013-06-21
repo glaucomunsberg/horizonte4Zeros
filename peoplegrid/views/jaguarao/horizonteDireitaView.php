@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/twitter.png" class="pull-left">
         <div class="hero-unit btn-warning">
             <div>
@@ -15,8 +15,8 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit btn-danger">
             <a href="#" class="thumbnail">
@@ -33,8 +33,8 @@
     </div>
 </div>
 <section id="programa">
-    <div class="row">
-        <div class="span5">
+    <div class="row-fluid">
+        <div class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-success">
                 <h2>
@@ -47,8 +47,8 @@
         </div>
     </div>
 </section>
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
        <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class='hero-unit'>
             <div class="thumbnail">
@@ -70,8 +70,8 @@
     </div>
 </div>
 <section id="cromatica"> 
-    <div class="row">
-        <div class="span5">
+    <div class="row-fluid">
+        <div class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-info">
                 <h1>
@@ -85,8 +85,8 @@
     </div>
 </section>
 
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/notification.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <ul class="thumbnails">
@@ -103,8 +103,8 @@
     </div>
 </div>
 <section id="ordemento">
-    <div class="row">
-        <div class="span5">
+    <div class="row-fluid">
+        <div class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-danger">
                 <h1>

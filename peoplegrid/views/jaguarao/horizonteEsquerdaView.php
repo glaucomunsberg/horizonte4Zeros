@@ -1,5 +1,5 @@
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/flickr.png" class="pull-left">
         <div class="hero-unit">
             <div class="thumbnail">
@@ -15,8 +15,8 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <a href="#" class="thumbnail">
@@ -32,8 +32,8 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/youtube.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <ul class="thumbnails">
@@ -52,8 +52,8 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/youtube.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <ul class="thumbnails">
@@ -65,8 +65,8 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/personal.png" class="pull-left">
         <div class="hero-unit">
             <h3 style="padding-top:10px"><?= lang('peopleGridPessoasLigadas') ?></h3>
@@ -83,8 +83,8 @@
     </div>
 </div>
 <section id="paraformal">
-    <div class="row">
-        <div class="span5">
+    <div class="row-fluid">
+        <div class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-info">
                 <h1>
@@ -97,8 +97,8 @@
         </div>
     </div>
 </section>
-<div class="row">
-    <div class="span5">
+<div class="row-fluid">
+    <div class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit">
             <div class="thumbnail">
@@ -115,8 +115,8 @@
     </div>
 </div>
 <section id="drup">
-    <div class="row">
-        <div class="span5">
+    <div class="row-fluid">
+        <div class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-info">
                 <h1>
