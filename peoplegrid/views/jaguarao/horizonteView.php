@@ -32,9 +32,12 @@
             </div>
         </div>
     </div>
-    <div class="row-fluid" style="margin-top:100px">
-        <div id="loading" class="progress progress-striped active">
-            <div class="bar" style="width: 100%;"></div>
+    <div id="row-fluid" style="margin-top:50px">
+        <div class="row-fluid">
+            <div id="loading" class="hero-unit">
+                <div class="span12" style="text-align: center">
+                    <img src="<?=BASE_URL?>static/img/ajax-loader.gif" width="16" height="11" alt="ajax-loader"/>
+                    <?=lang('horizonteCarregando')?>
         </div>
         
     </div>
@@ -50,7 +53,7 @@
 <script>
   
   jQuery(window).load(function () {
-        $('#loading').hide(); 
+        $('#loading').hide('blind'); 
   });
   
   
