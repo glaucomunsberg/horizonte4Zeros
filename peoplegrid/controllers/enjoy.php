@@ -12,9 +12,9 @@ class Enjoy extends CI_Controller {
         }
 	public function index($fb_id='0')
 	{
-                $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
-                if( $this->pessoaModel->getUsuarioEquipeByUserIdFacebook($fb_id) != null){
-                    $data['pessoa'] = $this->pessoaModel->getUsuarioEquipeByUserIdFacebook($fb_id);
+                $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
+                if( $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($fb_id) != null){
+                    $data['pessoa'] = $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($fb_id);
                     $this->load->view('administrar/dasboardFiltroView',$data);
                 }else{
                     $this->load->view('administrar/naoPermitidoView');
@@ -32,8 +32,8 @@ class Enjoy extends CI_Controller {
                   define('FACEBOOK_SECRET', $this->config->item('app_fb_secret'));
                   $response = $this->parse_signed_request($_REQUEST['signed_request'],FACEBOOK_SECRET);
                   $dados = $response['registration'];
-                  if( $this->pessoaModel->getPessoaByUserIdFacebook($response['user_id']) != null){
-                      if($this->pessoaModel->getUsuarioEquipeByUserIdFacebook($response['user_id']) != null){
+                  if( $this->pessoasModel->getPessoaByUserIdFacebook($response['user_id']) != null){
+                      if($this->pessoasModel->getUsuarioEquipeByUserIdFacebook($response['user_id']) != null){
                           if($backTo != null){
                               header("Location:".$backTo.$response['user_id']);
                           }else{
@@ -47,7 +47,7 @@ class Enjoy extends CI_Controller {
                           $this->load->view('enjoy/registrandoFiltroView',$data);
                       }
                   }else{
-                      $this->pessoaModel->inserir($dados,$response['user_id']);
+                      $this->pessoasModel->inserir($dados,$response['user_id']);
                       $data['resposta'] = '<h1>'.lang('horizonteRegistrado').'<small>'.lang('horizonteRegistradoMensagem').'</small></h1>';
                       $data['voltar'] = $backTo;
                       $this->load->view('enjoy/registrandoFiltroView',$data);

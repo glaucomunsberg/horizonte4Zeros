@@ -68,30 +68,7 @@
                     <h3>finalizando...</h3>
                     <hr>
                     <div class="span12">  
-                        <div class="control-group">
-                            <b><?= lang('formJaParticipouAtividadeParecida') ?></b>
-                            <br>
-                            <div class="control-group">
-                                <label class="radio inline">
-                                    <ul><ul><ul>
-                                    <input type="radio" name="atividadeParecida" id="atividadeParecida" value="<?= lang('sim')?>">
-                                    <?= lang('sim') ?>
-                                    </ul></ul></ul>
-                                </label>
-                                    
-                                <label class="radio inline">
-                                    <ul><ul><ul>
-                                    <input type="radio" name="atividadeParecida" id="atividadeParecida" value="<?= lang('nao')?>">
-                                    <?= lang('nao') ?>
-                                    </ul></ul></ul>
-                                </label>
-                                
-                                <label class="control-group">
-                                    <input type="radio" name="genero" id="genero" hidden="true" value="null" checked>
-                                </label>
-                            </div>
-                        </div>
-                        <hr>
+                        
                         <div class="control-group">          
                             <b><?= lang('formPensouComo') ?></b>
                             <br>
@@ -128,6 +105,13 @@
                                     <ul>
                                         <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt5')?>">
                                         <?= lang('formPensouComoOpt5') ?>
+                                    </ul>
+                                </label>
+                                
+                                <label class="control-label"> 
+                                    <ul>
+                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt6')?>">
+                                        <?= lang('formPensouComoOpt6') ?>
                                     </ul>
                                 </label>
                                 
@@ -223,7 +207,7 @@
                             <ul>
                                 <?= lang('formNivelEscolaridade') ?>  
                             </ul>     
-                       </div>   
+                        </div>   
 
                         <div class="control-group">
                             <label class="control-group">
@@ -256,11 +240,54 @@
                                 </ul>
                             </label>
                             
-                            <label class="control-group">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" hidden="true" value="null" checked>
+                           <label class="control-group">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="null" checked>
                             </label>
                         </div>    
+                        
+                        
+                        <div class="control-group">
+                            <ul>
+                                <?= lang('formRendaFamiliar') ?>  
+                            </ul>     
+                        </div>   
 
+                        <div class="control-group">
+                            <label class="control-group">
+                                <ul>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt1')?>">
+                                    <?= lang('formRendaFamiliarOpt1') ?>
+                                </ul>
+                            </label>
+
+
+                            <label class="control-group">
+                                <ul>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt2')?>">
+                                    <?= lang('formRendaFamiliarOpt2') ?>
+                                </ul>
+                            </label>
+
+
+                            <label class="control-group">
+                                <ul>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt3')?>">
+                                    <?= lang('formRendaFamiliarOpt3') ?>
+                                </ul>
+                            </label>
+
+                            <label class="control-group">
+                                <ul>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt4')?>">
+                                    <?= lang('formRendaFamiliarOpt4') ?>
+                                </ul>
+                            </label>
+                            
+                           <label class="control-group">
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="null" checked>
+                            </label>
+                        </div>
+                        
                         <button class="btn-navbar" onClick="enviar()" margin="right">Enviar</button>
                     </div>
         </div>
@@ -384,8 +411,6 @@
         var atividadeParecida;
         var identifiquese = [];
         
-
-        
         pensouComo = document.getElementById("pensouComo").value;
         atividadeParecida = document.getElementById("atividadeParecida").value;
         
@@ -394,9 +419,10 @@
         identifiquese[2] = document.getElementById("genero").value;
         identifiquese[3] = document.getElementById("txtCidade").value;
         identifiquese[4] = document.getElementById("nivelEscolaridade").value;
-        identifiquese[5] = $("#calendario").val();
+        identifiquese[5] = "null" //document.getElementById("rendaFamiliar").value;
+        identifiquese[6] = $("#calendario").val();
         
-        $.post( '<?=BASE_URL?>peopleGrid/salvar',{resportasGrids: questao, pensouComo: pensouComo,
+        $.post( '<?=BASE_URL?>peopleGrid/salvar',{respostasGrids: questao, pensouComo: pensouComo,
                     atividadeParecida: atividadeParecida,
                     identifiquese: identifiquese});
        

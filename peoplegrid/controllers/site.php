@@ -8,7 +8,7 @@ class Site extends CI_Controller {
 	 */
         function __construct() {
             parent::__construct();
-            $this->load->model('pessoaModel', 'pessoaModel');
+            $this->load->model('pessoasModel', 'pessoasModel');
             $this->load->model('projetoModel', 'projetoModel');
             $this->load->model('programaModel','programaModel');
         }
@@ -20,7 +20,7 @@ class Site extends CI_Controller {
         
         public function site_desenv(){
             $this->loadLanguage();
-            $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
+            $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
             $data['programa'] = $this->programaModel->getPrograma(1);
             $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
             $data['projeto1'] = $this->projetoModel->getProjeto(1);
@@ -32,7 +32,7 @@ class Site extends CI_Controller {
         
         public function site_horizonte(){
             $this->loadLanguage();
-            $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
+            $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
             $data['programa'] = $this->programaModel->getPrograma(1);
             $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
             $data['projeto1'] = $this->projetoModel->getProjeto(1);
@@ -51,8 +51,8 @@ class Site extends CI_Controller {
                   define('FACEBOOK_SECRET', $this->config->item('app_fb_secret'));
                   $response = $this->parse_signed_request($_REQUEST['signed_request'],FACEBOOK_SECRET);
                   $dados = $response['registration'];
-                  if( $this->pessoaModel->getPessoaByUserIdFacebook($response['user_id']) != null){
-                      if($this->pessoaModel->getUsuarioEquipeByUserIdFacebook($response['user_id']) != null){
+                  if( $this->pessoasModel->getPessoaByUserIdFacebook($response['user_id']) != null){
+                      if($this->pessoasModel->getUsuarioEquipeByUserIdFacebook($response['user_id']) != null){
                           header("Location:".BASE_URL.'administrar/index/'.$response['user_id']);
                           
                           
@@ -61,7 +61,7 @@ class Site extends CI_Controller {
                           $this->load->view('enjoy/registrandoFiltroView',$data);
                       }
                   }else{
-                      $this->pessoaModel->inserir($dados,$response['user_id']);
+                      $this->pessoasModel->inserir($dados,$response['user_id']);
                       $data['resposta'] = '<h1>'.lang('horizonteRegistrado').'<small>'.lang('horizonteRegistradoMensagem').'</small></h1>';
                       $this->load->view('enjoy/registrandoFiltroView',$data);
                   }
@@ -78,7 +78,7 @@ class Site extends CI_Controller {
          * @param type $idFacebook
          */
         public function logarComFacebook($idFacebook){
-            if($this->pessoaModel->getUsuarioEquipeByUserIdFacebook($idFacebook) != null){
+            if($this->pessoasModel->getUsuarioEquipeByUserIdFacebook($idFacebook) != null){
                   header("Location:".BASE_URL.'administrar/index/'.$idFacebook);
                   
               }else{

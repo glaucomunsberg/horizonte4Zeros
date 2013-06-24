@@ -8,7 +8,7 @@ class Administrar extends CI_Controller {
 	 */
         function __construct() {
             parent::__construct();
-            $this->load->model('pessoaModel', 'pessoaModel');
+            $this->load->model('pessoasModel', 'pessoasModel');
             $this->load->model('programaModel','programaModel');
             $this->load->model('projetoModel','projetoModel');
         }
@@ -20,14 +20,14 @@ class Administrar extends CI_Controller {
          */
 	public function index($fb_id='0')
 	{
-                $data['pessoas'] = $this->pessoaModel->getPessoasOnFacebook();
+                $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
                 $data['projeto1'] = $this->projetoModel->getProjeto(1);
                 $data['projeto2'] = $this->projetoModel->getProjeto(2);
                 $data['projeto3'] = $this->projetoModel->getProjeto(3);
                 $data['projeto4'] = $this->projetoModel->getProjeto(4);
                 $data['programa'] = $this->programaModel->getPrograma(1);
-                if( $this->pessoaModel->getUsuarioEquipeByUserIdFacebook($fb_id) != null){
-                    $data['pessoa'] = $this->pessoaModel->getUsuarioEquipeByUserIdFacebook($fb_id);
+                if( $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($fb_id) != null){
+                    $data['pessoa'] = $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($fb_id);
                     $this->load->view('administrar/dasboardFiltroView',$data);
                 }else{
                     $this->load->view('administrar/naoPermitidoView');
@@ -38,7 +38,7 @@ class Administrar extends CI_Controller {
 
         public function salvarPrograma(){
             
-            if( $this->pessoaModel->getUsuarioEquipeByUserIdFacebook($_POST['txtFbId']) != null){
+            if( $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($_POST['txtFbId']) != null){
                 print json_encode($this->programaModel->setPrograma($_POST));
             }else{
                 print json_encode('false');
@@ -47,7 +47,7 @@ class Administrar extends CI_Controller {
         }
         
         public function salvarProjeto(){
-            if( $this->pessoaModel->getUsuarioEquipeByUserIdFacebook($_POST['txtFbId']) != null){
+            if( $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($_POST['txtFbId']) != null){
                 print json_encode($this->projetoModel->atualizarProjeto($_POST));
             }else{
                 print json_encode('false');

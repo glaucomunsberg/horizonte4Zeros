@@ -95,13 +95,14 @@ $lang['nao'] = 'Não';
  * 
  */
 $lang['formIdentifiquese'] = 'Identifique-se';
-$lang['formJaParticipouAtividadeParecida'] = 'Já participou de atividade que discute questões urbanas na sua cidade?';
-$lang['formPensouComo'] = 'Ao responder o questionário você pensou como?';
-$lang['formPensouComoOpt1'] = 'Representante da população.';
-$lang['formPensouComoOpt2'] = 'Um líder comunitario e/ou ativista.';
-$lang['formPensouComoOpt3'] = 'Representante politico e/ou/gestor.';
-$lang['formPensouComoOpt4'] = 'Um técnico municipal e/ou planejador urbano.';
-$lang['formPensouComoOpt5'] = 'Um investidor e/ou empresário.';
+//$lang['formJaParticipouAtividadeParecida'] = 'Já participou de atividade que discute questões urbanas na sua cidade?';
+$lang['formPensouComo'] = 'Ao responder o questionário, você pensou como?';
+$lang['formPensouComoOpt1'] = 'Representante da população';
+$lang['formPensouComoOpt2'] = 'Um líder comunitario e/ou ativista';
+$lang['formPensouComoOpt3'] = 'Representante político e/ou gestor';
+$lang['formPensouComoOpt4'] = 'Um técnico municipal e/ou planejador urbano';
+$lang['formPensouComoOpt5'] = 'Um investidor e/ou empresário';
+$lang['formPensouComoOpt6'] = 'Outro';
 $lang['formInformacoesPessoais'] = 'Informações Pessoais';
 $lang['formNome'] = 'Nome';
 $lang['formEmail'] = 'Email';

@@ -12,7 +12,7 @@ class PeopleGrid extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        $this->load->model('pessoaModel', 'pessoaModel');
+        $this->load->model('pessoasModel', 'pessoasModel');
         $this->load->model('perguntasModel', 'perguntasModel');
         $this->load->model('questionarioModel', 'questionarioModel');
     }
@@ -74,7 +74,7 @@ class PeopleGrid extends CI_Controller {
     //verificar esse tratamento
     function salvar() {
         
-        
+       $this->pessoasModel->inserir_new($_POST['identifiquese']); 
         
        $this->questionarioModel->inserir($_POST);
        // $this->pessoaModel->inserir($_POST);
