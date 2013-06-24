@@ -13,7 +13,7 @@ root {
     filter:opacity(alpha=70); /* para o IE */
     -moz-opacity:0.70; /* para o FireFox */
     opacity:0.70; /* para o outros Navegadores */
-    background-color: #ffff;
+    background-color: #fff;
 }
 .caixaFotoMembroEquipe{
     margin-top:5px;margin-left:1px ;height: 150px; width: 150px; cursor:pointer; background-size:contain ;background-repeat: no-repeat;margin-right:1px; float:left
@@ -32,3 +32,24 @@ root {
     border-width: 0 1px 1px 0;
     float: left;
 }
+
+
+.entorta{
+	-webkit-transform: rotate(10deg) translate(0px,0px);
+	-moz-transform: rotate(10deg) translate(0px,0px);
+	-o-transform: rotate(10deg) translate(0px,0px);
+}
+
+.escala{
+    -webkit-transform: scaleX(0.7) translateY(0px) !important;
+    -moz-transform: scaleX(0.7) translateY(0px) !important;
+    -ms-transform: scaleX(0.7) translateY(0px) !important;
+    -o-transform: scaleX(0.7) translateY(0px) !important;
+}
+
+.rotacao{
+    -moz-transform: rotate(-50deg) translateX(-60px);
+    -ms-transform: rotate(-50deg) translateX(-60px);
+    -o-transform: rotate(-50deg) translateX(-60px);
+}
+

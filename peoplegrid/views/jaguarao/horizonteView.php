@@ -41,11 +41,11 @@
         </div>
         
     </div>
-    <div class="row-fluid" style="text-align: center">
+    <div id="conteudo" class="row-fluid" style="text-align: center">
         <div class="span6" id="esquerda">
             <? $this->load->view('jaguarao/horizonteEsquerdaView') ?>
         </div>
-        <div class="span6">
+        <div class="span6" id="direita">
             <? $this->load->view('jaguarao/horizonteDireitaView') ?>
         </div>
     </div>
@@ -56,6 +56,27 @@
         $('#loading').hide('blind'); 
   });
   
+  $('#conteudo quadro').each(function(){
+      var number = Math.floor(Math.random() * 3);
+      console.log(number);
+        switch(number){
+          case 0:
+            $(this).addClass("rotacao");
+            $(this).addClass("zoomTarget");
+            break;
+          case 1:
+            $(this).addClass("entorta");
+            $(this).addClass("zoomTarget");
+            break;
+          case 2:
+            $(this).addClass("escala");
+            $(this).addClass("zoomTarget");
+            break;
+                   
+      }
+      
+      //$(this).attr("data-targetsize","0.45")
+  })
   
 </script>
 <?$this->load->view('../../static/views/rodapeView')?>

@@ -1,5 +1,5 @@
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/twitter.png" class="pull-left">
         <div class="hero-unit btn-warning">
             <div>
@@ -12,11 +12,10 @@
             <a href="https://twitter.com/search?q=jaguarao&src=typd" class="btn btn-success pull-right"><?=lang('peopleGridVai')?></a>
             
         </div>
-    </div>
+    </quadro>
 </div>
-
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit btn-danger">
             <a href="#" class="thumbnail">
@@ -30,11 +29,11 @@
                 <a href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2013/06/05/horizonte4zerosp9/" class="btn btn-success pull-right"><?=lang('peopleGridLeiaMais')?></a>
             </p>
         </div>
-    </div>
+    </quadro>
 </div>
 <section id="programa">
     <div class="row-fluid">
-        <div class="span12">
+        <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-success">
                 <h2>
@@ -44,11 +43,11 @@
                     <?=$programa->resumo?>
                 </p>
             </div>
-        </div>
+        </quadro>
     </div>
 </section>
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
        <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class='hero-unit'>
             <div class="thumbnail">
@@ -67,11 +66,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </quadro>
 </div>
 <section id="cromatica"> 
     <div class="row-fluid">
-        <div class="span12">
+        <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-info">
                 <h1>
@@ -81,12 +80,12 @@
                     <?=$projeto4->resumo?>
                 </p>
             </div>
-        </div>
+        </quadro>
     </div>
 </section>
 
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/notification.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <ul class="thumbnails">
@@ -100,11 +99,11 @@
               </p>
             </ul>
         </div>
-    </div>
+    </quadro>
 </div>
 <section id="ordemento">
     <div class="row-fluid">
-        <div class="span12">
+        <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-danger">
                 <h1>
@@ -114,6 +113,6 @@
                     <?=$projeto2->resumo?>
                 </p>
             </div>
-        </div>
+        </quadro>
     </div>
 </section>

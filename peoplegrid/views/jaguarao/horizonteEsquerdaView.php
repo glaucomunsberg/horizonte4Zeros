@@ -1,5 +1,5 @@
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/flickr.png" class="pull-left">
         <div class="hero-unit">
             <div class="thumbnail">
@@ -13,10 +13,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </quadro>
 </div>
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <a href="#" class="thumbnail">
@@ -30,10 +30,10 @@
                 <a href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2013/06/05/h4z-p9-em-jaguarao-novamente/" class="btn btn-success pull-right"><?=lang('peopleGridLeiaMais')?></a>
             </p>
         </div>
-    </div>
+    </quadro>
 </div>
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/youtube.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <ul class="thumbnails">
@@ -50,10 +50,10 @@
               </p>
             </ul>
         </div>
-    </div>
+    </quadro>
 </div>
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/youtube.png" class="pull-left">
         <div class="hero-unit btn-primary">
             <ul class="thumbnails">
@@ -63,10 +63,10 @@
               </p>
             </ul>
         </div>
-    </div>
+    </quadro>
 </div>
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/personal.png" class="pull-left">
         <div class="hero-unit">
             <h3 style="padding-top:10px"><?= lang('peopleGridPessoasLigadas') ?></h3>
@@ -80,11 +80,11 @@
                 <br style="clear:both;" />
                 <a href="<?=BASE_URL.'site/enjoy'?>" ><button class="btn btn-info" style="margin-top:10px"><?= lang('horizonteEntrar') ?></button></a>
         </div>
-    </div>
+    </quadro>
 </div>
 <section id="paraformal">
     <div class="row-fluid">
-        <div class="span12">
+        <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-info">
                 <h1>
@@ -94,11 +94,11 @@
                     <?=$projeto3->resumo?>
                 </p>
             </div>
-        </div>
+        </quadro>
     </div>
 </section>
 <div class="row-fluid">
-    <div class="span12">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit">
             <div class="thumbnail">
@@ -112,11 +112,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </quadro>
 </div>
 <section id="drup">
     <div class="row-fluid">
-        <div class="span12">
+        <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div class="hero-unit btn-info">
                 <h1>
@@ -126,6 +126,6 @@
                     <?=$projeto1->resumo?>
                 </p>
             </div>
-        </div>
+        </quadro>
     </div>
 </section>
