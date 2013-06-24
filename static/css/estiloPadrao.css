@@ -23,12 +23,17 @@ root {
     vertical-align: middle !important;display: none; padding-top: 40px; padding-bottom: 5px;text-align: center;height: 110px;width: 150px;cursor:pointer;
 }
 .grid {
+    
+    background-image: url('../img/mapaJaguarao.png');
     border: 1px solid #ccc;
     border-width: 1px 0 0 1px;
 }
 
 .grid div {
-    border: 1px solid #c5c5c5;
+    filter:opacity(alpha=75) !important; /* para o IE */
+    -moz-opacity:0.75 !important; /* para o FireFox */
+    opacity:0.75 !important; /* para o outros Navegadores */
+    border: 1px solid #e8e8e8;
     border-width: 0 1px 1px 0;
     float: left;
 }
