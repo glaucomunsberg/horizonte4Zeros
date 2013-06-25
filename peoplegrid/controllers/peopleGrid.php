@@ -73,12 +73,14 @@ class PeopleGrid extends CI_Controller {
 
     //verificar esse tratamento
     function salvar() {
-        
-       $this->pessoasModel->inserir_new($_POST['identifiquese']); 
-        
-       $this->questionarioModel->inserir($_POST);
+
+       $pessoa_id = $this->pessoasModel->inserir_new($_POST); 
+       
+       log_message('info', $pessoa_id);
+       
+       $this->questionarioModel->inserir($_POST, $pessoa_id);
        // $this->pessoaModel->inserir($_POST);
-        echo json_encode( 'sucessototal');
+       echo json_encode( 'sucessototal');
     }
 
 }

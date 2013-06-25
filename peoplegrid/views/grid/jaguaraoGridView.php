@@ -408,29 +408,25 @@
 
     function enviar(){
         var pensouComo;
-        var atividadeParecida;
         var identifiquese = [];
         
         pensouComo = document.getElementById("pensouComo").value;
-        atividadeParecida = document.getElementById("atividadeParecida").value;
         
         identifiquese[0] = document.getElementById("txtNome").value;
         identifiquese[1] = document.getElementById("txtEmail").value;
         identifiquese[2] = document.getElementById("genero").value;
         identifiquese[3] = document.getElementById("txtCidade").value;
         identifiquese[4] = document.getElementById("nivelEscolaridade").value;
-        identifiquese[5] = "null" //document.getElementById("rendaFamiliar").value;
+        identifiquese[5] = //document.getElementById("rendaFamiliar").value;
         identifiquese[6] = $("#calendario").val();
         
         $.post( '<?=BASE_URL?>peopleGrid/salvar',{respostasGrids: questao, pensouComo: pensouComo,
-                    atividadeParecida: atividadeParecida,
                     identifiquese: identifiquese});
        
         //console.log(questao[1]);
-        console.log(identifiquese);
-        console.log(pensouComo);
-        console.log(atividadeParecida);
-        
+       // console.log(identifiquese);
+      //  console.log(pensouComo);     
+
 }
 </script>
 <?

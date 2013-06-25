@@ -32,7 +32,7 @@
          */
         function inserir_new($parametros){
             
-            $identifiquese = $parametros['identifiquese'];
+            $identifiquese = $parametros['identifiquese']; 
             
             $this->db->trans_start();
                 $this->db->set('nome', $identifiquese['0']);
@@ -45,12 +45,13 @@
                 $this->db->set('equipe', 'N');
                 $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP'); 
                 $this->db->insert('pessoas'); 
-            $this->db->trans_complete();
+                $id = $this->db->insert_id();
+           $this->db->trans_complete();
             
             if($this->db->trans_status() === FALSE){
-                return true;
-            } else {
                 return false;
+            } else {
+                return $id;
             }
         }
         
