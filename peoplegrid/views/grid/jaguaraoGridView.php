@@ -421,7 +421,13 @@
         identifiquese[6] = $("#calendario").val();
         
         $.post( '<?=BASE_URL?>peopleGrid/salvar',{respostasGrids: questao, pensouComo: pensouComo,
-                    identifiquese: identifiquese});
+                    identifiquese: identifiquese},function(data){
+                     var questao = data.questao;
+                        console.log(questao);
+                     });
+       
+       
+       
        
         //console.log(questao[1]);
        // console.log(identifiquese);
