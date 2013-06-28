@@ -77,8 +77,14 @@ class PeopleGrid extends CI_Controller {
      * e insere na tabela pessoas e na tabela questionario
      * 
      */  
-    function salvar() {
-       if (($_POST['nome'] == '') && ($_POST['email'] == ''))
+    function salvar() {  
+       
+       $identifiquese = $_POST['identifiquese']; 
+       
+       log_message('INFO', $identifiquese['0']);
+       
+       
+       if (($identifiquese['0'] == ''))
            $pessoa_id = 8; // numero do não identificado
        else {
            $pessoa_id = $this->pessoasModel->inserir_new($_POST);    
@@ -86,7 +92,7 @@ class PeopleGrid extends CI_Controller {
        
        $ret = $this->questionarioModel->inserir($_POST, $pessoa_id);
        
-       if (ret == TRUE){
+       if ($ret == TRUE){
            echo json_encode("sucesso");
        } else {
            echo json_encode("falha");

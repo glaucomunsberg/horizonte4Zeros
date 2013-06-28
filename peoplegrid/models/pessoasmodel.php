@@ -35,13 +35,13 @@
             $identifiquese = $parametros['identifiquese']; 
             
             $this->db->trans_start();
-                $this->db->set('nome', $identifiquese['nome']);
-                $this->db->set('email', $identifiquese['email']);
-                $this->db->set('genero',$identifiquese['genero']);
-                $this->db->set('cidade_natal',$identifiquese['cidade']);
-                $this->db->set('nivel_escolaridade', $identifiquese['nivelEscolaridade']);
-                $this->db->set('renda_familiar', $identifiquese['rendaFamiliar']);
-                $this->db->set('dt_nascimento',$identifiquese['calendario']);
+                $this->db->set('nome', $identifiquese['0']);
+                $this->db->set('email', $identifiquese['1']);
+                $this->db->set('genero',$identifiquese['2']);
+                $this->db->set('cidade_natal',$identifiquese['3']);
+                $this->db->set('nivel_escolaridade', $identifiquese['4']);
+                $this->db->set('renda_familiar', $identifiquese['5']);
+                $this->db->set('dt_nascimento',$identifiquese['6']);
                 $this->db->set('equipe', 'N');
                 $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP'); 
                 $this->db->insert('pessoas'); 

@@ -63,6 +63,26 @@
         <br>
         <div class="row">
             <h3>Perguntas Objetivas</h3>
+            
+            <div class='span6'>
+                <form class="form-horizontal well" novalidate="novalidate1">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" for="input007"><?=lang('peopleGridQuestao22Def')?></label>
+                            <div class="controls">
+                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input008"><?=lang('peopleGridQuestao23Def')?></label>
+                            <div class="controls">
+                              <textarea type="text" class="input-xlarge"  rows="5" id="txtPrioridadesFuturo" placeholder="Digite o que você pensa sobre isso"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            
             <div class="span6">
                 <form class="form-horizontal well" novalidate="novalidate1">
                     <fieldset>
@@ -92,24 +112,7 @@
                 </form> 
               </fieldset>
             </div>
-            <div class='span6'>
-                <form class="form-horizontal well" novalidate="novalidate1">
-                    <fieldset>
-                        <div class="control-group">
-                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao22Def')?></label>
-                            <div class="controls">
-                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao23Def')?></label>
-                            <div class="controls">
-                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
+
             <button class="btn btn-success pull-right" onClick="trazerProximaQuestao()">Próxima Questão</button>
         </div>
     </section>
@@ -209,6 +212,7 @@
                 </form>
             </div>
         </div>
+        <hr>
         <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar();">Enviar</button>
     </section>
     <section id='sucesso' style="margin-top: 40px; display:none">
@@ -230,7 +234,9 @@
     var cont = 0;
     var questoesGrid = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
-       
+    var identifiquese = new Array();
+    var perguntasObjetivas = new Array();
+    
     /**
      * Função init já carrega a primeira pergunta
      *
@@ -319,12 +325,14 @@
      * nesta função o formulario finalizando é tratado
      * @return finalizando --> vetor com perguntas
      */
-    function trataFinalizando(){
-        var finalizando = Array();
+    
+    function trataPerguntasObjetivas(){
         
-        finalizando["pensouComo"] = document.getElementById("pensouComo").value;
         
-        return finalizando;
+        perguntasObjetivas[0] = document.getElementById("pensouComo").value;
+        perguntasObjetivas[1] = document.getElementById("txtProblemasCidadeAtual").value;
+        perguntasObjetivas[2] = document.getElementById("txtPrioridadesFuturo").value;
+        //return perguntasObjetivas;
     }
     /**
      * Função de tratamento das perguntas pessoais
@@ -332,18 +340,19 @@
      * vetor.
      * @return identifiquese --> vetor
      */
+      // vetor recolhe todas as informações pessoais
     function trataIdentifiquese(){
-        var identifiquese = Array();  // vetor recolhe todas as informações pessoais
         
-        identifiquese["nome"] = document.getElementById("txtNome").value;
-        identifiquese["email"] = document.getElementById("txtEmail").value;
-        identifiquese["genero"] = document.getElementById("genero").value;
-        identifiquese["cidade"] = document.getElementById("txtCidade").value;
-        identifiquese["nivelEscolaridade"] = document.getElementById("nivelEscolaridade").value;
-        identifiquese["rendaFamiliar"] = document.getElementById("rendaFamiliar").value;
-        identifiquese["calendario"] = $("#calendario").val();
         
-        return identifiquese;
+        identifiquese[0] = document.getElementById("txtNome").value;
+        identifiquese[1] = document.getElementById("txtEmail").value;
+        identifiquese[2] = document.getElementById("genero").value;
+        identifiquese[3] = document.getElementById("txtCidade").value;
+        identifiquese[4] = document.getElementById("nivelEscolaridade").value;
+        identifiquese[5] = document.getElementById("rendaFamiliar").value;
+        identifiquese[6] = $("#calendario").val();
+        
+        //return identifiquese;
     }
     
    /**
@@ -351,6 +360,13 @@
      * 
      */
     function trazerProximaQuestao(){   
+        
+        if (contQuestao < 22){
+            questoesGrid[cont] = trataGrid();
+            this.limparGrid();
+            $("#questao_area").html(perguntas[contQuestao]['questaoSobre']);
+            $("#questao_def").html(perguntas[contQuestao]['questao']);
+        }
         
         if (contQuestao == 22){
             questoesGrid[cont] = trataGrid();
@@ -360,14 +376,7 @@
             $("#formPerguntas").show();
         }
         
-        if (contQuestao < 22){
-            questoesGrid[cont] = trataGrid();
-            this.limparGrid();
-            $("#questao_area").html(perguntas[contQuestao]['questaoSobre']);
-            $("#questao_def").html(perguntas[contQuestao]['questao']);
-        }
-        
-        if (contQuestao == 25) {
+        if (contQuestao == 23) {
             $("#questionGrid").hide();
             $("#formPerguntas").hide();
             $("#formIdentifiquese").show()
@@ -378,19 +387,20 @@
     
     
     function enviar(){
-
+         
         $.post( '<?=BASE_URL?>peopleGrid/salvar',
-        {
-            respostasGrid: questoesGrid, 
-            finalizando: trataFinalizando(),
+        {  
+            perguntasObjetivas: trataPerguntasObjetivas(),
+            respostasGrid: questoesGrid,
             identifiquese: trataIdentifiquese()
         },
         function(data){
             if (data.sucesso){   
-                $("#sucesso").html();
+                $("#identifiquese").hide;
+                $("#sucesso").show;
             }
             if (data.falha){
-                $("#falha").html();
+                $("#falha").show;
             }
             
         });
