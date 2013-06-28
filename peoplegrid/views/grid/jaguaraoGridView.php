@@ -46,253 +46,138 @@
                     </dd>
                     <dd>
                         <button class="btn btn-danger" href="#" onClick="limparGrid()"><?= lang('peopleGridLimparGrid') ?></button>
-
                     </dd>
                 </dl>
-                
-
             </div>
             <div class="span7">
                 <?= form_getGrid('peopleGridPai1', 'peopleGrid1', 34, 2, 'black') ?> 
             </div>
-            <div class="span12">
-
-            </div>
         </div>
     </section>
-
-      <section id="formPerguntas" style="margin-top: 40px; display:none"> 
+    <section id="formPerguntas" style="margin-top: 40px; display:none"> 
         <br>
         <br>
         <div class="row">
-                    <h3>finalizando...</h3>
-                    <hr>
-                    <div class="span12">  
-                        
-                        <div class="control-group">          
-                            <b><?= lang('formPensouComo') ?></b>
-                            <br>
-                            <div class="control-group">
-                                <label class="control-label">    
-                                    <ul>
-                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt1')?>">
-                                        <?= lang('formPensouComoOpt1') ?>
-                                    </ul>
+            <div class="span12">
+                <br>
+                <h3><?= lang('formPensouComo') ?></h3>
+                <form class="form-horizontal well" novalidate="novalidate1">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="radio-label"></label>
+                            <div class="controls">
+                                <label class="radio">
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt1')?>"><?= lang('formPensouComoOpt1')?>
                                 </label>
-                                
-                                <label class="control-label"> 
-                                    <ul>
-                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt2')?>">
-                                        <?= lang('formPensouComoOpt2') ?>
-                                    </ul>    
+                                <label class="radio">
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt2')?>"><?= lang('formPensouComoOpt2')?>
+                                </label>        
+                                <label class="radio">
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt3')?>"><?= lang('formPensouComoOpt3')?>
+                                </label>         
+                                <label class="radio">
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt4')?>"><?= lang('formPensouComoOpt4')?>
+                                </label>  
+                                <label class="radio">
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt5')?>"><?= lang('formPensouComoOpt5')?>
                                 </label>
-                        
-                                <label class="control-label"> 
-                                    <ul>
-                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt3')?>">
-                                        <?= lang('formPensouComoOpt3') ?>
-                                    </ul>
+                                <label class="radio">
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt6')?>"><?= lang('formPensouComoOpt6')?>
                                 </label>
-                            
-                                <label class="control-label"> 
-                                    <ul>
-                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt4')?>">
-                                        <?= lang('formPensouComoOpt4') ?>
-                                    </ul>
-                                </label>
-                            
-                                <label class="control-label"> 
-                                    <ul>
-                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt5')?>">
-                                        <?= lang('formPensouComoOpt5') ?>
-                                    </ul>
-                                </label>
-                                
-                                <label class="control-label"> 
-                                    <ul>
-                                        <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt6')?>">
-                                        <?= lang('formPensouComoOpt6') ?>
-                                    </ul>
-                                </label>
-                                
-                                <label class="control-group">
-                                    <input type="radio" name="pensouComo" id="genero" hidden="true" value="null" checked>
-                                </label>
-                                
+                            </div>
+                        </div>                                
+                    </fieldset>
+                </form> 
+            </div>
+            <button class="btn btn-success pull-right" onClick="trazerProximaQuestao()">Próxima Questão</button>
+        </div>
+    </section>
+    <section id="formIdentifiquese" style="margin-top: 40px; display:none">      
+        <div class="row">
+            <br>
+            <h3><?= lang('formIdentifiquese') ?></h3>
+            <div class="span6">
+                <form class="form-horizontal well" novalidate="novalidate">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" for="input01"><?=lang('formNome')?></label>
+                            <div class="controls">
+                              <input type="text" class="span3" id="txtNome" placeholder="Digite seu nome">
                             </div>
                         </div>
-                    </div>
-                <button class="btn btn-success pull-right" onClick="trazerProximaQuestao()">Próxima Questão</button>
+                        <div class="control-group">
+                            <label class="control-label" for="input02"><?=lang('formEmail')?></label>
+                            <div class="controls">
+                              <input type="text" class="span3" id="txtEmail" placeholder="Digite sua cidade">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="select03"><?=lang('formGenero')?></label>
+                            <div class="controls">
+                              <select id="genero" class="valid">
+                                <option><?=lang('formMasculino')?></option>
+                                <option><?=lang('formFeminino')?></option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input04"><?=lang('formDtNascimento')?></label>
+                            <div class="controls">
+                              <?=getCalendario('calendario')?>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input05"><?=lang('formCidade')?></label>
+                            <div class="controls">
+                              <input type="text" class="span3" id="txtCidade" placeholder="Digite sua cidade">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class='span6'>
+                <form class="form-horizontal well" novalidate="novalidate1">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label"><?=lang('formNivelEscolaridade')?></label>
+                            <div class='controls'>
+                                <label class="radio">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt1')?>"><?=lang('formNivelEscolaridadeOpt1') ?>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt2')?>"><?=lang('formNivelEscolaridadeOpt2') ?>
+                                </label>        
+                                <label class="radio">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt3')?>"><?=lang('formNivelEscolaridadeOpt3') ?>
+                                </label>         
+                                <label class="radio">
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt4')?>"><?=lang('formNivelEscolaridadeOpt4') ?>
+                                </label> 
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><?= lang('formRendaFamiliar') ?></label>
+                            <div class='controls'>
+                                <label class="radio">
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt1')?>"><?= lang('formRendaFamiliarOpt1') ?>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt2')?>"><?= lang('formRendaFamiliarOpt2') ?>
+                                </label>        
+                                <label class="radio">
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt3')?>"><?= lang('formRendaFamiliarOpt3') ?>
+                                </label>         
+                                <label class="radio">
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt4')?>"><?= lang('formRendaFamiliarOpt4') ?>
+                                </label> 
+                            </div> 
+                        </div>
+                    </fieldset>    
+                </form>
+            </div>
         </div>
-    </section>
-    
-    <section id="formIdentifiquese" style="margin-top: 40px; display:none">      
-        <br>
-        <br>
-        <div class="row">
-                    <h3><?= lang('formIdentifiquese') ?></h3>
-                    <hr>
-                    <div class="span12">    
-                        <div class="control-group">
-                            <ul>
-                                <?= lang('formNome') ?>
-                            </ul>
-                        </div>
-                        <div class="control-group">
-                            <ul>
-                                <input type="text" class="span3" id="txtNome" placeholder="Digite seu nome">
-                            </ul>    
-                        </div>
-
-                        <br>
-
-                        <div class="control-group">
-                            <ul>
-                                <?= lang('formEmail') ?>
-                            </ul>
-                        </div>    
-
-                        <div class="control-group">
-                            <ul>
-                                <input type="text" class="span3" id="txtEmail" placeholder="Digite sua cidade">
-                            </ul>
-                        </div>
-
-                        <br>
-
-                        <div class="control-group">
-                            <ul>
-                                <?= lang('formGenero') ?>
-                            </ul>
-                        </div>    
-                        <div class="control-group">
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="genero" id="genero" value="<?=lang('formMasculino')?>">
-                                    <?= lang('formMasculino') ?>
-                                </ul>
-                            </label>
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="genero" id="genero"  value="<?=lang('formFeminino')?>" >
-                                    <?= lang('formFeminino') ?>
-                                </ul>
-                            </label>
-                            <label class="control-group">
-                                    <input type="radio" name="genero" id="genero" hidden="true" value="null" checked>
-                            </label>
-                        </div>
-
-                        <br>
-
-                        <div class="control-group">
-                            <ul>
-                                <?=lang('formDtNascimento') ?> 
-                                <?=getCalendario('calendario')?>
-                            </ul>
-                        </div>
-
-                        <br>
-
-                        <div class="control-group">
-                            <ul>
-                                <?= lang('formCidade') ?>
-                                <input type="text" class="span3" id="txtCidade" placeholder="Digite sua cidade">
-                            </ul>
-                        </div>
-
-                        <br>
-
-                        <div class="control-group">
-                            <ul>
-                                <?= lang('formNivelEscolaridade') ?>  
-                            </ul>     
-                        </div>   
-
-                        <div class="control-group">
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt1')?>">
-                                    <?= lang('formNivelEscolaridadeOpt1') ?>
-                                </ul>
-                            </label>
-
-
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt2')?>">
-                                    <?= lang('formNivelEscolaridadeOpt2') ?>
-                                </ul>
-                            </label>
-
-
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt3')?>">
-                                    <?= lang('formNivelEscolaridadeOpt3') ?>
-                                </ul>
-                            </label>
-
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt4')?>">
-                                    <?= lang('formNivelEscolaridadeOpt4') ?>
-                                </ul>
-                            </label>
-                            
-                           <label class="control-group">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="null" checked>
-                            </label>
-                        </div>    
-                        
-                        
-                        <div class="control-group">
-                            <ul>
-                                <?= lang('formRendaFamiliar') ?>  
-                            </ul>     
-                        </div>   
-
-                        <div class="control-group">
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt1')?>">
-                                    <?= lang('formRendaFamiliarOpt1') ?>
-                                </ul>
-                            </label>
-
-
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt2')?>">
-                                    <?= lang('formRendaFamiliarOpt2') ?>
-                                </ul>
-                            </label>
-
-
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt3')?>">
-                                    <?= lang('formRendaFamiliarOpt3') ?>
-                                </ul>
-                            </label>
-
-                            <label class="control-group">
-                                <ul>
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt4')?>">
-                                    <?= lang('formRendaFamiliarOpt4') ?>
-                                </ul>
-                            </label>
-                            
-                           <label class="control-group">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="null" checked>
-                            </label>
-                        </div>
-                        
-                        <button class="btn-navbar" onClick="enviar()" margin="right">Enviar</button>
-                    </div>
-        </div>
+        <button type="submit" class="btn btn-sucess pull-right btn-large"  onClick="enviar()">Enviar</button>
     </section>   
-    
 </div>
 
 <script>

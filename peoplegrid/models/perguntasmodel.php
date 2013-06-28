@@ -125,6 +125,11 @@
                     $data['questao'] = lang('peopleGridQuestao23Def');
                     $data['questaoNum'] = 23;
                     break;
+                case 24:
+                    $data['questaoSobre'] = lang('peopleGridQuestao24');
+                    $data['questao'] = lang('peopleGridQuestao24Def');
+                    $data['questaoNum'] = 24;
+                    break;
                 default:
                     $data['questaoSobre'] = lang('peopleGridQuestaoNone');
                     $data['questao'] = lang('peopleGridQuestaoNoneDef');
@@ -154,6 +159,6 @@
          * @return string{numerico}
          */
         public function totalPerguntasJaguarao(){
-            return 23;
+            return 24;
         }
     }
