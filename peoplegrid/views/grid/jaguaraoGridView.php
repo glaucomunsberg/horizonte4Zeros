@@ -62,9 +62,8 @@
         <br>
         <br>
         <div class="row">
-            <div class="span12">
-                <br>
-                <h3>ASASASA</h3>
+            <h3>Perguntas Objetivas</h3>
+            <div class="span6">
                 <form class="form-horizontal well" novalidate="novalidate1">
                     <fieldset>
                         <div class="control-group">
@@ -90,6 +89,12 @@
                                 </label>
                             </div>
                         </div>
+                </form> 
+              </fieldset>
+            </div>
+            <div class='span6'>
+                <form class="form-horizontal well" novalidate="novalidate1">
+                    <fieldset>
                         <div class="control-group">
                             <label class="control-label" for="input01"><?=lang('peopleGridQuestao22Def')?></label>
                             <div class="controls">
@@ -102,9 +107,8 @@
                               <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
                             </div>
                         </div>
-                    
-                </form> 
-              </fieldset>
+                    </fieldset>
+                </form>
             </div>
             <button class="btn btn-success pull-right" onClick="trazerProximaQuestao()">Próxima Questão</button>
         </div>
