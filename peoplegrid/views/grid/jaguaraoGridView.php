@@ -64,11 +64,11 @@
         <div class="row">
             <div class="span12">
                 <br>
-                <h3><?= lang('formPensouComo') ?></h3>
+                <h3>ASASASA</h3>
                 <form class="form-horizontal well" novalidate="novalidate1">
                     <fieldset>
                         <div class="control-group">
-                            <label class="radio-label"></label>
+                            <label class="radio-label"><?= lang('formPensouComo') ?></label>
                             <div class="controls">
                                 <label class="radio">
                                     <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt1')?>"><?= lang('formPensouComoOpt1')?>
@@ -89,9 +89,22 @@
                                     <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt6')?>"><?= lang('formPensouComoOpt6')?>
                                 </label>
                             </div>
-                        </div>                                
-                    </fieldset>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao22Def')?></label>
+                            <div class="controls">
+                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao23Def')?></label>
+                            <div class="controls">
+                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
+                            </div>
+                        </div>
+                    
                 </form> 
+              </fieldset>
             </div>
             <button class="btn btn-success pull-right" onClick="trazerProximaQuestao()">Próxima Questão</button>
         </div>
@@ -193,38 +206,6 @@
             </div>
         </div>
         <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar();">Enviar</button>
-    </section>
-    <section id='problemasCidadeAtual' style="margin-top: 40px; display:none">
-        <div class='row'>
-            <div class='span12'>
-                <form class="form-horizontal well" novalidate="novalidate1">
-                    <fieldset>
-                        <div class="control-group">
-                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao22Def')?></label>
-                            <div class="controls">
-                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>   
-                </form>
-            </div>
-        </div>
-    </section>
-    <section id='prioridadesFuturo' style="margin-top: 40px; display:none">
-        <div class='row'>
-            <div class='span12'>
-                <form class="form-horizontal well" novalidate="novalidate1">
-                    <fieldset>
-                        <div class="control-group">
-                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao23Def')?></label>
-                            <div class="controls">
-                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>   
-                </form>
-            </div>
-        </div>
     </section>
     <section id='sucesso' style="margin-top: 40px; display:none">
         <div class='row'>
