@@ -38,12 +38,11 @@
                 $this->db->set('questao_21', $array['20']);
                 $this->db->set('questao_22', $array['21']);
                 $this->db->set('questao_23', $array['22']);
-                $this->db->set('questao_23', $finalizando['23']);
-                $this->db->set('questao_23', $finalizando['24']);
+                $this->db->set('questao_23', $finalizando['']);
+                $this->db->set('questao_23', $finalizando['']);
                 $this->db->set('voce_pensou_como', $finalizando['pensouComo']);
                 $this->db->set('cidade', $identifiquese['cidade']);
                 $this->db->set('pessoa_id', $pessoa_id);
-                $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP');
                 $this->db->insert('questionario');
             $this->db->trans_complete();
             

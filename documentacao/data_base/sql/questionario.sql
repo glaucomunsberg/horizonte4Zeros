@@ -1,4 +1,4 @@
-CREATE TABLE DEFAULT_SCHEMA.questionario (
+CREATE TABLE questionario (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
      , questao_1 BLOB
      , questao_2 BLOB
@@ -22,15 +22,15 @@ CREATE TABLE DEFAULT_SCHEMA.questionario (
      , questao_20 BLOB
      , questao_21 BLOB
      , questao_22 BLOB
-     , questao_23 BLOB
-     , cidade VARCHAR(50)
-     , participou_atividade_parecida CHAR(1)
+     , problemas_cidade_atual TEXT
+     , prioridades_futuro TEXT
      , voce_pensou_como VARCHAR(50)
+     , cidade VARCHAR(50)
      , pessoa_id BIGINT(20) UNSIGNED
      , dt_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
      , PRIMARY KEY (id)
      , INDEX (pessoa_id)
      , CONSTRAINT FK_questionario_1 FOREIGN KEY (pessoa_id)
-                  REFERENCES DEFAULT_SCHEMA.pessoas (id)
-);
+     REFERENCES pessoas (id)
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=1 ;
 
