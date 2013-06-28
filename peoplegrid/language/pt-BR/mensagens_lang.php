@@ -23,15 +23,11 @@ $lang['horizonteDoisMundos'] = 'Dois mundos: Um único objetivo';
 $lang['administrarNaoPermitido'] = '<h1>Oops! <small> você não deveria estar aqui.</small></h1>';
 $lang['administrarAdministrarMensagem'] = ' bem-vindo ao sistema.';
 $lang['administrarNaoPreenchido'] =  'Preencha todos os campos';
-$lang['administrarSalvo'] = 'Salvo com sucesso!';
 $lang['administrarFalha'] = 'Ooops! Falhou :/';
 $lang['administrarSalvar'] = 'Salvar';
 $lang['administrarSubtituloProjeto'] = 'Subtitulo';
-$lang['administrarSalvar'] = '';
-$lang['administrarSalvar'] = '';
-$lang['administrarSalvar'] = '';
-$lang['administrarSalvar'] = '';
-
+$lang['administrarSalvo'] = 'Salvo com sucesso!';
+$lang['administrarSalvoMensagem'] = 'Obrigado por participar de nosso questionário, agora vamos redirecionar você para a home page do Projeto.';
 
 /**
  * PeopleGrid
@@ -51,56 +47,52 @@ $lang['peopleGridQuestao'] = '';
 /**
  * PeopleGrid Questões
  */
-$lang['peopleGridQuestao1'] = '<strong>1 de 24:</strong> Áreas Naturais 1/2';
+$lang['peopleGridQuestao1'] = '<strong>1 de 22:</strong> Áreas Naturais 1/2';
 $lang['peopleGridQuestao1Def'] = 'Quais áreas naturais devem ser preservadas na cidade e no entorno?';
-$lang['peopleGridQuestao2'] = '<strong>2 de 24:</strong> Áreas Naturais 2/2';
+$lang['peopleGridQuestao2'] = '<strong>2 de 22:</strong> Áreas Naturais 2/2';
 $lang['peopleGridQuestao2Def'] = 'Quais áreas naturais degradas precisam ser recuperadas na cidade e no entorno?';
-$lang['peopleGridQuestao3'] = '<strong>3 de 24:</strong> Loteamento da cidade 1/2';
+$lang['peopleGridQuestao3'] = '<strong>3 de 22:</strong> Loteamento da cidade 1/2';
 $lang['peopleGridQuestao3Def'] = 'Quais são as melhores áreas para novos loteamentos ou para a cidade crescer?';
-$lang['peopleGridQuestao4'] = '<strong>4 de 24:</strong> Loteamento da cidade 2/2';
+$lang['peopleGridQuestao4'] = '<strong>4 de 22:</strong> Loteamento da cidade 2/2';
 $lang['peopleGridQuestao4Def'] = 'Onde se localizam problemas causados pelo crescimento urbano?';
-$lang['peopleGridQuestao5'] = '<strong>5 de 24:</strong> Habitação 1/2';
+$lang['peopleGridQuestao5'] = '<strong>5 de 22:</strong> Habitação 1/2';
 $lang['peopleGridQuestao5Def'] = 'Quais são as áreas indicadas para habitação de interesse social?';
-$lang['peopleGridQuestao6'] = '<strong>6 de 24:</strong> Habitação 2/2';
+$lang['peopleGridQuestao6'] = '<strong>6 de 22:</strong> Habitação 2/2';
 $lang['peopleGridQuestao6Def'] = 'Em que locais existem problemas de habitação?';
-$lang['peopleGridQuestao7'] = '<strong>7 de 24:</strong> Atividades Produtivas 1/3';
+$lang['peopleGridQuestao7'] = '<strong>7 de 22:</strong> Atividades Produtivas 1/3';
 $lang['peopleGridQuestao7Def'] = 'Quais são as melhores áreas para atividades de produção industrial, dentro e fora da cidade atual?';
-$lang['peopleGridQuestao8'] = '<strong>8 de 24:</strong> Atividades Produtivas 2/3';
+$lang['peopleGridQuestao8'] = '<strong>8 de 22:</strong> Atividades Produtivas 2/3';
 $lang['peopleGridQuestao8Def'] = 'Onde aparecem conflitos entre as atividades produtivas e a cidade?';
-$lang['peopleGridQuestao9'] = '<strong>9 de 24:</strong> Atividades Produtivas 2/3';
+$lang['peopleGridQuestao9'] = '<strong>9 de 22:</strong> Atividades Produtivas 2/3';
 $lang['peopleGridQuestao9Def'] = 'Quais são as melhores áreas para atividades de produção agrícola, dentro e fora da cidade atual?';
-$lang['peopleGridQuestao10'] = '<strong>10 de 24:</strong> Zona Livre Comércio 1/2';
+$lang['peopleGridQuestao10'] = '<strong>10 de 22:</strong> Zona Livre Comércio 1/2';
 $lang['peopleGridQuestao10Def'] = 'Quais são as melhores áreas para a localização da zona de livre comércio (free shop brasileiro)?';
-$lang['peopleGridQuestao11'] = '<strong>11 de 24:</strong> Zona Livre Comércio 2/2';
+$lang['peopleGridQuestao11'] = '<strong>11 de 22:</strong> Zona Livre Comércio 2/2';
 $lang['peopleGridQuestao11Def'] = 'Quais são as piores áreas para a localização da zona de livre comércio (free shop brasileiro)?';
-$lang['peopleGridQuestao12'] = '<strong>12 de 24:</strong>Centro da Cidade ';
+$lang['peopleGridQuestao12'] = '<strong>12 de 22:</strong>Centro da Cidade ';
 $lang['peopleGridQuestao12Def'] = 'Onde fica a área central da cidade ?';
-$lang['peopleGridQuestao13'] = '<strong>13 de 24:</strong> Preservação Arquitetônica';
+$lang['peopleGridQuestao13'] = '<strong>13 de 22:</strong> Preservação Arquitetônica';
 $lang['peopleGridQuestao13Def'] = 'Onde ficam as áreas a serem preservadas por sua qualidade arquitetônica?';
-$lang['peopleGridQuestao14'] = '<strong>14 de 24:</strong> Novas Construções 1/2';
+$lang['peopleGridQuestao14'] = '<strong>14 de 22:</strong> Novas Construções 1/2';
 $lang['peopleGridQuestao14Def'] = 'Quais as áreas mais adequadas para novas construções?';
-$lang['peopleGridQuestao15'] = '<strong>15 de 24:</strong> Novas Construções 1/2';
+$lang['peopleGridQuestao15'] = '<strong>15 de 22:</strong> Novas Construções 1/2';
 $lang['peopleGridQuestao15Def'] = 'Quais áreas não são adequadas para novas construções?';
-$lang['peopleGridQuestao16'] = '<strong>16 de 24:</strong> Atividade Informal 1/2';
+$lang['peopleGridQuestao16'] = '<strong>16 de 22:</strong> Atividade Informal 1/2';
 $lang['peopleGridQuestao16Def'] = 'Onde estão localizadas as atividades que podem ser consideradas não formais  ou informais?';
-$lang['peopleGridQuestao17'] = '<strong>17 de 24:</strong> Atividade Informal 2/2';
+$lang['peopleGridQuestao17'] = '<strong>17 de 22:</strong> Atividade Informal 2/2';
 $lang['peopleGridQuestao17Def'] = 'Onde deveriam se localizar as atividades que podem ser consideradas não formais  ou informais?';
-$lang['peopleGridQuestao18'] = '<strong>18 de 24:</strong> Jaguarão em Cores 1/2';
+$lang['peopleGridQuestao18'] = '<strong>18 de 22:</strong> Jaguarão em Cores 1/2';
 $lang['peopleGridQuestao18Def'] = 'Em que áreas estão prédios com cores adequadas para Jaguarão?';
-$lang['peopleGridQuestao19'] = '<strong>19 de 24:</strong> Jaguarão em Cores 2/2';
+$lang['peopleGridQuestao19'] = '<strong>19 de 22:</strong> Jaguarão em Cores 2/2';
 $lang['peopleGridQuestao19Def'] = 'Em que áreas estão prédios com cores inadequadas para Jaguarão?';
-$lang['peopleGridQuestao20'] = '<strong>20 de 24:</strong> Ruas 1/2';
+$lang['peopleGridQuestao20'] = '<strong>20 de 22:</strong> Ruas 1/2';
 $lang['peopleGridQuestao20Def'] = 'Onde estão as ruas de melhor qualidade na cidade?';
-$lang['peopleGridQuestao21'] = '<strong>21 de 24:</strong> Ruas 2/2';
+$lang['peopleGridQuestao21'] = '<strong>21 de 22:</strong> Ruas 2/2';
 $lang['peopleGridQuestao21Def'] = 'Onde estão as ruas de pior qualidade na cidade?';
-$lang['peopleGridQuestao22'] = '<strong>22 de 24:</strong> Infraestrutura';
+$lang['peopleGridQuestao22'] = '<strong>22 de 22:</strong> Infraestrutura';
 $lang['peopleGridQuestao22Def'] = 'Quais são os locais prioritários para melhorar a infraestruturada urbana?';
-$lang['peopleGridQuestao23'] = '<strong>23 de 24:</strong> Cidade no Futuro';
-$lang['peopleGridQuestao23Def'] = 'Quais são as prioridades para a cidade no futuro? Listar.
-(aqui tem que abrir uma caixa para o usuário escrever)';
-$lang['peopleGridQuestao24'] = '<strong>24 de 24:</strong> ';
-$lang['peopleGridQuestao24Def'] = 'Quais são os maiores problemas da idade atual? Listar.
-(aqui tem que abrir uma caixa para o usuário escrever)';
+$lang['peopleGridQuestao23Def'] = 'Quais são as prioridades para a cidade no futuro? Listar.';
+$lang['peopleGridQuestao24Def'] = 'Quais são os maiores problemas da idade atual? Listar.';
 $lang['peopleGridQuestaoNone'] = '<strong>Oops!</strong>';
 $lang['peopleGridQuestaoNoneDef'] = 'Não há pergunta aqui para responderes :S';
 ?>

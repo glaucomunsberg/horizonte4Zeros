@@ -1,4 +1,8 @@
 <? $this->load->view('../../static/views/cabecalhoPublicoView') ?>
+
+<link rel="stylesheet" href="<?=CSS?>/bootstrap-datetimepicker.min.css">
+<script type="text/javascript" src="<?=JS?>/bootstrap-datetimepicker.min.js"></script>
+
 <div class="container">
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -123,8 +127,20 @@
                         <div class="control-group">
                             <label class="control-label" for="input04"><?=lang('formDtNascimento')?></label>
                             <div class="controls">
-                              <?=getCalendario('calendario')?>
+                                <div id="datetimepicker1" class="input-append date">
+                                      <input data-format="dd/MM/yyyy" type="text"></input>
+                                      <span class="add-on">
+                                        <img width='15px' height='15px' style="margin-top:5px" src="<?=IMG.'/calendar.png'?>"/>
+                                      </span>
+                                    </div>
                             </div>
+                              <script type="text/javascript">
+                                $(function() {
+                                  $('#datetimepicker1').datetimepicker({
+                                    language: 'pt-BR'
+                                  });
+                                });
+                              </script>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="input05"><?=lang('formCidade')?></label>
@@ -176,8 +192,52 @@
                 </form>
             </div>
         </div>
-        <button type="submit" class="btn btn-sucess pull-right btn-large"  onClick="enviar()">Enviar</button>
-    </section>   
+        <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar();">Enviar</button>
+    </section>
+    <section id='problemasCidadeAtual' style="margin-top: 40px; display:none">
+        <div class='row'>
+            <div class='span12'>
+                <form class="form-horizontal well" novalidate="novalidate1">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao22Def')?></label>
+                            <div class="controls">
+                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>   
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id='prioridadesFuturo' style="margin-top: 40px; display:none">
+        <div class='row'>
+            <div class='span12'>
+                <form class="form-horizontal well" novalidate="novalidate1">
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" for="input01"><?=lang('peopleGridQuestao23Def')?></label>
+                            <div class="controls">
+                              <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>   
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id='sucesso' style="margin-top: 40px; display:none">
+        <div class='row'>
+            <div class='span12'>
+                <div class='hero-unit'>
+                    <h1><?=lang('administrarSalvo')?></h1>
+                    <p><?=lang('administrarSalvoMensagem')?></p>
+                    <p><button class="btn btn-primary pull-right btn-large" href="<?=BASE_URL?>">Voltar ao Início</button></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <script>

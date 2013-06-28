@@ -95,6 +95,7 @@ $lang['nao'] = 'Não';
  * 
  */
 $lang['formIdentifiquese'] = 'Identificação';
+$lang['formSucesso'] = 'Enviado com sucesso!';
 $lang['formPensouComo'] = ' Ao responder o questionário, você pensou como?';
 $lang['formPensouComoOpt1'] = ' Representante da população';
 $lang['formPensouComoOpt2'] = ' Um líder comunitario e/ou ativista';
