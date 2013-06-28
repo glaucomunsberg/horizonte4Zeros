@@ -181,13 +181,28 @@
 </div>
 
 <script>
-    var cont = 1;
-    var questao = new Array();
+    var contQuestao = 1;
+    var cont = 0;
+    var questoesGrid = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
        
-    
     /**
-     * 
+     * Função init já carrega a primeira pergunta
+     *
+     */       
+    function init(){
+        $("#questionGrid").show();
+        $("#formPerguntas").hide();
+        $("#formIdentifiquese").hide();
+        $("#questao_area").html(perguntas[cont]['questaoSobre']); 
+        $("#questao_def").html(perguntas[cont]['questao']);
+    }
+       
+    this.init();
+    
+// FERRAMENTAS DA GRID
+//=======================================================================================    
+    /**
      * Limpa a grid,ou seja, remove qualquer cor
      *  que haja nela
      */
@@ -216,6 +231,9 @@
         $("#peopleGrid1").css('cursor','url(<?= BASE_URL ?>static/img/pen.cur)');
         $corpeopleGrid1 = $corBasepeopleGrid1;
     }
+    
+//=======================================================================================    
+    
         
     /**
      *  Começa as perguntas
@@ -231,94 +249,107 @@
     }
 
          
+
     /**
-     * Função init já carrega a primeira pergunta
-     *
-     */       
-    function init(){
-        $("#questionGrid").show();
-        $("#formPerguntas").hide();
-        $("#formIdentifiquese").hide();
-        $("#questao_area").html(perguntas[cont-1]['questaoSobre']); 
-        $("#questao_def").html(perguntas[cont-1]['questao']);
+      * Função de tratamento da grid.
+      * Nesta função é feito o tratamento dos dados
+      * que o usuario respondeu na grid, transforma
+      * a cor que ele trocou como 0 ou 1
+      * @return grid --> string com as combinação respondida
+      */ 
+    function trataGrid(){
+        var grid = '';
+        $('#peopleGrid1 div').each(function(){ 
+            if (($(this).css('background-color')) == "rgba(0, 0, 0, 0)"){
+                grid += '0';
+            } else {
+                grid += '1';  
+            }  
+         });
+        return grid;
     }
-       
-    this.init();
+    
     /**
+     * Função de tratamento das perguntas finais
+     * nesta função o formulario finalizando é tratado
+     * @return finalizando --> vetor com perguntas
+     */
+    function trataFinalizando(){
+        var finalizando = Array();
+        
+        finalizando["pensouComo"] = document.getElementById("pensouComo").value;
+        
+        return finalizando;
+    }
+    /**
+     * Função de tratamento das perguntas pessoais
+     * insere os valores respondidos pelo usuario em um
+     * vetor.
+     * @return identifiquese --> vetor
+     */
+    function trataIdentifiquese(){
+        var identifiquese = Array();  // vetor recolhe todas as informações pessoais
+        
+        identifiquese["nome"] = document.getElementById("txtNome").value;
+        identifiquese["email"] = document.getElementById("txtEmail").value;
+        identifiquese["genero"] = document.getElementById("genero").value;
+        identifiquese["cidade"] = document.getElementById("txtCidade").value;
+        identifiquese["nivelEscolaridade"] = document.getElementById("nivelEscolaridade").value;
+        identifiquese["rendaFamiliar"] = document.getElementById("rendaFamiliar").value;
+        identifiquese["calendario"] = $("#calendario").val();
+        
+        return identifiquese;
+    }
+    
+   /**
      * Trás a proxima questão a ser repsondida
      * 
      */
-    
-    
-    function trazerProximaQuestao(){
-        var grid = '';
-
-        if (cont == 24) {
+    function trazerProximaQuestao(){   
+        
+        if (contQuestao == 22){
+            questoesGrid[cont] = trataGrid();
+            this.limparGrid();
+            $("#questionGrid").hide();
+            $("#formIdentifiquese").hide();
+            $("#formPerguntas").show();
+        }
+        
+        if (contQuestao < 22){
+            questoesGrid[cont] = trataGrid();
+            this.limparGrid();
+            $("#questao_area").html(perguntas[contQuestao]['questaoSobre']);
+            $("#questao_def").html(perguntas[contQuestao]['questao']);
+        }
+        
+        if (contQuestao == 25) {
             $("#questionGrid").hide();
             $("#formPerguntas").hide();
-            $("#formIdentifiquese").show();
-        
-        } else 
-            if (cont == 23){
-                $("#questionGrid").hide();
-                $("#formIdentifiquese").hide();
-                $("#formPerguntas").show();
-            
-                /*                        
-                for (var i = 0; i < 23; i++){
-                    console.log(questao[i]);
-                }
-                */
-            } else {
-                $('#peopleGrid1 div').each(function(){ 
-                  if (($(this).css('background-color')) == "rgba(0, 0, 0, 0)"){
-                    grid += '0';
-                  } else {
-                    grid += '1';  
-                  }  
-                });
-
-                questao[cont] = grid;
-
-                //console.log(questao[cont]);
-
-                $("#questao_area").html(perguntas[cont]['questaoSobre']);
-                $("#questao_def").html(perguntas[cont]['questao']); 
-                this.limparGrid();
-        }
+            $("#formIdentifiquese").show()
+        }  
+        contQuestao++;
         cont++;
     }
     
-
-
+    
     function enviar(){
-        var pensouComo;
-        var identifiquese = [];
-        
-        pensouComo = document.getElementById("pensouComo").value;
-        
-        identifiquese[0] = document.getElementById("txtNome").value;
-        identifiquese[1] = document.getElementById("txtEmail").value;
-        identifiquese[2] = document.getElementById("genero").value;
-        identifiquese[3] = document.getElementById("txtCidade").value;
-        identifiquese[4] = document.getElementById("nivelEscolaridade").value;
-        identifiquese[5] = //document.getElementById("rendaFamiliar").value;
-        identifiquese[6] = $("#calendario").val();
-        
-        $.post( '<?=BASE_URL?>peopleGrid/salvar',{respostasGrids: questao, pensouComo: pensouComo,
-                    identifiquese: identifiquese},function(data){
-                     var questao = data.questao;
-                        console.log(questao);
-                     });
-       
-       
-       
-       
-        //console.log(questao[1]);
-       // console.log(identifiquese);
-      //  console.log(pensouComo);     
 
-}
+        $.post( '<?=BASE_URL?>peopleGrid/salvar',
+        {
+            respostasGrid: questoesGrid, 
+            finalizando: trataFinalizando(),
+            identifiquese: trataIdentifiquese()
+        },
+        function(data){
+            if (data.sucesso){   
+                $("#sucesso").html();
+            }
+            if (data.falha){
+                $("#falha").html();
+            }
+            
+        });
+    }
 </script>
 <?
 $this->load->view('../../static/views/rodapeView')?>

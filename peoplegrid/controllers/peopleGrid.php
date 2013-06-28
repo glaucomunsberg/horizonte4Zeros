@@ -71,26 +71,35 @@ class PeopleGrid extends CI_Controller {
         }
     }
 
-    //verificar esse tratamento
+    /**
+     * Função Salvar
+     * recebe os dados inseridos no questionario
+     * e insere na tabela pessoas e na tabela questionario
+     * 
+     */  
     function salvar() {
-
-       $pessoa_id = $this->pessoasModel->inserir_new($_POST); 
+       if (($_POST['nome'] == '') && ($_POST['email'] == ''))
+           $pessoa_id = 8; // numero do não identificado
+       else {
+           $pessoa_id = $this->pessoasModel->inserir_new($_POST);    
+       }
        
-       log_message('info', $pessoa_id);
+       $ret = $this->questionarioModel->inserir($_POST, $pessoa_id);
        
-       $this->questionarioModel->inserir($_POST, $pessoa_id);
-       
-       $questao = $this->questionarioModel->getQuestaoTeste();
-       log_message('info', $questao);
-
-        // $this->pessoaModel->inserir($_POST);
-       echo json_encode($questao);
-       echo json_encode( 'sucessototal');
-       
-       
+       if (ret == TRUE){
+           echo json_encode("sucesso");
+       } else {
+           echo json_encode("falha");
+       }
        
     }
 
+    function editar(){
+        $questao = $this->questionarioModel->getQuestaoTeste();
+       echo json_encode($questao);
+        
+    }
+    
 }
 
 /* End of file welcome.php */
