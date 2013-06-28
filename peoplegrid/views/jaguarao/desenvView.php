@@ -26,9 +26,7 @@
             </div>
         </div>
     </div>
-
     <br>
-
     <section id="home">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -113,66 +111,62 @@
         <div class="page-header">
             <h1><?= lang('horizonteLastNews') ?> <small> <?= lang('horizonteLastNewsMensagem') ?></small></h1>
         </div>
-        <div class="row-fluid">
-            <div class="span4">
-                <p>
-                <dt><?= lang('horizonteViagensDesc') ?></dt>
-                <dl class="dl-horizontal">
-                    <dt><?= lang('horizonteViagens') ?></dt>
-                    <dd>14/05 a definir</dd>
-                    <dd>21/05 a definir</dd>
-                    <dd>28/05 a definir</dd>
-                    <dd>14/06 a definir</dd>
-                    <dd>28/06 a definir</dd>
-                    <dd>12/07 a definir</dd>
-                    <dd>09/08 a definir</dd>
-                    <dd>23/08 a definir</dd>
-                </dl>
-                </p>
-                <p>
-                    <span class="label label-info"><?= lang('horizonteNews') ?></span>
-                    <?= lang('horizonteNewsMensagem') ?>
-                </p>
-            </div>
+        <div class="row">
             <div class="span8">
                 <ul class="thumbnails">
-                    <li class="span6">
-                        <a href="#" class="thumbnail">
-                            <img src="http://horizonte4zeros.files.wordpress.com/2013/04/ruinas.jpg?w=560" alt="">
+                    <li class="span2">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2013/06/fundo4.jpg?w=695" alt="">
                         </a>
                     </li>
                     <li class="span2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/160x120" alt="">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://farm9.staticflickr.com/8268/8959379603_ffbc523893_s.jpg" alt="">
                         </a>
                     </li>
                     <li class="span2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/160x120" alt="">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://farm6.staticflickr.com/5450/8959373489_e3d6b0a31f_s.jpg" alt="">
                         </a>
                     </li>
                     <li class="span2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/160x120" alt="">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://farm8.staticflickr.com/7308/8960580514_14cd6b9a2e_s.jpg" alt="">
                         </a>
                     </li>
                     <li class="span2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/160x120" alt="">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://farm8.staticflickr.com/7451/8959381343_eb69e46cfc_t.jpg" alt="">
                         </a>
                     </li>
                     <li class="span2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/160x120" alt="">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://farm9.staticflickr.com/8402/8959378043_571a2e4826_t.jpg" alt="">
                         </a>
                     </li>
                     <li class="span2">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/160x120" alt="">
+                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
+                            <img src="http://farm9.staticflickr.com/8557/8959375415_a832f121cb_s.jpg" alt="">
                         </a>
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="span4">
+            <p>
+            <dt><?= lang('horizonteViagensDesc') ?></dt>
+            <dl class="dl-horizontal">
+                <dt><?= lang('horizonteViagens') ?></dt>
+                <dd>28/06 nos estaremos em Jaguarão!</dd>
+                <dd>12/07 nos estaremos em Jaguarão!</dd>
+                <dd>09/08 nos estaremos em Jaguarão!</dd>
+                <dd>23/08 nos estaremos em Jaguarão!</dd>
+            </dl>
+            </p>
+            <p>
+                <span class="label label-info"><?= lang('horizonteNews') ?></span>
+                <?= lang('horizonteNewsMensagem') ?>
+            </p>
         </div>
     </section>
 
