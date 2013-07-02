@@ -28,6 +28,7 @@ $lang['administrarSalvar'] = 'Salvar';
 $lang['administrarSubtituloProjeto'] = 'Subtitulo';
 $lang['administrarSalvo'] = 'Salvo com sucesso!';
 $lang['administrarSalvoMensagem'] = 'Obrigado por participar de nosso questionário, agora vamos redirecionar você para a home page do Projeto.';
+$lang['administrarFalhaMensagem'] = 'Houve um erro no processo de inserção, tente novamente.';
 
 /**
  * PeopleGrid

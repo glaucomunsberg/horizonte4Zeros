@@ -81,9 +81,6 @@ class PeopleGrid extends CI_Controller {
        
        $identifiquese = $_POST['identifiquese']; 
        
-       log_message('INFO', $identifiquese['0']);
-       
-       
        if (($identifiquese['0'] == ''))
            $pessoa_id = 8; // numero do não identificado
        else {

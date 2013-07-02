@@ -139,6 +139,7 @@
                             <label class="control-label" for="select03"><?=lang('formGenero')?></label>
                             <div class="controls">
                               <select id="genero" class="valid">
+                                <option></option>  
                                 <option><?=lang('formMasculino')?></option>
                                 <option><?=lang('formFeminino')?></option>
                               </select>
@@ -148,7 +149,7 @@
                             <label class="control-label" for="input04"><?=lang('formDtNascimento')?></label>
                             <div class="controls">
                                 <div id="datetimepicker1" class="input-append date">
-                                      <input data-format="dd/MM/yyyy" type="text"></input>
+                                      <input data-format="dd/MM/yyyy" type="text" id="data"></input>
                                       <span class="add-on">
                                         <img width='15px' height='15px' style="margin-top:5px" src="<?=IMG.'/calendar.png'?>"/>
                                       </span>
@@ -188,24 +189,25 @@
                                 </label>         
                                 <label class="radio">
                                     <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt4')?>"><?=lang('formNivelEscolaridadeOpt4') ?>
-                                </label> 
+                                </label>
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label"><?= lang('formRendaFamiliar') ?></label>
                             <div class='controls'>
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt1')?>"><?= lang('formRendaFamiliarOpt1') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt1')?>"><?= lang('formRendaFamiliarOpt1') ?>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt2')?>"><?= lang('formRendaFamiliarOpt2') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt2')?>"><?= lang('formRendaFamiliarOpt2') ?>
                                 </label>        
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt3')?>"><?= lang('formRendaFamiliarOpt3') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt3')?>"><?= lang('formRendaFamiliarOpt3') ?>
                                 </label>         
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formNivelEscolaridadeOpt4')?>"><?= lang('formRendaFamiliarOpt4') ?>
-                                </label> 
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt4')?>"><?= lang('formRendaFamiliarOpt4') ?>
+                                </label>
+
                             </div> 
                         </div>
                     </fieldset>    
@@ -218,24 +220,39 @@
     <section id='sucesso' style="margin-top: 40px; display:none">
         <div class='row'>
             <div class='span12'>
-                <div class='hero-unit'>
-                    <h1><?=lang('administrarSalvo')?></h1>
+                <div class='hero-unit' style="background-color:#DDEDAB">
+                    <h1><img src="<?=BASE_URL?>static/img/success.png">
+                    <?=lang('administrarSalvo')?></h1>
                     <p><?=lang('administrarSalvoMensagem')?></p>
-                    <p><button class="btn btn-primary pull-right btn-large" href="<?=BASE_URL?>">Voltar ao Início</button></p>
+                    <p><a href="<?=BASE_URL?>site/site_desenv/#news" class="btn btn-primary pull-right btn-large" >Voltar ao Início</a></p>
                     <br>
                 </div>
             </div>
         </div>
     </section>
+    <section id='falha' style="margin-top: 40px; display:none">
+        <div class='row'>
+            <div class='span12'>
+                <div class='hero-unit' style="background-color:#FCC0C0">
+                    <h1><img src="<?=BASE_URL?>static/img/fail2.png">
+                    <?=lang('administrarFalha')?></h1>
+                    <p><?=lang('administrarFalhaMensagem')?></p>
+                    <p><a href="<?=BASE_URL?>/peopleGrid" class="btn btn-primary pull-right btn-large" >Voltar ao Início</a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 </div>
 
 <script>
-    var contQuestao = 1;
     var cont = 0;
+    var contQuestao = 1;
     var questoesGrid = new Array();
+    //var questoesObjetivas = new Array();
+    //var questoesIdentifiquese = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
-    var identifiquese = new Array();
-    var perguntasObjetivas = new Array();
     
     /**
      * Função init já carrega a primeira pergunta
@@ -326,13 +343,14 @@
      * @return finalizando --> vetor com perguntas
      */
     
-    function trataPerguntasObjetivas(){
+    function trataPerguntasObjetivas(){    
+        var questoesObjetivas = new Array();
         
+        questoesObjetivas[0] = $('input[name=pensouComo]:checked').val()
+        questoesObjetivas[1] = document.getElementById("txtProblemasCidadeAtual").value;
+        questoesObjetivas[2] = document.getElementById("txtPrioridadesFuturo").value;
         
-        perguntasObjetivas[0] = document.getElementById("pensouComo").value;
-        perguntasObjetivas[1] = document.getElementById("txtProblemasCidadeAtual").value;
-        perguntasObjetivas[2] = document.getElementById("txtPrioridadesFuturo").value;
-        //return perguntasObjetivas;
+        return questoesObjetivas;
     }
     /**
      * Função de tratamento das perguntas pessoais
@@ -342,17 +360,17 @@
      */
       // vetor recolhe todas as informações pessoais
     function trataIdentifiquese(){
+        var questoesIdentifiquese = new Array();       
         
+        questoesIdentifiquese[0] = document.getElementById("txtNome").value;
+        questoesIdentifiquese[1] = document.getElementById("txtEmail").value;
+        questoesIdentifiquese[2] = document.getElementById("genero").value;
+        questoesIdentifiquese[3] = document.getElementById("txtCidade").value;
+        questoesIdentifiquese[4] = $('input[name=nivelEscolaridade]:checked').val()
+        questoesIdentifiquese[5] = $('input[name=rendaFamiliar]:checked').val()
+        questoesIdentifiquese[6] = $("#data").val();
         
-        identifiquese[0] = document.getElementById("txtNome").value;
-        identifiquese[1] = document.getElementById("txtEmail").value;
-        identifiquese[2] = document.getElementById("genero").value;
-        identifiquese[3] = document.getElementById("txtCidade").value;
-        identifiquese[4] = document.getElementById("nivelEscolaridade").value;
-        identifiquese[5] = document.getElementById("rendaFamiliar").value;
-        identifiquese[6] = $("#calendario").val();
-        
-        //return identifiquese;
+        return questoesIdentifiquese;
     }
     
    /**
@@ -379,7 +397,7 @@
         if (contQuestao == 23) {
             $("#questionGrid").hide();
             $("#formPerguntas").hide();
-            $("#formIdentifiquese").show()
+            $("#formIdentifiquese").show();
         }  
         contQuestao++;
         cont++;
@@ -387,22 +405,34 @@
     
     
     function enviar(){
-         
+        
+        
+        
         $.post( '<?=BASE_URL?>peopleGrid/salvar',
         {  
             perguntasObjetivas: trataPerguntasObjetivas(),
             respostasGrid: questoesGrid,
-            identifiquese: trataIdentifiquese()
+            identifiquese: trataIdentifiquese() //questoesIdentifiquese
         },
         function(data){
-            if (data.sucesso){   
-                $("#identifiquese").hide;
-                $("#sucesso").show;
-            }
-            if (data.falha){
-                $("#falha").show;
+            
+            console.log(data.substring(0, 3));
+            
+            if (data.substring(0, 3) == 'l"s'){
+                data = "sucesso";
             }
             
+            if (data.substring(0, 3) == 'l"f'){
+                data = "falha";
+            }
+            
+            if (data == "sucesso"){   
+                $("#formIdentifiquese").hide();
+                $("#falha").show();
+            }
+            if (data == "falha"){
+                $("#falha").show();
+            }
         });
     }
 </script>
