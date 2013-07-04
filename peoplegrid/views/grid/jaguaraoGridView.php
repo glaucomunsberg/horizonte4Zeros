@@ -29,7 +29,10 @@
                 <h3><div id="questao_area"></div></h3>
                 <div id="questao_def" style="min-height: 60px"></div>
                 <br>
-                <div id="row"><button class="btn btn-success pull-right" href="#" onClick="trazerProximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button></div>
+                <div id="row">
+                    <button id="questaoAnterior" class="btn btn-danger pull-left" onClick="questaoAnterior()"><?= lang('peopleGridQuestaoAnterior') ?></button>
+                    <button class="btn btn-success pull-right" href="#" onClick="proximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button>
+                </div>
                 <br>
                 <br>
                 <hr>
@@ -112,9 +115,10 @@
                 </form> 
               </fieldset>
             </div>
-
-            <button class="btn btn-success pull-right" onClick="trazerProximaQuestao()">Próxima Questão</button>
         </div>
+        <hr>
+        <button id="questaoAnterior" class="btn btn-danger pull-left" onClick="questaoAnterior()"><?= lang('peopleGridQuestaoAnterior') ?></button>
+        <button class="btn btn-success pull-right" onClick="proximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button>
     </section>
     <section id="formIdentifiquese" style="margin-top: 40px; display:none">      
         <div class="row">
@@ -215,6 +219,7 @@
             </div>
         </div>
         <hr>
+        <button id="trazerQuestaoAnterior" class="btn btn-danger pull-left" onClick="questaoAnterior()"><?= lang('peopleGridQuestaoAnterior') ?></button>
         <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar();">Enviar</button>
     </section>
     <section id='sucesso' style="margin-top: 40px; display:none">
@@ -248,7 +253,7 @@
 
 <script>
     var cont = 0;
-    var contQuestao = 1;
+    var contQuestao = 0;
     var questoesGrid = new Array();
     //var questoesObjetivas = new Array();
     //var questoesIdentifiquese = new Array();
@@ -258,7 +263,14 @@
      * Função init já carrega a primeira pergunta
      *
      */       
-    function init(){
+    function init(){  
+        
+        if (contQuestao < 1){
+            $('#questaoAnterior').hide();
+        } else{
+            $('#questaoAnterior').show();
+        }
+        
         $("#questionGrid").show();
         $("#formPerguntas").hide();
         $("#formIdentifiquese").hide();
@@ -346,7 +358,7 @@
     function trataPerguntasObjetivas(){    
         var questoesObjetivas = new Array();
         
-        questoesObjetivas[0] = $('input[name=pensouComo]:checked').val()
+        questoesObjetivas[0] = $('input[name=pensouComo]:checked').val();
         questoesObjetivas[1] = document.getElementById("txtProblemasCidadeAtual").value;
         questoesObjetivas[2] = document.getElementById("txtPrioridadesFuturo").value;
         
@@ -366,24 +378,45 @@
         questoesIdentifiquese[1] = document.getElementById("txtEmail").value;
         questoesIdentifiquese[2] = document.getElementById("genero").value;
         questoesIdentifiquese[3] = document.getElementById("txtCidade").value;
-        questoesIdentifiquese[4] = $('input[name=nivelEscolaridade]:checked').val()
-        questoesIdentifiquese[5] = $('input[name=rendaFamiliar]:checked').val()
+        questoesIdentifiquese[4] = $('input[name=nivelEscolaridade]:checked').val();
+        questoesIdentifiquese[5] = $('input[name=rendaFamiliar]:checked').val();
         questoesIdentifiquese[6] = $("#data").val();
         
         return questoesIdentifiquese;
     }
     
-   /**
-     * Trás a proxima questão a ser repsondida
-     * 
-     */
-    function trazerProximaQuestao(){   
+    function preencheResposta(){
+        var questoesIdentifiquese = new Array();
+        var questoesObjetivas = new Array();
+        
+        questoesIdentifiquese = trataPerguntasObjetivas();
+        questoesObjetivas = trataIdentifiquese();
+        
+        for(var i = 0; i < 1155; i++){
+            aux = questoesGrid[cont].charAt(i);
+            if (aux == '1'){
+                $("#"+i).css('background-color','rgb(0, 0, 0)');
+            }
+            aux = '';
+        }
+        
+    }
+    
+    function manipulaQuestao() {
+        if (contQuestao < 1){
+            $('#questaoAnterior').hide();
+        } else{
+            $('#questaoAnterior').show();
+        }
         
         if (contQuestao < 22){
             questoesGrid[cont] = trataGrid();
             this.limparGrid();
             $("#questao_area").html(perguntas[contQuestao]['questaoSobre']);
-            $("#questao_def").html(perguntas[contQuestao]['questao']);
+            $("#questao_def").html(perguntas[contQuestao]['questao']);    
+            $("#formIdentifiquese").hide();
+            $("#formPerguntas").hide();
+            $("#questionGrid").show();
         }
         
         if (contQuestao == 22){
@@ -398,16 +431,31 @@
             $("#questionGrid").hide();
             $("#formPerguntas").hide();
             $("#formIdentifiquese").show();
-        }  
+        }
+        
+        
+    } 
+    
+    function questaoAnterior(){
+       contQuestao--;
+       cont--;
+       manipulaQuestao(); 
+       preencheResposta();
+    }
+    
+   /**
+     * Trás a proxima questão a ser repsondida
+     * 
+     */
+    function proximaQuestao(){
+        manipulaQuestao();
         contQuestao++;
         cont++;
+        manipulaQuestao(); 
     }
     
     
     function enviar(){
-        
-        
-        
         $.post( '<?=BASE_URL?>peopleGrid/salvar',
         {  
             perguntasObjetivas: trataPerguntasObjetivas(),
@@ -428,7 +476,7 @@
             
             if (data == "sucesso"){   
                 $("#formIdentifiquese").hide();
-                $("#falha").show();
+                $("#sucesso").show();
             }
             if (data == "falha"){
                 $("#falha").show();
