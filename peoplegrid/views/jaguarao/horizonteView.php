@@ -56,6 +56,14 @@
         $('#loading').hide('blind'); 
   });
   
+  $('#membros div').mouseenter(function() {
+        $(this).find('div').show();
+    });
+    $('#membros div').mouseleave(function() {
+
+        $(this).find('div').hide();
+    });
+  
   $('#conteudo quadro').each(function(){
       var number = Math.floor(Math.random() * 3);
       console.log(number);
@@ -69,7 +77,7 @@
             $(this).addClass("zoomTarget");
             break;
           case 2:
-            $(this).addClass("escala");
+            $(this).addClass("rotacaoInversa");
             $(this).addClass("zoomTarget");
             break;
                    

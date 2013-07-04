@@ -20,7 +20,7 @@ root {
 }
 
 .caixaDescricaoMembroEquipe{
-    vertical-align: middle !important;display: none; padding-top: 40px; padding-bottom: 5px;text-align: center;height: 110px;width: 150px;cursor:pointer;
+    vertical-align: middle !important;display: none; padding-top: 40px; padding-bottom: 5px;text-align: center;height: 110px;width: 150px;cursor:pointer;color: black
 }
 .grid {
     
@@ -45,11 +45,10 @@ root {
 	-o-transform: rotate(10deg) translate(0px,0px);
 }
 
-.escala{
-    -webkit-transform: scaleX(0.7) translateY(0px) !important;
-    -moz-transform: scaleX(0.7) translateY(0px) !important;
-    -ms-transform: scaleX(0.7) translateY(0px) !important;
-    -o-transform: scaleX(0.7) translateY(0px) !important;
+.rotacaoInversa{
+    -moz-transform: rotate(-100deg) translateX(-120px);
+    -ms-transform: rotate(-100deg) translateX(-120px);
+    -o-transform: rotate(-100deg) translateX(-120px);
 }
 
 .rotacao{
