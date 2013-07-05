@@ -22,7 +22,7 @@
         </div>
     </div>
     <!-- Informações gerais do usuário -->
-    <section id="questionGrid" style="margin-top: 40px">
+    <section id="perguntasGrid" style="margin-top: 40px">
         <div class="row">
             <div class="span5">
                 <br>
@@ -30,7 +30,7 @@
                 <div id="questao_def" style="min-height: 60px"></div>
                 <br>
                 <div id="row">
-                    <button id="questaoAnterior" class="btn btn-danger pull-left" onClick="questaoAnterior()"><?= lang('peopleGridQuestaoAnterior') ?></button>
+                    <button id="btnAnterior" class="btn btn-danger pull-left" onClick="anteriorQuestao()"><?= lang('peopleGridQuestaoAnterior') ?></button>
                     <button class="btn btn-success pull-right" href="#" onClick="proximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button>
                 </div>
                 <br>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </section>
-    <section id="formPerguntas" style="margin-top: 40px; display:none"> 
+    <section id="perguntasObjetivas" style="margin-top: 40px; display:none"> 
         <br>
         <br>
         <div class="row">
@@ -117,10 +117,10 @@
             </div>
         </div>
         <hr>
-        <button id="questaoAnterior" class="btn btn-danger pull-left" onClick="questaoAnterior()"><?= lang('peopleGridQuestaoAnterior') ?></button>
+        <button class="btn btn-danger pull-left" onClick="anteriorQuestao()"><?= lang('peopleGridQuestaoAnterior') ?></button>
         <button class="btn btn-success pull-right" onClick="proximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button>
     </section>
-    <section id="formIdentifiquese" style="margin-top: 40px; display:none">      
+    <section id="perguntasIdentifiqueSe" style="margin-top: 40px; display:none">      
         <div class="row">
             <br>
             <h3><?= lang('formIdentifiquese') ?></h3>
@@ -219,7 +219,7 @@
             </div>
         </div>
         <hr>
-        <button id="trazerQuestaoAnterior" class="btn btn-danger pull-left" onClick="questaoAnterior()"><?= lang('peopleGridQuestaoAnterior') ?></button>
+        <button class="btn btn-danger pull-left" onClick="anteriorQuestao()"><?= lang('peopleGridQuestaoAnterior') ?></button>
         <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar();">Enviar</button>
     </section>
     <section id='sucesso' style="margin-top: 40px; display:none">
@@ -252,11 +252,10 @@
 </div>
 
 <script>
-    var cont = 0;
-    var contQuestao = 0;
+    var questaoCorrente = 1;
     var questoesGrid = new Array();
-    //var questoesObjetivas = new Array();
-    //var questoesIdentifiquese = new Array();
+    var questoesIdentifiqueSe = new Array();
+    var questoesObjetivas = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
     
     /**
@@ -265,17 +264,21 @@
      */       
     function init(){  
         
-        if (contQuestao < 1){
-            $('#questaoAnterior').hide();
-        } else{
-            $('#questaoAnterior').show();
-        }
+        $('#btnAnterior').hide();
+
+        $("#perguntasGrid").hide();
+        $("#perguntasObjetivas").hide();
+        $("#perguntasGrid").show();
         
-        $("#questionGrid").show();
-        $("#formPerguntas").hide();
-        $("#formIdentifiquese").hide();
-        $("#questao_area").html(perguntas[cont]['questaoSobre']); 
-        $("#questao_def").html(perguntas[cont]['questao']);
+        $("#questao_area").html(perguntas[questaoCorrente-1]['questaoSobre']); 
+        $("#questao_def").html(perguntas[questaoCorrente-1]['questao']);
+        var grid;
+        for(var b = 0; b < 1155; b++ ){
+            grid += '0';
+        }
+        for(var a = 0; a < 21; a++){    
+            questoesGrid[a] = grid;
+        }
     }
        
     this.init();
@@ -314,22 +317,102 @@
     
 //=======================================================================================    
     
-        
     /**
-     *  Começa as perguntas
+     * Este método salva os valores nos respectivos arrays
+     *  para serem enviados para o servidor
      */
-    function diretoComecoQuestao(){
-        $('#information').hide();
-        $('#usuarioLogin').show();
-    }
+    function salvarDados(){
+        if(questaoCorrente < 22){
+            questoesGrid[questaoCorrente-1] = trataGrid();
+        }
         
-    function exibirPeopleGrid(){
-        $('#usuarioLogin').hide();
-        $('#questionGrid').show();
+        if(questaoCorrente == 22){
+            trataPerguntasObjetivas();
+        }
+        if(questaoCorrente == 23){
+            trataIdentifiqueSe();
+        }
     }
-
-         
-
+  
+    function proximaQuestao(){
+        salvarDados();
+        questaoCorrente++;
+        manipulaFormulario();
+    }
+  
+    function anteriorQuestao(){
+        salvarDados();
+        questaoCorrente--;
+        manipulaFormulario();
+    }
+  
+    function manipulaFormulario() {
+        
+        if (questaoCorrente == 1){
+            $('#btnAnterior').hide();
+        } else{
+            $('#btnAnterior').show();
+        }
+        
+        if (questaoCorrente < 22){
+            $("#perguntasIdentifiqueSe").hide();
+            $("#perguntasObjetivas").hide();
+            $("#perguntasGrid").show();
+            $("#questao_area").html(perguntas[questaoCorrente-1]['questaoSobre']);
+            $("#questao_def").html(perguntas[questaoCorrente-1]['questao']);    
+            limparGrid();
+            preencheGrid();
+        }
+        
+        if (questaoCorrente == 22){
+            
+            $("#perguntasGrid").hide();
+            $("#perguntasIdentifiqueSe").hide();
+            $("#perguntasObjetivas").show();
+            
+        }
+        
+        if (questaoCorrente == 23) {
+            $("#perguntasGrid").hide();
+            $("#perguntasObjetivas").hide();
+            $("#perguntasIdentifiqueSe").show();
+            
+        }
+        
+        
+    } 
+  
+    /**
+     * Função de tratamento das perguntas finais
+     * nesta função o formulario finalizando é tratado
+     * @return finalizando --> vetor com perguntas
+     */
+    
+    function trataPerguntasObjetivas(){     
+        questoesObjetivas[0] = $('input[name=pensouComo]:checked').val();
+        questoesObjetivas[1] = document.getElementById("txtProblemasCidadeAtual").value;
+        questoesObjetivas[2] = document.getElementById("txtPrioridadesFuturo").value;
+    }
+    
+    /**
+     * Função de tratamento das perguntas pessoais
+     * insere os valores respondidos pelo usuario em um
+     * vetor.
+     * @return identifiquese --> vetor
+     */
+      // vetor recolhe todas as informações pessoais
+    function trataIdentifiqueSe(){
+               
+        questoesIdentifiqueSe[0] = document.getElementById("txtNome").value;
+        questoesIdentifiqueSe[1] = document.getElementById("txtEmail").value;
+        questoesIdentifiqueSe[2] = document.getElementById("genero").value;
+        questoesIdentifiqueSe[3] = document.getElementById("txtCidade").value;
+        questoesIdentifiqueSe[4] = $('input[name=nivelEscolaridade]:checked').val();
+        questoesIdentifiqueSe[5] = $('input[name=rendaFamiliar]:checked').val();
+        questoesIdentifiqueSe[6] = $("#data").val();
+       
+    }
+  
     /**
       * Função de tratamento da grid.
       * Nesta função é feito o tratamento dos dados
@@ -348,119 +431,31 @@
          });
         return grid;
     }
-    
-    /**
-     * Função de tratamento das perguntas finais
-     * nesta função o formulario finalizando é tratado
-     * @return finalizando --> vetor com perguntas
-     */
-    
-    function trataPerguntasObjetivas(){    
-        var questoesObjetivas = new Array();
-        
-        questoesObjetivas[0] = $('input[name=pensouComo]:checked').val();
-        questoesObjetivas[1] = document.getElementById("txtProblemasCidadeAtual").value;
-        questoesObjetivas[2] = document.getElementById("txtPrioridadesFuturo").value;
-        
-        return questoesObjetivas;
-    }
-    /**
-     * Função de tratamento das perguntas pessoais
-     * insere os valores respondidos pelo usuario em um
-     * vetor.
-     * @return identifiquese --> vetor
-     */
-      // vetor recolhe todas as informações pessoais
-    function trataIdentifiquese(){
-        var questoesIdentifiquese = new Array();       
-        
-        questoesIdentifiquese[0] = document.getElementById("txtNome").value;
-        questoesIdentifiquese[1] = document.getElementById("txtEmail").value;
-        questoesIdentifiquese[2] = document.getElementById("genero").value;
-        questoesIdentifiquese[3] = document.getElementById("txtCidade").value;
-        questoesIdentifiquese[4] = $('input[name=nivelEscolaridade]:checked').val();
-        questoesIdentifiquese[5] = $('input[name=rendaFamiliar]:checked').val();
-        questoesIdentifiquese[6] = $("#data").val();
-        
-        return questoesIdentifiquese;
-    }
-    
-    function preencheResposta(){
-        var questoesIdentifiquese = new Array();
-        var questoesObjetivas = new Array();
-        
-        questoesIdentifiquese = trataPerguntasObjetivas();
-        questoesObjetivas = trataIdentifiquese();
-        
+  
+    function preencheGrid(){
+       
         for(var i = 0; i < 1155; i++){
-            aux = questoesGrid[cont].charAt(i);
+            console.log(questaoCorrente);
+            aux = questoesGrid[questaoCorrente-1].charAt(i);
+            
             if (aux == '1'){
                 $("#"+i).css('background-color','rgb(0, 0, 0)');
+                
+            } else {
+                $("#"+i).css('background-color','rgb(0, 0, 0, 0)');
             }
+            
             aux = '';
         }
         
     }
     
-    function manipulaQuestao() {
-        if (contQuestao < 1){
-            $('#questaoAnterior').hide();
-        } else{
-            $('#questaoAnterior').show();
-        }
-        
-        if (contQuestao < 22){
-            questoesGrid[cont] = trataGrid();
-            this.limparGrid();
-            $("#questao_area").html(perguntas[contQuestao]['questaoSobre']);
-            $("#questao_def").html(perguntas[contQuestao]['questao']);    
-            $("#formIdentifiquese").hide();
-            $("#formPerguntas").hide();
-            $("#questionGrid").show();
-        }
-        
-        if (contQuestao == 22){
-            questoesGrid[cont] = trataGrid();
-            this.limparGrid();
-            $("#questionGrid").hide();
-            $("#formIdentifiquese").hide();
-            $("#formPerguntas").show();
-        }
-        
-        if (contQuestao == 23) {
-            $("#questionGrid").hide();
-            $("#formPerguntas").hide();
-            $("#formIdentifiquese").show();
-        }
-        
-        
-    } 
-    
-    function questaoAnterior(){
-       contQuestao--;
-       cont--;
-       manipulaQuestao(); 
-       preencheResposta();
-    }
-    
-   /**
-     * Trás a proxima questão a ser repsondida
-     * 
-     */
-    function proximaQuestao(){
-        manipulaQuestao();
-        contQuestao++;
-        cont++;
-        manipulaQuestao(); 
-    }
-    
-    
-    function enviar(){
+   function enviar(){
         $.post( '<?=BASE_URL?>peopleGrid/salvar',
         {  
-            perguntasObjetivas: trataPerguntasObjetivas(),
+            perguntasObjetivas: questoesObjetivas,
             respostasGrid: questoesGrid,
-            identifiquese: trataIdentifiquese() //questoesIdentifiquese
+            identifiquese: questoesIdentifiqueSe //questoesIdentifiqueSe
         },
         function(data){
             
@@ -483,6 +478,7 @@
             }
         });
     }
+  
 </script>
 <?
 $this->load->view('../../static/views/rodapeView')?>
