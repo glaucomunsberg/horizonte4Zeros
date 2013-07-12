@@ -8,9 +8,9 @@
                 <div class="nav-collapse collapse" >
                     <ul class="nav">
                         <li class=""><a href="#projetos"><?= lang('horizonteProjetos') ?></a> </li>
-                        <li class=""><a href="#enjoy" target="_blank"><?= lang('horizonteEnjoy') ?></a></li>
-                        <li class=""><a href="#equipe"><?= lang('horizonteEquipe') ?></a></li>
                         <li class=""><a href="#news"><?= lang('horizonteLastNews') ?></a></li>
+                        <li class=""><a href="#enjoy"><?= lang('horizonteEnjoy') ?></a></li>
+                        <li class=""><a href="#equipe"><?= lang('horizonteEquipe') ?></a></li>
                         <li class=""><a href="http://horizonte4zeros.wordpress.com" target="_blank"><?= lang('horizonteBlog') ?></a></li>
                         <div class="btn-group">
                             <button class="btn dropdown-toggle" data-toggle="dropdown"><?= lang('horizonteSuaLingua'); ?> <span class="caret"></span></button>
@@ -27,6 +27,8 @@
         </div>
     </div>
     <br>
+    
+<div class="container">    
     <section id="home">
         <div style="padding-top:35px"></div>
         <div class="page-header">
@@ -56,6 +58,10 @@
             </div>
             <!-- PROJETOS -->
             <section id="projetos">
+                <div style="padding-top:55px"></div>
+                <div class="page-header">
+                    <h1><?= lang('horizonteProjetos') ?><small></small></h1>
+                </div>
                 <!-- TITULO DOS PROJETOS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
                     <? foreach ($projetos as $projeto) { ?>
@@ -107,7 +113,7 @@
     </section>
 
     <section id="news">
-        <div style="padding-top:35px"></div>
+        <div style="padding-top:55px"></div>
         <div class="page-header">
             <h1><?= lang('horizonteLastNews') ?> <small> <?= lang('horizonteLastNewsMensagem') ?></small></h1>
         </div>
@@ -152,7 +158,8 @@
                 </ul>
             </div>
         </div>
-        <div class="span4">
+        <div class="row-fluid">
+        <div class="span6">
             <p>
             <dt><?= lang('horizonteViagensDesc') ?></dt>
             <dl class="dl-horizontal">
@@ -168,29 +175,31 @@
                 <?= lang('horizonteNewsMensagem') ?>
             </p>
         </div>
+        </div>    
     </section>
-
+    
     <section id="enjoy">
-        <div style="padding-top:35px"></div>
+        <div style="padding-top:55px"></div>
         <div class="page-header">
             <h1><?= lang('horizonteEnjoy') ?> <small><?= lang('horizonteEnjoySimple') ?></small></h1>
         </div>
         <div class="row-fluid">
-            <div class="span6">
+            <div class="span8">
                 <p><?= lang('horizonteEnjoyConhecendo') ?></p>
             </div>
-            <div class="span6">
+            <div class="span8">
+                <br>
                 <button onClick="irEnjoy()" class="btn btn-large btn-info" href="#"><?= lang('horizonteParticipar') ?></button>
             </div>
         </div>
     </section>
 
-    <session id="equipe">
-        <div style="padding-top:35px"></div>
+    <section id="equipe">
+        <div style="padding-top:55px"></div>
         <div class="page-header">
             <h1><?= lang('horizonteEquipe') ?><small></small></h1>
         </div>
-        <div class="row-fluid">
+        <div class="container">
             <div id="membros" class="span12">
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div  class="transparecia caixaDescricaoMembroEquipe">
@@ -252,11 +261,9 @@
                         <b>Glauco Roberto</b><br>Computação - UFPel
                     </div>
                 </div>
-
             </div>
-
         </div>
-    </session>
+    </section>
 
     <?
     foreach ($projetos as $projeto) {
@@ -292,6 +299,8 @@
         <?
     }
     ?>
+    
+</div>    
     <footer class="footer" >
         <p>
         <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>. <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 

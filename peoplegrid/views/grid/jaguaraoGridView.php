@@ -435,7 +435,6 @@
     function preencheGrid(){
        
         for(var i = 0; i < 1155; i++){
-            console.log(questaoCorrente);
             aux = questoesGrid[questaoCorrente-1].charAt(i);
             
             if (aux == '1'){
