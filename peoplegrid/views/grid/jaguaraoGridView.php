@@ -295,7 +295,7 @@
         $('#peopleGrid1 div').css('background-color','');
     }
     
-    
+
     /**
      * Modifica a imagem do solo da grid
      */
@@ -305,10 +305,12 @@
             soloTerreno = false;
             $('#solo').text('<?= lang('peopleGridTerreno') ?>');
             $('#peopleGrid1').css('background-image',"url('"+IMG+"/solo_satelite.jpg')");
+            
         }else{
             soloTerreno = true;
             $('#solo').text('<?= lang('peopleGridSatelite') ?>');
             $('#peopleGrid1').css('background-image',"url('"+IMG+"/solo_terreno.jpg')");
+            
         }
     }
     
