@@ -16,7 +16,9 @@ root {
     background-color: #fff;
 }
 .caixaFotoMembroEquipe{
-    margin-top:5px;margin-left:1px ;height: 150px; width: 150px; cursor:pointer; background-size:contain ;background-repeat: no-repeat;margin-right:1px; float:left
+    margin-top:5px;margin-left:1px ;height: 150px; width: 150px; cursor:pointer; background-size:contain ;background-repeat: no-repeat;margin-right:1px; float:left;
+    -webkit-filter: grayscale(100%);
+    filter: gray; /* IE6-9 */
 }
 
 .caixaDescricaoMembroEquipe{

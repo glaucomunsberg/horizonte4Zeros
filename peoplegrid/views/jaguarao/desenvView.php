@@ -203,7 +203,62 @@
             <div id="membros" class="span12">
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div  class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Ana Paula Faria</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Ana Paula Zechlinski</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Eduardo Rocha</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Maurício Polidori</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Natalia Naoumova</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Otávio Peres</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>André Peil</b><br>Computação - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Amanda Carvalho</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Amanda Ronca</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Estela Polidori</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Gabriela Cavalheiro</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Giovana Bandeira</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
@@ -213,52 +268,37 @@
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Lucas Prezotto</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Maiga Youkemura</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Matheus Costa</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Otávio Viana</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Rafaela Pinto</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Luciano Oliveira</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Arquiteto - UFPel
-                    </div>
-                </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
-                    <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
-                    </div>
-                </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
-                    <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
-                    </div>
-                </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
-                    <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Rodolfo Ribeiro</b><br>FaUrb - UFPel
                     </div>
                 </div>
             </div>
@@ -301,18 +341,23 @@
     ?>
     
 </div>    
-    <footer class="footer" >
-        <p>
-        <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>. <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
-        <?= lang('horizonteVisitantes') ?>
-            <a href="#" target="blank" >
-                <img alt="Website counter" hspace="0" vspace="0" border="0" src="http://legitfreecounters.com/6554002-EE2D826E78DDFC18F85ACE62DA35116F/counter.img?theme=7&digits=5&siteId=6"/>
-            </a>
-            <noscript>
-            <br/>
-            <a href="#"></a><br><a href="http://www.alexa.com/siteinfo/ireel.com" target="_blank">ireel</a>
-            </noscript>
-        </p>
+    <footer class="footer" style="font-size:11px" align="center" >
+        <div class="container">
+            <hr>
+            <p>
+            <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>.
+            <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
+            <br><?= lang('horizonteVisitantes') ?>
+                <a href="#" target="blank" >
+                    <img alt="Website counter" hspace="0" vspace="0" border="0" src="http://legitfreecounters.com/6554002-EE2D826E78DDFC18F85ACE62DA35116F/counter.img?theme=7&digits=5&siteId=6"/>
+                </a>
+                <noscript>
+                <br/>
+                <a href="#"></a><br><a href="http://www.alexa.com/siteinfo/ireel.com" target="_blank">ireel</a>
+                </noscript>
+            </p>
+            <br>
+        </div>
     </footer>
 
     

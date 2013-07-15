@@ -52,7 +52,8 @@
                         </div>
                     </dd>
                     <dd>
-                        <button class="btn btn-danger" href="#" onClick="limparGrid()"><?= lang('peopleGridLimparGrid') ?></button>
+                        <button class="btn btn-primary" href="#" onClick="limparGrid()"><?= lang('peopleGridLimparGrid') ?></button>
+                        <button id="solo" class="btn btn-primary" href="#" onClick="mudarSolo()"><?= lang('peopleGridSatelite') ?></button>
                     </dd>
                 </dl>
             </div>
@@ -239,7 +240,7 @@
         <div class='row'>
             <div class='span12'>
                 <div class='hero-unit' style="background-color:#FCC0C0">
-                    <h1><img src="<?=BASE_URL?>static/img/fail2.png">
+                    <h1><img src="<?=BASE_URL?>static/img/fail.png">
                     <?=lang('administrarFalha')?></h1>
                     <p><?=lang('administrarFalhaMensagem')?></p>
                     <p><a href="<?=BASE_URL?>/peopleGrid" class="btn btn-primary pull-right btn-large" >Voltar ao Início</a></p>
@@ -263,6 +264,7 @@
      *
      */       
     function init(){  
+        $('#peopleGrid1').css('background-image',"url('"+IMG+"/solo_terreno.jpg')");
         
         $('#btnAnterior').hide();
 
@@ -292,7 +294,25 @@
     function limparGrid(){
         $('#peopleGrid1 div').css('background-color','');
     }
-        
+    
+    
+    /**
+     * Modifica a imagem do solo da grid
+     */
+    var soloTerreno = true;
+    function mudarSolo(){
+        if(soloTerreno){
+            soloTerreno = false;
+            $('#solo').text('<?= lang('peopleGridTerreno') ?>');
+            $('#peopleGrid1').css('background-image',"url('"+IMG+"/solo_satelite.jpg')");
+        }else{
+            soloTerreno = true;
+            $('#solo').text('<?= lang('peopleGridSatelite') ?>');
+            $('#peopleGrid1').css('background-image',"url('"+IMG+"/solo_terreno.jpg')");
+        }
+    }
+    
+    
     /**
      * Função de borracha, limpa um pixel
      *  qualquer; para isso torna o pincel
