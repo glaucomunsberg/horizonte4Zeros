@@ -9,28 +9,33 @@
 
 /**
  * creatrGrid é o comando cria uma grid
- *  na dimensao sizeXsize, tal que ela 
+ *  na dimensao sizeWXsizeH, tal que ela 
  *  estará vinculada na div cont
- * @param {type} size
+ * @param {type} sizeW
+ * @param {type} sizeH
  * @param {type} nomePai
  * @returns {undefined}
  */
-function createGrid(name,size,nomePai,rate) {
-    var ratioW = size,
-        ratioH = size, cont = 0;
+function createGrid(name , sizeW, sizeH, nomePai, rate) {
+    
+    var dif = Math.abs(sizeW-sizeH);
+    var ratioW = sizeW,
+        ratioH = sizeH, cont = 0;
     var parent = $('<div />', {
         class: 'grid',
         id: name,
-        width: (ratioW / rate)  * size,
-        height: (ratioH / rate)  * size
+        width: (sizeW / rate)  * sizeW,
+        height: (sizeH / rate)  * sizeH
     }).addClass('grid').appendTo('.'+nomePai);
-
-    for (var i = 0; i < ratioH; i++) {
-        for(var p = 0; p < ratioW; p++){
+    
+    for (var i = 0; i < sizeW; i++) {
+        // se os sizes não são quadrados deve-se somar a diferenca
+        //  para toda a imagem ser preenchida
+        for(var p = 0; p < sizeH+dif; p++){
             $('<div />', {
                 id: cont,
-                width: (ratioW / rate) - 1,
-                height: (ratioH / rate) -1
+                width: (sizeH / rate) - 1,
+                height: (sizeH / rate) -1
             }).appendTo(parent);
             cont++;
         }

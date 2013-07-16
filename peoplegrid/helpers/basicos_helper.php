@@ -416,10 +416,10 @@ function jTableEnd(){
     $GLOBALS['temp'] = '';
     return $retorno;
 }
-function form_getGrid($nomePai,$id,$size,$rate,$corBase ){
+function form_getGrid($nomePai,$id,$sizeW,$sizeH,$rate,$corBase ){
     $retorno = "<div id='$nomePai' class='$nomePai'></div>";
     $retorno .= "<script>
-                    createGrid('$id',$size,'$nomePai','$rate');
+                    createGrid('$id',$sizeW, $sizeH,'$nomePai','$rate');
                     ";
     
     $retorno .= '$corBase'.$id.' = \''.$corBase.'\'

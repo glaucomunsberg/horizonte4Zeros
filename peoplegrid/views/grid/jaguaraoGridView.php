@@ -24,7 +24,7 @@
     <!-- Informações gerais do usuário -->
     <section id="perguntasGrid" style="margin-top: 40px">
         <div class="row">
-            <div class="span5">
+            <div class="span4">
                 <br>
                 <h3><div id="questao_area"></div></h3>
                 <div id="questao_def" style="min-height: 60px"></div>
@@ -58,7 +58,7 @@
                 </dl>
             </div>
             <div class="span7">
-                <?= form_getGrid('peopleGridPai1', 'peopleGrid1', 34, 2, 'black') ?> 
+                <?= form_getGrid('peopleGridPai1', 'peopleGrid1', 40,32, 2, 'black') ?> 
             </div>
         </div>
     </section>
@@ -68,7 +68,7 @@
         <div class="row">
             <h3>Perguntas Objetivas</h3>
             
-            <div class='span6'>
+            <div class='span3'>
                 <form class="form-horizontal well" novalidate="novalidate1">
                     <fieldset>
                         <div class="control-group">
@@ -258,7 +258,7 @@
     var questoesIdentifiqueSe = new Array();
     var questoesObjetivas = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
-    
+    var numGrid = 1280;
     /**
      * Função init já carrega a primeira pergunta
      *
@@ -275,7 +275,7 @@
         $("#questao_area").html(perguntas[questaoCorrente-1]['questaoSobre']); 
         $("#questao_def").html(perguntas[questaoCorrente-1]['questao']);
         var grid;
-        for(var b = 0; b < 1155; b++ ){
+        for(var b = 0; b < numGrid; b++ ){
             grid += '0';
         }
         for(var a = 0; a < 21; a++){    
@@ -456,9 +456,8 @@
   
     function preencheGrid(){
        
-        for(var i = 0; i < 1155; i++){
+        for(var i = 0; i < numGrid; i++){
             aux = questoesGrid[questaoCorrente-1].charAt(i);
-            
             if (aux == '1'){
                 $("#"+i).css('background-color','rgb(0, 0, 0)');
                 
@@ -479,8 +478,6 @@
             identifiquese: questoesIdentifiqueSe //questoesIdentifiqueSe
         },
         function(data){
-            
-            console.log(data.substring(0, 3));
             
             if (data.substring(0, 3) == 'l"s'){
                 data = "sucesso";
