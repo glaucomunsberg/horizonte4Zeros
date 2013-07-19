@@ -14,12 +14,12 @@
         function inserir($parametros, $pessoa_id){
             $array =  $parametros['respostasGrid'];
             $perguntasObjetivas = $parametros['perguntasObjetivas'];
-            $identifiquese = $parametros['identifiquese'];
+            $a = $parametros['identifiquese'];
             
-            
-            log_message('INFO', $identifiquese['3']);
-            log_message('INFO', $perguntasObjetivas['0']);
-            
+            log_message('INFO', $array['0']);
+            log_message('INFO', $array['1']);
+            log_message('INFO', $array['21']);
+
             $this->db->trans_start();
                 $this->db->set('questao_1', $array['0']);
                 $this->db->set('questao_2', $array['1']);
@@ -46,7 +46,7 @@
                 $this->db->set('voce_pensou_como', $perguntasObjetivas['0']);
                 $this->db->set('problemas_cidade_atual', $perguntasObjetivas['1']);
                 $this->db->set('prioridades_futuro', $perguntasObjetivas['2']);
-                $this->db->set('cidade', $identifiquese['3']);
+                $this->db->set('cidade', $a['3']);
                 $this->db->set('pessoa_id', $pessoa_id);
                 $this->db->insert('questionario');
             $this->db->trans_complete();
@@ -59,12 +59,11 @@
         }
         
         
-        function getQuestaoTeste(){
+        function getQuestao(){
             $this->db->select('*',false);
-             $this->db->from('questionario');
-             $this->db->where('pessoa_id','8');
-            return $this->db->get()->row();
-            
+                $this->db->from('questionario');
+                $this->db->where('pessoa_id','10');
+            return $this->db->get()->row();  
         }
         
         

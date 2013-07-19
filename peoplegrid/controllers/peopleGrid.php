@@ -99,8 +99,7 @@ class PeopleGrid extends CI_Controller {
 
     function editar(){
         $questao = $this->questionarioModel->getQuestaoTeste();
-       echo json_encode($questao);
-        
+        echo json_encode($questao); 
     }
     
 }

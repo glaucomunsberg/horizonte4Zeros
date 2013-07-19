@@ -50,6 +50,7 @@
                                 <span class="radio-label"><?= lang('peopleGridBorracha') ?></span>
                             </label>
                         </div>
+                    
                     </dd>
                     <dd>
                         <button class="btn btn-primary" href="#" onClick="limparGrid()"><?= lang('peopleGridLimparGrid') ?></button>
@@ -68,17 +69,17 @@
         <div class="row">
             <h3>Perguntas Objetivas</h3>
             
-            <div class='span3'>
+            <div class='span6'>
                 <form class="form-horizontal well" novalidate="novalidate1">
                     <fieldset>
                         <div class="control-group">
-                            <label class="control-label" for="input007"><?=lang('peopleGridQuestao22Def')?></label>
+                            <label class="control-label" for="input007"><?=lang('peopleGridQuestao23Def')?></label>
                             <div class="controls">
                               <textarea type="text" class="input-xlarge"  rows="5" id="txtProblemasCidadeAtual" placeholder="Digite o que você pensa sobre isso"></textarea>
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="input008"><?=lang('peopleGridQuestao23Def')?></label>
+                            <label class="control-label" for="input008"><?=lang('peopleGridQuestao24Def')?></label>
                             <div class="controls">
                               <textarea type="text" class="input-xlarge"  rows="5" id="txtPrioridadesFuturo" placeholder="Digite o que você pensa sobre isso"></textarea>
                             </div>
@@ -118,6 +119,7 @@
             </div>
         </div>
         <hr>
+        
         <button class="btn btn-danger pull-left" onClick="anteriorQuestao()"><?= lang('peopleGridQuestaoAnterior') ?></button>
         <button class="btn btn-success pull-right" onClick="proximaQuestao()"><?= lang('peopleGridProximaQuestao') ?></button>
     </section>
@@ -220,9 +222,10 @@
             </div>
         </div>
         <hr>
+        <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar()">Enviar</button>
         <button class="btn btn-danger pull-left" onClick="anteriorQuestao()"><?= lang('peopleGridQuestaoAnterior') ?></button>
-        <button type="submit" class="btn btn-success pull-right btn-large" onClick="enviar();">Enviar</button>
     </section>
+    
     <section id='sucesso' style="margin-top: 40px; display:none">
         <div class='row'>
             <div class='span12'>
@@ -258,7 +261,7 @@
     var questoesIdentifiqueSe = new Array();
     var questoesObjetivas = new Array();
     var perguntas = <?php echo json_encode($perguntas); ?>;
-    var numGrid = 1280;
+    var numGrid = 1600;
     /**
      * Função init já carrega a primeira pergunta
      *
@@ -278,11 +281,15 @@
         for(var b = 0; b < numGrid; b++ ){
             grid += '0';
         }
-        for(var a = 0; a < 21; a++){    
+        for(var a = 0; a <= 21; a++){    
             questoesGrid[a] = grid;
         }
     }
-       
+    /*
+    function teste(){
+        location.href = '<?=BASE_URL?>peopleGrid/editar'; 
+    }
+    */
     this.init();
     
 // FERRAMENTAS DA GRID
@@ -344,14 +351,14 @@
      *  para serem enviados para o servidor
      */
     function salvarDados(){
-        if(questaoCorrente < 22){
+        if(questaoCorrente <= 22){
             questoesGrid[questaoCorrente-1] = trataGrid();
         }
         
-        if(questaoCorrente == 22){
+        if(questaoCorrente == 23){
             trataPerguntasObjetivas();
         }
-        if(questaoCorrente == 23){
+        if(questaoCorrente == 24){
             trataIdentifiqueSe();
         }
     }
@@ -376,7 +383,7 @@
             $('#btnAnterior').show();
         }
         
-        if (questaoCorrente < 22){
+        if (questaoCorrente <= 22){
             $("#perguntasIdentifiqueSe").hide();
             $("#perguntasObjetivas").hide();
             $("#perguntasGrid").show();
@@ -386,7 +393,7 @@
             preencheGrid();
         }
         
-        if (questaoCorrente == 22){
+        if (questaoCorrente == 23){
             
             $("#perguntasGrid").hide();
             $("#perguntasIdentifiqueSe").hide();
@@ -394,7 +401,7 @@
             
         }
         
-        if (questaoCorrente == 23) {
+        if (questaoCorrente == 24) {
             $("#perguntasGrid").hide();
             $("#perguntasObjetivas").hide();
             $("#perguntasIdentifiqueSe").show();
@@ -471,6 +478,7 @@
     }
     
    function enviar(){
+        salvarDados();
         $.post( '<?=BASE_URL?>peopleGrid/salvar',
         {  
             perguntasObjetivas: questoesObjetivas,
@@ -478,6 +486,8 @@
             identifiquese: questoesIdentifiqueSe //questoesIdentifiqueSe
         },
         function(data){
+            
+            console.log(data);
             
             if (data.substring(0, 3) == 'l"s'){
                 data = "sucesso";
@@ -488,10 +498,11 @@
             }
             
             if (data == "sucesso"){   
-                $("#formIdentifiquese").hide();
+                $("#perguntasIdentifiqueSe").hide();
                 $("#sucesso").show();
             }
             if (data == "falha"){
+                $("#perguntasIdentifiqueSe").hide();
                 $("#falha").show();
             }
         });
