@@ -20,6 +20,7 @@ $lang['horizonteDoisMundos'] = 'Dois mundos: Um único objetivo';
 /**
  * Administrar
  */
+$lang['administrarOlaMembro'] = 'Abaixo você como colaborador pode editar e salvar as informações do programa PROEXT, seus projetos e até mesmo visualizar os resultados prévios do PeopleGrid. Aproveite :D';
 $lang['administrarNaoPermitido'] = '<h1>Oops! <small> você não deveria estar aqui.</small></h1>';
 $lang['administrarAdministrarMensagem'] = ' bem-vindo ao sistema.';
 $lang['administrarNaoPreenchido'] =  'Preencha todos os campos';

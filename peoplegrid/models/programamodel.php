@@ -4,19 +4,17 @@
         
         function atualizar($parametros){
             $this->db->trans_start();
-                $this->db->set('nome', $parametros['txtNome']);
+                $this->db->set('nome',$parametros['txtNome']);
                 $this->db->set('subtitulo', $parametros['txtSubtitulo']);
                 $this->db->set('resumo', $parametros['txtResumo']);
                 $this->db->set('apresentacao', $parametros['txtApresentacao']);
-                $this->db->set('ativo',$parametros['ativo']);
-                $this->db->set('fb_id',$parametros['txtFbId']);
-                $this->db->where('id', $parametros['txtProjetoId']);
+                $this->db->where('id',1);
                 $this->db->update('programas');
             $this->db->trans_complete();
             if($this->db->trans_status() === FALSE){
-                return true;
-            }else{
                 return false;
+            }else{
+                return true;
             }
         }
         

@@ -21,8 +21,8 @@ class PeopleGrid extends CI_Controller {
         $this->loadLanguage();
         $data['$userOn'] = 'off';
         if ($userFbid != 0) {
-            if ($this->pessoaModel->getPessoaByUserIdFacebook($userFbid) != null) {
-                $data['userOn'] = $this->pessoaModel->getPessoaByUserIdFacebook($userFbid);
+            if ($this->pessoasModel->getPessoaByUserIdFacebook($userFbid) != null) {
+                $data['userOn'] = $this->pessoasModel->getPessoaByUserIdFacebook($userFbid);
             }
         }
         $this->load->view('grid/welComeGridView', $data);

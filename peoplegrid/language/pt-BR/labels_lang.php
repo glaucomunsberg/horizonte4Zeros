@@ -1,10 +1,10 @@
 <?php
 $lang['horizonte0000']='Horizonte4Zeros';
 $lang['horizonteProjetos'] = 'Projetos';
-$lang['horizonteProjeto1'] = 'Projeto A';
-$lang['horizonteProjeto2'] = 'Projeto B';
-$lang['horizonteProjeto3'] = 'Projeto C';
-$lang['horizonteProjeto4'] = 'Projeto D';
+$lang['horizonteProjeto1'] = 'Projeto drup';
+$lang['horizonteProjeto2'] = 'Projeto Orden. Urb.';
+$lang['horizonteProjeto3'] = 'Projeto Cid. Paraformal';
+$lang['horizonteProjeto4'] = 'Projeto Cromática';
 $lang['horizonteHome'] = 'Home';
 $lang['horizonteLerMais'] = 'Ler Mais';
 $lang['horizonteNews'] = 'Acompanhe!';
@@ -56,10 +56,10 @@ $lang['administrarApresentacao'] = 'Apresentação';
 $lang['administrarJustitificativa'] = 'Justitif./Problema';
 $lang['administrarTeoricos'] = 'Fundamentos Teóricos';
 $lang['administrarResultados'] = 'Resultados';
-$lang['administrarPrograma'] = 'Programa';
+$lang['administrarPrograma'] = 'PROEXT';
 $lang['administrarAreaPublica'] = 'Área Pública ';
 $lang['administrarSalva'] = 'Salvar';
-$lang['administrar'] = '';
+$lang['horizontePeopleGridVerResultado'] = 'Ver PeopleGrid';
 $lang['administrar'] = '';
 $lang['administrar'] = '';
 

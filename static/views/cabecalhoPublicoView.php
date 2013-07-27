@@ -6,7 +6,7 @@
       <meta name="author" content="Glauco Roberto Munsberg">
         <meta charset="UTF-8">
         <meta name="author" content="Glauco Roberto">
-        <meta name="description" content="<?=lang('cabecalhoTitle');?>">
+        <meta name="description" content="<?=lang('horizonte0000');?>">
         <title><?=lang('horizonte0000');?></title>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <script>

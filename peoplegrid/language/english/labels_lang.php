@@ -1,10 +1,10 @@
 <?php
 $lang['horizonte0000']='Horizonte4Zeros';
 $lang['horizonteProjetos'] = 'Projetos';
-$lang['horizonteProjeto1'] = 'Projeto A';
-$lang['horizonteProjeto2'] = 'Projeto B';
-$lang['horizonteProjeto3'] = 'Projeto C';
-$lang['horizonteProjeto4'] = 'Projeto D';
+$lang['horizonteProjeto1'] = 'Projeto drup';
+$lang['horizonteProjeto2'] = 'Projeto Orden. Urb.';
+$lang['horizonteProjeto3'] = 'Projeto Cid. Paraformal';
+$lang['horizonteProjeto4'] = 'Projeto Cromática';
 $lang['horizonteHome'] = 'Home';
 $lang['horizonteLerMais'] = 'Ler Mais';
 $lang['horizonteNews'] = 'Acompanhe as novidades!';

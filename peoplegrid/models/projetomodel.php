@@ -61,19 +61,18 @@ class ProjetoModel extends CI_Model{
         $this->db->trans_start();
             $this->db->set('nome', $parametros['txtNome']);
             $this->db->set('resumo', $parametros['txtResumo']);
-            $this->db->set('objetivo', $parametros['txtApresentacao']);
-            $this->db->set('mapeamento', $parametros['mapeamento']);
-            $this->db->set('problemajustificativa', $parametros['problemajustificativa']);
-            $this->db->set('fudamentos', $parametros['txtTeoria']);
+            $this->db->set('objetivos', $parametros['txtApresentacao']);
+            $this->db->set('problemajustificacao', $parametros['txtJustiticativa']);
+            $this->db->set('fundamentos', $parametros['txtTeoria']);
             $this->db->set('resultados', $parametros['txtResultado']);
             $this->db->where('id', $parametros['txtProjetoId']);
             $this->db->update('projetos');
         $this->db->trans_complete();
 
         if($this->db->trans_status() === FALSE){
-            return true;
-        }else{
             return false;
+        }else{
+            return true;
         }
 
     }

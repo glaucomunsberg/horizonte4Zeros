@@ -37,20 +37,28 @@ class Administrar extends CI_Controller {
         
 
         public function salvarPrograma(){
-            
             if( $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($_POST['txtFbId']) != null){
-                print json_encode($this->programaModel->setPrograma($_POST));
+                print json_encode($this->programaModel->atualizar($_POST));   
             }else{
-                print json_encode('false');
+                print json_encode('lfalse');
             }
             
+        }
+        
+        public function verResultadoPeopleGrid($fb_id = '0') {
+            if ($this->pessoasModel->getUsuarioEquipeByUserIdFacebook($fb_id) != null) {
+                $data['pessoa'] = $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($fb_id);
+                $this->load->view('administrar/verResultadoGridFiltroView', $data);
+            } else {
+                $this->load->view('administrar/naoPermitidoView');
+            }
         }
         
         public function salvarProjeto(){
             if( $this->pessoasModel->getUsuarioEquipeByUserIdFacebook($_POST['txtFbId']) != null){
                 print json_encode($this->projetoModel->atualizarProjeto($_POST));
             }else{
-                print json_encode('false');
+                print json_encode('lfalse');
             }
         }
         
