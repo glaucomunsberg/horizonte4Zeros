@@ -8,7 +8,7 @@ class Enjoy extends CI_Controller {
 	 */
         function __construct() {
             parent::__construct();
-            $this->load->model('pessoaModel', 'pessoaModel');
+            $this->load->model('pessoasModel', 'pessoasModel');
         }
 	public function index($fb_id='0')
 	{
