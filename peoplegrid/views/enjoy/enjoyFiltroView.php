@@ -32,7 +32,7 @@
                 <p>
                     <iframe src="https://www.facebook.com/plugins/registration?
                                  client_id=<?=$this->config->item('app_fb_id')?>&
-                                 redirect_uri=http%3A%2F%2Fglaucomunsberg.com%2Fhorizonte0000%2Fsite%2FcadatroPessoa&
+                                 redirect_uri=http%3A%2F%2Fhorizonte4zeros.ufpel.edu.br%2Fsite%2FcadastroPessoa&
                                  fields=name,birthday,gender,location,email,captcha"
                             scrolling="auto"
                             frameborder="no"

@@ -62,7 +62,7 @@
                                     <input type="hidden" id="fbUserId" value="<?=@$pessoa->fb_id?>">
                                     
                                     <div class="form-actions">
-                                        <button type="submit" class="btn btn-primary" onClick="enviarPrograma()" ><?=lang('administrarSalva')?></button>
+                                        <button type="submit" class="btn btn-primary" onClick="enviarPrograma()" ><?=lang('administrarSalvar')?></button>
                                         <button class="btn" onClick="reloadPagina()"><?=lang('administrarCancelar')?></button>
                                     </div>
                                 </fieldset>
@@ -282,6 +282,33 @@
             </div>
         </div>
     </section>
+    
+    <section id='sucesso' style="margin-top: 40px; display:none">
+        <div class='row'>
+            <div class='span12'>
+                <div class='hero-unit' style="background-color:#DDEDAB">
+                    <h1><img src="<?=BASE_URL?>static/img/success.png">
+                    <?=lang('administrarSalvo')?></h1>
+                    <p><?=lang('administrarSucessoMensagem')?></p>
+                    <p><a href="#"onClick="reloadPagina()" class="btn btn-primary pull-right btn-large" ><?= lang('formVoltarAoInicio')?></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id='falha' style="margin-top: 40px; display:none">
+        <div class='row'>
+            <div class='span12'>
+                <div class='hero-unit' style="background-color:#FCC0C0">
+                    <h1><img src="<?=BASE_URL?>static/img/fail.png">
+                    <?=lang('administrarFalha')?></h1>
+                    <p><?=lang('administrarFalhaMensagem')?></p>
+                    <p><a href="#"onClick="reloadPagina()" class="btn btn-primary pull-right btn-large" ><?= lang('formVoltarAoInicio')?></a></p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 <script>
     
@@ -302,11 +329,11 @@
                  txtResumo: $('#txtProgramaResumo').val()
                  },function(data){
                      if(data == "ltrue"){
-                         $('#alertMensagem').html('<?=lang('administrarSalvo')?>');
-                         $('#alert').show();
+                         $('#home').hide();
+                         $('#sucesso').show();
                      }else{
-                         $('#alertMensagem').html('<?=lang('administrarFalha')?>');
-                         $('#alert').show();
+                         $('#home').hide();
+                         $('#falha').show();
                      }
              });
          }
@@ -366,13 +393,13 @@
                  txtTeoria: $teoria,
                  txtResultado: $resultado
                  },function(data){
-                    
-                     if(data = "ltrue"){
-                         $('#alertMensagem').html('<?=lang('administrarSalvo')?>');
-                         $('#alert').show();
+                    console.log(data);
+                     if(data == "ltrue"){
+                         $('#home').hide();
+                         $('#sucesso').show();
                      }else{
-                         $('#alertMensagem').html('<?=lang('administrarFalha')?>');
-                         $('#alert').show();
+                         $('#home').hide();
+                         $('#falha').show();
                      }
              });
          }

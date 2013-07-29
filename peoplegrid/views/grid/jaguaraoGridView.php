@@ -487,8 +487,6 @@
         },
         function(data){
             
-            console.log(data);
-            
             if (data.substring(0, 3) == 'l"s'){
                 data = "sucesso";
             }

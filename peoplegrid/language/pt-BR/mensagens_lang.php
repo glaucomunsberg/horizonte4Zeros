@@ -24,12 +24,13 @@ $lang['administrarOlaMembro'] = 'Abaixo você como colaborador pode editar e sal
 $lang['administrarNaoPermitido'] = '<h1>Oops! <small> você não deveria estar aqui.</small></h1>';
 $lang['administrarAdministrarMensagem'] = ' bem-vindo ao sistema.';
 $lang['administrarNaoPreenchido'] =  'Preencha todos os campos';
-$lang['administrarFalha'] = 'Ooops! Falhou :/';
-$lang['administrarSalvar'] = 'Salvar';
-$lang['administrarSubtituloProjeto'] = 'Subtitulo';
-$lang['administrarSalvo'] = 'Salvo com sucesso!';
-$lang['administrarSalvoMensagem'] = 'Obrigado por participar de nosso questionário, agora vamos redirecionar você para a home page do Projeto.';
-$lang['administrarFalhaMensagem'] = 'Houve um erro no processo de inserção, tente novamente.';
+$lang['administrarSubtituloProjeto'] = 'Subtítulo';
+$lang['administrarSalvo'] = 'Salvo com sucesso.';
+$lang['administrarSucessoMensagem'] = 'Modificações salvas com sucesso.';
+$lang['administrarFalhaMensagem'] = 'Ocorreu alguma falha... tente novamente.';
+$lang['questionarioSalvoMensagem'] = 'Obrigado por participar de nosso questionário, agora vamos redirecionar você para a home page do Projeto.';
+$lang['questionarioFalhaMensagem'] = 'Houve um erro no processo de inserção, tente novamente.';
+
 
 /**
  * PeopleGrid

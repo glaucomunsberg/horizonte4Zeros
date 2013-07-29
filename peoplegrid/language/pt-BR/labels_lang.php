@@ -5,7 +5,7 @@ $lang['horizonteProjeto1'] = 'Projeto drup';
 $lang['horizonteProjeto2'] = 'Projeto Orden. Urb.';
 $lang['horizonteProjeto3'] = 'Projeto Cid. Paraformal';
 $lang['horizonteProjeto4'] = 'Projeto Cromática';
-$lang['horizonteHome'] = 'Home';
+$lang['horizonteInicio'] = 'Início';
 $lang['horizonteLerMais'] = 'Ler Mais';
 $lang['horizonteNews'] = 'Acompanhe!';
 $lang['horizonteLastNews'] = 'Acompanhe';
@@ -58,8 +58,9 @@ $lang['administrarTeoricos'] = 'Fundamentos Teóricos';
 $lang['administrarResultados'] = 'Resultados';
 $lang['administrarPrograma'] = 'PROEXT';
 $lang['administrarAreaPublica'] = 'Área Pública ';
-$lang['administrarSalva'] = 'Salvar';
 $lang['horizontePeopleGridVerResultado'] = 'Ver PeopleGrid';
+$lang['administrarFalha'] = 'Houve uma falha.';
+$lang['administrarSucesso'] = 'Salvo.';
 $lang['administrar'] = '';
 $lang['administrar'] = '';
 
@@ -79,10 +80,10 @@ $lang['peopleGridTerreno'] = 'Terreno';
 $lang['peopleGridOutrasOpcoes'] = 'Outras Opções';
 $lang['peopleGridAvancar'] = 'Avançar';
 $lang['peopleGridModeladores'] = 'Modeladores';
-$lang['peopleGridHome'] = 'Home';
-$lang['peopleGridLeiaMais'] = 'leia Mais';
+$lang['peopleGridInicio'] = 'Início';
+$lang['peopleGridLeiaMais'] = 'Leia Mais';
+$lang['peopleGridVerMais'] = 'Ver Mais';
 $lang['peopleGridPessoasLigadas'] = 'Participantes';
-$lang['peopleGridVerMais'] = 'ver mais';
 $lang['peopleGridVai'] = 'Vai!';
 $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
@@ -123,7 +124,9 @@ $lang['formRendaFamiliarOpt1'] = '1 á 3 salários mínimos.';
 $lang['formRendaFamiliarOpt2'] = '3 á 5 salários mínimos.';
 $lang['formRendaFamiliarOpt3'] = '5 á 10 salários mínimos.';
 $lang['formRendaFamiliarOpt4'] = 'Mais de 10 salários mínimos.';
-
+$lang['formPerguntasObjetivas'] = 'Perguntas Objetivas';
+$lang['formVoltarAoInicio'] = 'Voltar ao Início';
+$lang['formEnviar'] = 'Enviar';
 
 
 
