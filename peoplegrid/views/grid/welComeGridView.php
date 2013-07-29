@@ -9,7 +9,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </a>
-                <a class="brand" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?=lang('peopleGridHome')?></a>
+                <a class="brand" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?=lang('peopleGridInicio')?></a>
                 <div class="nav-collapse">
                     <ul class="nav">
                         <li class="active"><a href="<?=BASE_URL.'peopleGrid/'?>"><?=lang('peopleGridPeopleGrid')?></a></li>

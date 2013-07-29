@@ -4,7 +4,7 @@
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-                <a class="brand active" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?= lang('horizonteHome') ?></a>
+                <a class="brand active" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?= lang('horizonteInicio') ?></a>
                 <div class="nav-collapse collapse" >
                     <ul class="nav">
                         <li class=""><a href="#projetos"><?= lang('horizonteProjetos') ?></a> </li>
@@ -216,7 +216,7 @@
                         <b>Eduardo Rocha</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/maricio_polidori.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/mauricio_polidori.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Maurício Polidori</b><br>FaUrb - UFPel
                     </div>

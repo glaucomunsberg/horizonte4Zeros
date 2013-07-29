@@ -5,7 +5,6 @@ $lang['horizonteProjeto1'] = 'Projeto A';
 $lang['horizonteProjeto2'] = 'Projeto B';
 $lang['horizonteProjeto3'] = 'Projeto C';
 $lang['horizonteProjeto4'] = 'Projeto D';
-$lang['horizonteHome'] = 'Home';
 $lang['horizonteLerMais'] = 'Ler Mais';
 $lang['horizonteNews'] = 'Acompanhe as novidades!';
 $lang['horizonteLastNews'] = 'Acompanhe';
