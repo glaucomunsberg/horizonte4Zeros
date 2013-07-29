@@ -30,8 +30,8 @@ define('JS', $config['base_url'].'static/js');
 |
 */
 $config['index_page'] = 'index.php';
-$config['app_fb_id'] = '405002446283967';
-$config['app_fb_secret'] = '3c1f20e3a06c17f2969ef9da604199cf';
+$config['app_fb_id'] = '';
+$config['app_fb_secret'] = '';
 
 /*
 |--------------------------------------------------------------------------
