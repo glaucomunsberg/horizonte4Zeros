@@ -118,7 +118,7 @@
             <h1><?= lang('horizonteLastNews') ?> <small> <?= lang('horizonteLastNewsMensagem') ?></small></h1>
         </div>
         <div class="row">
-            <div class="span8">
+            <div class="span12">
                 <ul class="thumbnails">
                     <li class="span2">
                         <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
@@ -163,6 +163,14 @@
             <p>
             <dt><?= lang('horizonteViagensDesc') ?></dt>
             <dl class="dl-horizontal">
+                <dt><?= lang('horizonteViagensFeitas') ?></dt>
+                <dd>28/06 nos estaremos em Jaguarão!</dd>
+                <dd>12/07 nos estaremos em Jaguarão!</dd>
+                <dd>09/08 nos estaremos em Jaguarão!</dd>
+                <dd>23/08 nos estaremos em Jaguarão!</dd>
+                <dd>23/08 nos estaremos em Jaguarão!</dd>
+                <dd>23/08 nos estaremos em Jaguarão!</dd>
+                <dd>23/08 nos estaremos em Jaguarão!</dd>
                 <dt><?= lang('horizonteViagens') ?></dt>
                 <dd>28/06 nos estaremos em Jaguarão!</dd>
                 <dd>12/07 nos estaremos em Jaguarão!</dd>
@@ -184,12 +192,22 @@
             <h1><?= lang('horizonteEnjoy') ?> <small><?= lang('horizonteEnjoySimple') ?></small></h1>
         </div>
         <div class="row-fluid">
-            <div class="span8">
+            <div class="span7">
                 <p><?= lang('horizonteEnjoyConhecendo') ?></p>
+                <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
             </div>
-            <div class="span8">
-                <br>
-                <button onClick="irEnjoy()" class="btn btn-large btn-info" href="#"><?= lang('horizonteParticipar') ?></button>
+            <div class="span5">
+                
+                <div class="hero-unit">
+                        <h3 style="padding-top:10px"><?= lang('horizontePessoas') ?></h3>
+                        <?
+                        foreach ($pessoas as $pessoa) {
+                            ?>
+                            <div title="<?= $pessoa->nome ?>" style="float:left; margin:2px; width:40px; height: 40px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?= $pessoa->fb_id ?>/picture')"></div>
+                            <?
+                        }
+                        ?>
+                    </div>
             </div>
         </div>
     </section>
