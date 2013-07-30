@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><?=lang('horizonteDoisMundos')?></title>
+    <link rel="shortcut icon" href="<?=IMG?>/favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="<?=BASE_URL?>static/js/jquery-1.7.min.js"></script>
     <script type="text/javascript" src="<?=BASE_URL?>static/js/plax.js"></script>
   </head>

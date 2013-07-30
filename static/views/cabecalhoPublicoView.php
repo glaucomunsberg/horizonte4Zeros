@@ -2,7 +2,7 @@
 <html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://www.facebook.com/2008/fbml">
     <head>
-      <link rel="shortcut icon" href="<?=IMG?>/favicon.ico">
+      <link rel="shortcut icon" href="<?=IMG?>/favicon.ico" type="image/x-icon" />
       <meta name="author" content="Glauco Roberto Munsberg">
         <meta charset="UTF-8">
         <meta name="author" content="Glauco Roberto">
