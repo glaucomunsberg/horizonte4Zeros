@@ -3,7 +3,7 @@
     <div class="navbar-inner">
         <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-            <a class="brand" href="<?=BASE_URL?>"><?=lang('horizonteHome')?></a>
+            <a class="brand" href="<?=BASE_URL?>"><?=lang('horizonteInicio')?></a>
             <a class="brand" href="<?=BASE_URL.'peopleGrid/index/'.@$pessoa->fb_id?>"><?=lang('peopleGridPeopleGrid')?></a>
         </div>
     </div>

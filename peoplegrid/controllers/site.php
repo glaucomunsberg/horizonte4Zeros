@@ -45,7 +45,7 @@ class Site extends CI_Controller {
                 $this->load->view('enjoy/enjoyFiltroView');
         }
         
-        public function cadatroPessoa(){
+        public function cadastroPessoa(){
             if (@$_REQUEST['signed_request']) {
                   define('FACEBOOK_APP_ID', $this->config->item('app_fb_id'));
                   define('FACEBOOK_SECRET', $this->config->item('app_fb_secret'));

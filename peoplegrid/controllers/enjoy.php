@@ -26,7 +26,7 @@ class Enjoy extends CI_Controller {
          * 
          * @param type $backTo volta para qual url
          */
-        public function cadatroPessoa($backTo = null){
+        public function casdatroPessoa($backTo = null){
             if (@$_REQUEST['signed_request']) {
                   define('FACEBOOK_APP_ID', $this->config->item('app_fb_id'));
                   define('FACEBOOK_SECRET', $this->config->item('app_fb_secret'));
