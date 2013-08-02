@@ -58,9 +58,10 @@
             
             function logarComFacebookId(){
                 FB.api('/me', function(response) {
+                  console.log(response);
                   location.href = '<?=BASE_URL?>site/logarComFacebook/'+response.id;
                 
-            });
+                });
             }
         </script>
 <?$this->load->view('../../static/views/rodapeView')?>

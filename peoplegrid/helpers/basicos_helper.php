@@ -416,7 +416,7 @@ function jTableEnd(){
     $GLOBALS['temp'] = '';
     return $retorno;
 }
-function form_getGrid($nomePai,$id,$sizeW,$sizeH,$rate,$corBase ){
+function form_getGrid($nomePai,$id,$sizeW,$sizeH,$rate,$corBase,$ferramentas = true ){
     $retorno = "<div id='$nomePai' class='$nomePai'></div>";
     $retorno .= "<script>
                     createGrid('$id',$sizeW, $sizeH,'$nomePai','$rate');
@@ -424,9 +424,9 @@ function form_getGrid($nomePai,$id,$sizeW,$sizeH,$rate,$corBase ){
     
     $retorno .= '$corBase'.$id.' = \''.$corBase.'\'
                  $desenhar'.$id.' = false;
-                 $cor'.$id.' = $corAnterior'.$id.' = $corBase'.$id.';
-
-                 $("#'.$id.'").selectable();
+                 $cor'.$id.' = $corAnterior'.$id.' = $corBase'.$id.';';
+    if($ferramentas){
+        $retorno .= '$("#'.$id.'").selectable();
                  $("#'.$id.'").css(\'cursor\',\'url('.BASE_URL.'static/img/pen.cur)\');
                  $("#'.$id.' div").mousedown(function(){
                    $desenhar'.$id.' =  true;  
@@ -448,6 +448,10 @@ function form_getGrid($nomePai,$id,$sizeW,$sizeH,$rate,$corBase ){
                         $(this).css(\'background-color\',$cor'.$id.'); 
                 });
                 </script>';
+    }else{
+         $retorno .= "</script>";
+    }
+                
 
     return $retorno;
 }

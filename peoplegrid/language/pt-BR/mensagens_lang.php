@@ -14,7 +14,7 @@ $lang['horizonteNaoRegistradoMensagem'] = ' algo aconteceu de errado, tente nova
 $lang['horizonteRegistradoAntesMensagem'] = ' anteriormente, volte e escolha \'Já sou membro\'.';
 $lang['horizonteRegistradoTenteRegistrar'] = ' você ainda não é membro ou ainda não foi liberado :)';
 $lang['horizonteEnjoySimple'] ='é a forma de estar conectado';
-$lang['horizonteEnjoyConhecendo'] =  ' A conexão com o site é simplificado, basta apenas que você tenha uma conta na rede social Facebook para que possa se conectar a nós. Fantástico não?! Clique em "entrar" para começar a experiência o PeopleGrid.';
+$lang['horizonteEnjoyConhecendo'] =  ' A conexão com o site é simplificado, basta apenas que você tenha uma conta na rede social Facebook para que possa se conectar a nós. Você receberá email e uma série de dicas sobre o projeto. Fantástico não?! Clique em "participar" para começar.';
 $lang['horizonteViagensDesc'] = 'Veja abaixo os dias e locais onde estaremos!';
 $lang['horizonteDoisMundos'] = 'Dois mundos: Um único objetivo';
 /**

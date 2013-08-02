@@ -18,7 +18,6 @@
             
             
         </div>
-        
         <div class="row-fluid">
             <div class="span12">
                 <div class="tabbable tabs-left">
@@ -31,12 +30,126 @@
                       <li class="active" id="peopleGrid"><a  href="#peopleGrid" data-toggle="tab"><?=lang('horizontePeopleGridVerResultado')?></a></li>
                     </ul>
                     <div class="tab-content">
-                        <!-- Programa -->
-                      <div class="tab-pane active" id="peopleGrid">
-                         oaisais
-                          
+                        <div class="tab-pane active" id="peopleGrid">
+                            <div class="row" style="margin-left: 0px;">
+                                <div class="span12">
+                                    <select id="select01">
+                                        <option>Questão</option>
+                                        <option id="1">Questão 1</option>
+                                        <option id="2">Questão 2</option>
+                                        <option id="3">Questão 3</option>
+                                        <option id="4">Questão 4</option>
+                                        <option id="5">Questão 5</option>
+                                        <option id="6">Questão 6</option>
+                                        <option id="7">Questão 7</option>
+                                        <option id="8">Questão 8</option>
+                                        <option id="9">Questão 9</option>
+                                        <option id="10">Questão 10</option>
+                                        <option id="11">Questão 11</option>
+                                        <option id="12">Questão 12</option>
+                                        <option id="13">Questão 13</option>
+                                        <option id="14">Questão 14</option>
+                                        <option id="15">Questão 15</option>
+                                        <option id="16">Questão 16</option>
+                                        <option id="17">Questão 17</option>
+                                        <option id="18">Questão 18</option>
+                                        <option id="19">Questão 19</option>
+                                        <option id="20">Questão 20</option>
+                                        <option id="21">Questão 21</option>
+                                        <option id="22">Questão 22</option>
+                                        <option id="23">Questão 23</option>
+                                        <option id="24">Questão 24</option>
+                                      </select>
+                                      <select id="select02">
+                                        <option>Gêneros</option>
+                                        <option id="F">Feminino</option>
+                                        <option id="M">Maculino</option>
+                                      </select>
+                                      <select id="select03">
+                                        <option>Idades</option>
+                                        <option>Entre 10 - 20 anos</option>
+                                        <option>Entre 20 - 40 anos</option>
+                                        <option>Maculino</option>
+                                        <option>Maculino</option>
+                                      </select>
+                                      <select id="select04">
+                                        <option>Cidades</option>
+                                        <option>Jaguarão</option>
+                                        <option>Cidades Estrangeiras</option>
+                                        <option>Cidades Nacionais</option>
+                                      </select>
+                                      <select id="select05">
+                                        <option id="T">Terreno</option>
+                                        <option id="S">Satélite</option>
+                                      </select>
+                                      <from class="control-horizontal">
+                                          <fieldset>
+                                              <div class="control-group">
+                                                <label class="control-label" for="optionsCheckboxList">Nível escolar</label>
+                                                <div class="controls">
+                                                  <label class="checkbox">
+                                                    <input type="checkbox" name="optionsCheckboxList1" value="option1">
+                                                    Ensino Fundamental
+                                                  </label>
+                                                  <label class="checkbox">
+                                                    <input type="checkbox" name="optionsCheckboxList2" value="option2">
+                                                    Ensino Médio
+                                                  </label>
+                                                  <label class="checkbox">
+                                                    <input type="checkbox" name="optionsCheckboxList3" value="option3">
+                                                    Ensino Superior
+                                                  </label>
+                                                </div>
+                                              </div>
+                                          </fieldset>
+                                      </from>
+
+                                      
+                                </div>
+                            </div>
+                            <div class="row"  style="margin-left: 0px;">
+                                <div class="span4">
+                                    <div class="control-group">
+                                        <label class="control-label" for="optionsCheckboxList">Pessoas</label>
+                                        <div class="controls">
+                                          <label class="checkbox">
+                                            <input type="checkbox" name="optionsCheckboxList" value="option1">
+                                            Filtrar Anônimos
+                                          </label>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="span4">
+                                                                            <form class=" control-group">
+                                            <div class="control-group">
+                                                <label class="control-label" for="optionsCheckboxList">Pessoas</label>
+                                                <div class="controls">
+                                                  <label class="checkbox">
+                                                    <input type="checkbox" name="optionsCheckboxList" value="option1">
+                                                    Filtrar Anônimos
+                                                  </label>
+                                                </div>
+                                              </div>
+                                        </form>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left: 0px;">
+                                <div class="span12">
+                                    <button class="btn btn-primary" href="#">filtrar</button>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left: 0px;">
+                                <div class="span12" id="resultadoGrid">
+                                    <?= form_getGrid('peopleGridPai1', 'peopleGrid1', 40,32, 2, 'black',false) ?> 
+                                </div>
+                            </div>
+                            <div class="row" style="display:none;margin-left: 0px;">
+                                <div class="span12" id="resultadoDiser">
+                                    
+                                </div>
+                            </div>
+                        </div>                          
                       </div>
-                      
                     </div>
                 </div>
             </div>
@@ -52,6 +165,7 @@
     </section>
 </div>
 <script>
+    $('#peopleGrid1').css('background-image',"url('"+IMG+"/solo_terreno.jpg')");
     $('#menu li').click(function(){
         if( this.id != 'peopleGrid'){
             location.href = BASE_URL+'administrar/index/<?=@$pessoa->fb_id?>';

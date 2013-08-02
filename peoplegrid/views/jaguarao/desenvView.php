@@ -197,8 +197,8 @@
                 <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
             </div>
             <div class="span5">
-
-                    <div class="hero-unit">
+                
+                <div class="hero-unit">
                         <h3 style="padding-top:10px"><?= lang('horizontePessoas') ?></h3>
                         <?
                         foreach ($pessoas as $pessoa) {
@@ -207,10 +207,8 @@
                             <?
                         }
                         ?>
-                        <br style="clear:both;" />
-                        <a href="#enjoy" ><button class="btn btn-info" style="margin-top:10px"><?= lang('horizonteEntrar') ?></button></a>
                     </div>
-           </div>
+            </div>
         </div>
     </section>
 
