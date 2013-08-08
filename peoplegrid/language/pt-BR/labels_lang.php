@@ -85,9 +85,7 @@ $lang['peopleGridLeiaMais'] = 'Leia Mais';
 $lang['peopleGridVerMais'] = 'Ver Mais';
 $lang['peopleGridPessoasLigadas'] = 'Participantes';
 $lang['peopleGridVai'] = 'Vai!';
-$lang['peopleGrid'] = '';
-$lang['peopleGrid'] = '';
-$lang['peopleGrid'] = '';
+
 $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
 
@@ -127,7 +125,9 @@ $lang['formRendaFamiliarOpt4'] = 'Mais de 10 salários mínimos.';
 $lang['formPerguntasObjetivas'] = 'Perguntas Objetivas';
 $lang['formVoltarAoInicio'] = 'Voltar ao Início';
 $lang['formEnviar'] = 'Enviar';
-
+$lang['formIdade'] = 'Idade';
+$lang['formDe'] = 'De';
+$lang['formAte'] = 'até';
 
 
 ?>

@@ -33,56 +33,62 @@
                         <div class="tab-pane active" id="peopleGrid">
                             <div class="row" style="margin-left: 0px;">
                                 <div class="span12">
-                                    <select id="select01">
-                                        <option>Questão</option>
-                                        <option id="1">Questão 1</option>
-                                        <option id="2">Questão 2</option>
-                                        <option id="3">Questão 3</option>
-                                        <option id="4">Questão 4</option>
-                                        <option id="5">Questão 5</option>
-                                        <option id="6">Questão 6</option>
-                                        <option id="7">Questão 7</option>
-                                        <option id="8">Questão 8</option>
-                                        <option id="9">Questão 9</option>
-                                        <option id="10">Questão 10</option>
-                                        <option id="11">Questão 11</option>
-                                        <option id="12">Questão 12</option>
-                                        <option id="13">Questão 13</option>
-                                        <option id="14">Questão 14</option>
-                                        <option id="15">Questão 15</option>
-                                        <option id="16">Questão 16</option>
-                                        <option id="17">Questão 17</option>
-                                        <option id="18">Questão 18</option>
-                                        <option id="19">Questão 19</option>
-                                        <option id="20">Questão 20</option>
-                                        <option id="21">Questão 21</option>
-                                        <option id="22">Questão 22</option>
-                                        <option id="23">Questão 23</option>
-                                        <option id="24">Questão 24</option>
-                                      </select>
-                                      <select id="select02">
+                                    <select id="select01" style="height:80; width:80%;">
+                                        <option><?=lang('peopleGridEscolhaQuestao');?></option>
+                                        <option id="1"><?=lang('peopleGridQuestao1Def');?></option>
+                                        <option id="2"><?=lang('peopleGridQuestao2Def');?></option>
+                                        <option id="3"><?=lang('peopleGridQuestao3Def');?></option>
+                                        <option id="4"><?=lang('peopleGridQuestao4Def');?></option>
+                                        <option id="5"><?=lang('peopleGridQuestao5Def');?></option>
+                                        <option id="6"><?=lang('peopleGridQuestao6Def');?></option>
+                                        <option id="7"><?=lang('peopleGridQuestao7Def');?></option>
+                                        <option id="8"><?=lang('peopleGridQuestao8Def');?></option>
+                                        <option id="9"><?=lang('peopleGridQuestao9Def');?></option>
+                                        <option id="10"><?=lang('peopleGridQuestao10Def');?></option>
+                                        <option id="11"><?=lang('peopleGridQuestao11Def');?></option>
+                                        <option id="12"><?=lang('peopleGridQuestao12Def');?></option>
+                                        <option id="13"><?=lang('peopleGridQuestao13Def');?></option>
+                                        <option id="14"><?=lang('peopleGridQuestao14Def');?></option>
+                                        <option id="15"><?=lang('peopleGridQuestao15Def');?></option>
+                                        <option id="16"><?=lang('peopleGridQuestao16Def');?></option>
+                                        <option id="17"><?=lang('peopleGridQuestao17Def');?></option>
+                                        <option id="18"><?=lang('peopleGridQuestao18Def');?></option>
+                                        <option id="19"><?=lang('peopleGridQuestao19Def');?></option>
+                                        <option id="20"><?=lang('peopleGridQuestao20Def');?></option>
+                                        <option id="21"><?=lang('peopleGridQuestao21Def');?></option>
+                                        <option id="22"><?=lang('peopleGridQuestao22Def');?></option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div class="span12">
+                                    
+                                    <select id="select02">
                                         <option>Gêneros</option>
-                                        <option id="F">Feminino</option>
-                                        <option id="M">Maculino</option>
-                                      </select>
-                                      <select id="select03">
-                                        <option>Idades</option>
-                                        <option>Entre 10 - 20 anos</option>
-                                        <option>Entre 20 - 40 anos</option>
-                                        <option>Maculino</option>
-                                        <option>Maculino</option>
-                                      </select>
-                                      <select id="select04">
+                                        <option id="F"><?=lang('formFeminino')?></option>
+                                        <option id="M"><?=lang('formMasculino')?></option>
+                                    </select>
+                                    
+                                    ̣<div class="control-group">
+                                        <label class="control-label" for="input01"><?=lang('formIdade')?></label>
+                                        <div class="controls">
+                                            <?=lang('formDe')?>
+                                            <input type="text" class="span3" id="txtNome" placeholder="Digite seu nome">
+                                            <?=lang('formAte')?>
+                                            <input type="text" class="span3" id="txtNome" placeholder="Digite seu nome">
+                                        </div>
+                                    </div>
+                                    
+                                    <select id="select04">
                                         <option>Cidades</option>
                                         <option>Jaguarão</option>
                                         <option>Cidades Estrangeiras</option>
                                         <option>Cidades Nacionais</option>
-                                      </select>
-                                      <select id="select05">
+                                    </select>
+                                    <select id="select05">
                                         <option id="T">Terreno</option>
                                         <option id="S">Satélite</option>
-                                      </select>
-                                      <from class="control-horizontal">
+                                    </select>
+                                    <from class="control-horizontal">
                                           <fieldset>
                                               <div class="control-group">
                                                 <label class="control-label" for="optionsCheckboxList">Nível escolar</label>
