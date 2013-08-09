@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="<?=CSS?>/estiloPadrao.css">
         <script type="text/javascript" src="<?=JS?>/jquery-1.8.2.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?=JS?>/mask.js"></script>
         <script type="text/javascript" src="<?=JS?>/javascriptBasico.js"></script>
         <script type="text/javascript" src="<?=JS?>/bootstrap-tooltip.js"></script>
         <script type="text/javascript" src="<?=JS?>/bootstrap-alert.js"></script>
@@ -35,20 +36,6 @@
         <script type="text/javascript" src="<?=JS?>/jquery.validate.js"></script>
         <script type="text/javascript" src="<?=JS?>/jquery.validate.unobtrusive.js"></script>
         <script type="text/javascript" src="<?=JS?>/jquery.unobtrusive-ajax.js"></script>
+        
     </head>
-    <body data-spy="scroll" data-target=".subnav" data-offset="50" screen_capture_injected="true">
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-40280251-1', 'glaucomunsberg.com');
-  ga('send', 'pageview');
-
-</script>    
-   
-    
-    
-
-     
+    <body data-spy="scroll" data-target=".subnav" data-offset="50" screen_capture_injected="true">   
