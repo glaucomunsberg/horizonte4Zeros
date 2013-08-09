@@ -33,7 +33,7 @@
                         <div class="tab-pane active" id="peopleGrid">
                             <div class="row" style="margin-left: 0px;">
                                 <div class="span12">
-                                    <select id="select01" style="height:80; width:80%;">
+                                    <strong><select id="select01" class="span12" style="height:50px; font-size:16px; " >
                                         <option><?=lang('peopleGridEscolhaQuestao');?></option>
                                         <option id="1"><?=lang('peopleGridQuestao1Def');?></option>
                                         <option id="2"><?=lang('peopleGridQuestao2Def');?></option>
@@ -57,7 +57,7 @@
                                         <option id="20"><?=lang('peopleGridQuestao20Def');?></option>
                                         <option id="21"><?=lang('peopleGridQuestao21Def');?></option>
                                         <option id="22"><?=lang('peopleGridQuestao22Def');?></option>
-                                    </select>
+                                    </select></strong>
                                 </div>
                                 </div>
                                 <div class="span12">

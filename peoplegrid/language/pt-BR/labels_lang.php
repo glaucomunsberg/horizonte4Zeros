@@ -85,7 +85,7 @@ $lang['peopleGridLeiaMais'] = 'Leia Mais';
 $lang['peopleGridVerMais'] = 'Ver Mais';
 $lang['peopleGridPessoasLigadas'] = 'Participantes';
 $lang['peopleGridVai'] = 'Vai!';
-
+$lang['peopleGridEscolhaQuestao'] = 'Escolha uma questão';
 $lang['peopleGrid'] = '';
 $lang['peopleGrid'] = '';
 
