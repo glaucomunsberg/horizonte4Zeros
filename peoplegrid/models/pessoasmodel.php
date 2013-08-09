@@ -5,7 +5,7 @@
          *  Insere um usuário com as informações trazidas
          *      do faceboook
          */
-        function inserir($parametros,$user_id){
+        function inserir($parametros, $user_id){
             $this->db->trans_start();
                 $this->db->set('nome', $parametros['name']);
                 $this->db->set('email', $parametros['email']);
@@ -38,7 +38,7 @@
                 $this->db->set('nome', $identifiquese['0']);
                 $this->db->set('email', $identifiquese['1']);
                 $this->db->set('genero',$identifiquese['2']);
-                $this->db->set('cidade_natal',$identifiquese['3']);
+                $this->db->set('cidade',$identifiquese['3']);
                 $this->db->set('nivel_escolaridade', $identifiquese['4']);
                 $this->db->set('renda_familiar', $identifiquese['5']);
                 $this->db->set('dt_nascimento',$identifiquese['6']);

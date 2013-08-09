@@ -1,4 +1,4 @@
-CREATE TABLE DEFAULT_SCHEMA.programas (
+CREATE TABLE programas (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
      , nome VARCHAR(500)
      , subtitulo VARCHAR(500)
@@ -8,4 +8,3 @@ CREATE TABLE DEFAULT_SCHEMA.programas (
      , dt_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
      , PRIMARY KEY (id)
 );
-

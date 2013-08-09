@@ -62,6 +62,11 @@ class Administrar extends CI_Controller {
             }
         }
         
+        public function filtrar() {
+           
+            
+        }
+        
 }
 
 /* End of file welcome.php */

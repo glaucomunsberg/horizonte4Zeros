@@ -1,4 +1,4 @@
-CREATE TABLE DEFAULT_SCHEMA.projetos (
+CREATE TABLE projetos (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
      , nome VARCHAR(255) BINARY
      , resumo VARCHAR(300)
@@ -12,6 +12,5 @@ CREATE TABLE DEFAULT_SCHEMA.projetos (
      , PRIMARY KEY (id)
      , INDEX (programa_id)
      , CONSTRAINT FK_projetos_1 FOREIGN KEY (programa_id)
-                  REFERENCES DEFAULT_SCHEMA.programas (id)
+                  REFERENCES programas (id)
 );
-

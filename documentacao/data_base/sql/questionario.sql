@@ -24,13 +24,14 @@ CREATE TABLE questionario (
      , questao_22 BLOB
      , problemas_cidade_atual TEXT
      , prioridades_futuro TEXT
-     , voce_pensou_como VARCHAR(50)
-     , cidade VARCHAR(50)
+     , voce_pensou_como_id INTEGER UNSIGNED
      , pessoa_id BIGINT(20) UNSIGNED
      , dt_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
      , PRIMARY KEY (id)
      , INDEX (pessoa_id)
      , CONSTRAINT FK_questionario_1 FOREIGN KEY (pessoa_id)
-     REFERENCES pessoas (id)
-)ENGINE=MyISAM  DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=1 ;
-
+                  REFERENCES pessoas (id)
+     , INDEX (voce_pensou_como_id)
+     , CONSTRAINT FK_questionario_3 FOREIGN KEY (voce_pensou_como_id)
+                  REFERENCES voce_pensou_como (id)
+);

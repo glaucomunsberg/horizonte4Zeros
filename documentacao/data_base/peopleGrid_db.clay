@@ -18,20 +18,17 @@
 <column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff4" mandatory="false" name="email">
 <data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n) BINARY"/>
 </column>
-<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff3" mandatory="false" name="cidade_natal">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff2" mandatory="false" name="cidade_id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
 </column>
-<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff2" mandatory="false" name="cidade_atual">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff4" mandatory="false" name="nivel_escolaridade_id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
 </column>
-<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff4" mandatory="false" name="nivel_escolaridade">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff1" mandatory="false" name="renda_familiar_id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
 </column>
-<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="1edaea6:13ec4261d8b:-7ff1" mandatory="false" name="renda_familiar">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
-</column>
-<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff3" mandatory="false" name="dt_nascimento">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n) BINARY"/>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff3" mandatory="false" name="dt_nascimento">
+<data-type name="YEAR" selected-variant-pattern="YEAR"/>
 </column>
 <column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7ff2" mandatory="false" name="fb_id">
 <data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
@@ -46,6 +43,17 @@
 <primary-key id="15006c9:13e0e70660f:-7ffa" name="PK_PESSOAS">
 <primary-key-column name="id"/>
 </primary-key>
+<foreign-key-list>
+<foreign-key id="9b643d:14064941683:-7d4a" name="FK_pessoas_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_NIVEIS_ESCOLARIDADE" referenced-table="niveis_escolaridade" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="nivel_escolaridade_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key id="9b643d:14064941683:-7ce3" name="FK_pessoas_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_RENDAS_FAMILIAR" referenced-table="rendas_familiar" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="renda_familiar_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key id="9b643d:14064941683:-7c72" name="FK_pessoas_3" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_CIDADES" referenced-table="cidades" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="cidade_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
 </table>
 <table id="15006c9:13e0e70660f:-7fef" name="programas">
 <column-list>
@@ -116,47 +124,6 @@
 <foreign-key-column column-name="programa_id" referenced-key-column-name="id"/>
 </foreign-key>
 </foreign-key-list>
-</table>
-<table id="15006c9:13e0e70660f:-7fae" name="files_upload">
-<column-list>
-<column auto-increment="true" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fac" mandatory="true" name="id">
-<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
-</column>
-<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fab" mandatory="false" name="filename">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
-</column>
-<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7faa" mandatory="false" name="titulo">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
-</column>
-<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7fa9" mandatory="false" name="pessoa_id">
-<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
-</column>
-<column auto-increment="false" column-size="0" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7fa8" mandatory="false" name="dt_cadastro">
-<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
-</column>
-</column-list>
-<primary-key id="15006c9:13e0e70660f:-7fa7" name="PK_FILES_UPLOAD">
-<primary-key-column name="id"/>
-</primary-key>
-</table>
-<table id="15006c9:13e0e70660f:-7fd7" name="programas_acessos">
-<column-list>
-<column auto-increment="true" column-size="20" decimal-digits="0" default-value="CURRENT_TIMESTAMP" id="15006c9:13e0e70660f:-7f99" mandatory="true" name="id">
-<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
-</column>
-<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7f98" mandatory="false" name="pessoa_id">
-<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
-</column>
-<column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7f97" mandatory="false" name="projeto_id">
-<data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
-</column>
-<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="15006c9:13e0e70660f:-7f96" mandatory="false" name="dt_cadastro">
-<data-type name="TIMESTAMP" selected-variant-pattern="TIMESTAMP"/>
-</column>
-</column-list>
-<primary-key id="15006c9:13e0e70660f:-7fd6" name="PK_PROGRAMAS_ACESSOS">
-<primary-key-column name="id"/>
-</primary-key>
 </table>
 <table id="87623d:13f1f8be859:-7ff5" name="questionario">
 <column-list>
@@ -235,11 +202,8 @@
 <column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="13693b:13f8c3a0abe:-7ff2" mandatory="false" name="prioridades_futuro">
 <data-type name="TEXT" selected-variant-pattern="TEXT"/>
 </column>
-<column auto-increment="false" column-size="50" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fd8" mandatory="false" name="voce_pensou_como">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
-</column>
-<column auto-increment="false" column-size="50" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fda" mandatory="false" name="cidade">
-<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fd8" mandatory="false" name="voce_pensou_como_id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
 </column>
 <column auto-increment="false" column-size="20" decimal-digits="0" default-value="" id="87623d:13f1f8be859:-7fd7" mandatory="false" name="pessoa_id">
 <data-type name="BIGINT" selected-variant-pattern="BIGINT(%n) UNSIGNED"/>
@@ -255,18 +219,75 @@
 <foreign-key id="87623d:13f1f8be859:-7fca" name="FK_questionario_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_PESSOAS" referenced-table="pessoas" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
 <foreign-key-column column-name="pessoa_id" referenced-key-column-name="id"/>
 </foreign-key>
+<foreign-key id="9b643d:14064941683:-7e39" name="FK_questionario_3" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_VOCE_PENSOU_COMO" referenced-table="voce_pensou_como" referenced-table-schema="DEFAULT_SCHEMA" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="voce_pensou_como_id" referenced-key-column-name="id"/>
+</foreign-key>
 </foreign-key-list>
+</table>
+<table id="9b643d:14064941683:-7ff0" name="rendas_familiar">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fec" mandatory="true" name="id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="9b643d:14064941683:-7feb" mandatory="false" name="descricao">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="9b643d:14064941683:-7fef" name="PK_RENDAS_FAMILIAR">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table id="9b643d:14064941683:-7fe7" name="cidades">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fe1" mandatory="true" name="id">
+<data-type name="INT" selected-variant-pattern="INT UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fe0" mandatory="false" name="nome">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="9b643d:14064941683:-7fe6" name="PK_CIDADES">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table id="9b643d:14064941683:-7fdf" name="niveis_escolaridade">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fdb" mandatory="true" name="id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fda" mandatory="false" name="descricao">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="9b643d:14064941683:-7fde" name="PK_NIVEIS_ESCOLARIDADE">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table id="9b643d:14064941683:-7fd5" name="voce_pensou_como">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fd1" mandatory="true" name="id">
+<data-type name="INT" selected-variant-pattern="INT UNSIGNED"/>
+</column>
+<column auto-increment="false" column-size="255" decimal-digits="0" default-value="" id="9b643d:14064941683:-7fd0" mandatory="false" name="descricao">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="9b643d:14064941683:-7fd4" name="PK_VOCE_PENSOU_COMO">
+<primary-key-column name="id"/>
+</primary-key>
 </table>
 </table-list>
 </schema>
 </schema-list>
 </database-model>
 <diagram>
-<table-figure refid="15006c9:13e0e70660f:-7ffb" x="100" y="171"/>
-<table-figure refid="15006c9:13e0e70660f:-7fef" x="368" y="170"/>
-<table-figure refid="15006c9:13e0e70660f:-7fe4" x="690" y="35"/>
-<table-figure refid="15006c9:13e0e70660f:-7fae" x="107" y="41"/>
-<table-figure refid="15006c9:13e0e70660f:-7fd7" x="367" y="40"/>
-<table-figure refid="87623d:13f1f8be859:-7ff5" x="483" y="350"/>
+<table-figure refid="15006c9:13e0e70660f:-7ffb" x="435" y="218"/>
+<table-figure refid="15006c9:13e0e70660f:-7fef" x="67" y="148"/>
+<table-figure refid="15006c9:13e0e70660f:-7fe4" x="529" y="17"/>
+<table-figure refid="87623d:13f1f8be859:-7ff5" x="19" y="323"/>
+<table-figure refid="9b643d:14064941683:-7ff0" x="896" y="417"/>
+<table-figure refid="9b643d:14064941683:-7fe7" x="754" y="544"/>
+<table-figure refid="9b643d:14064941683:-7fdf" x="912" y="230"/>
+<table-figure refid="9b643d:14064941683:-7fd5" x="675" y="709"/>
 </diagram>
 </clay-model>

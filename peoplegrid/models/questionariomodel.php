@@ -16,6 +16,11 @@
             $perguntasObjetivas = $parametros['perguntasObjetivas'];
             $a = $parametros['identifiquese'];
             
+            
+            // FAZER UM CASE PARA AS ALTERNATIVAS COMO TRATAMENTO
+            //  VOCE_PENSOU_COMO
+            //  ...
+            
             log_message('INFO', $array['0']);
             log_message('INFO', $array['1']);
             log_message('INFO', $array['21']);
@@ -59,7 +64,7 @@
         }
         
         
-        function getQuestao(){
+        function getQuestao($parametros){
             $this->db->select('*',false);
                 $this->db->from('questionario');
                 $this->db->where('pessoa_id','10');
