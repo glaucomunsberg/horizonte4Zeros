@@ -32,7 +32,7 @@
                             <div class="row" style="margin-left: 0px; margin-top:10px">
                                 <strong>
                                         <select id="selectedPergunta" class="span12" style="height:50px; font-size:16px; " >
-                                            <option><?=lang('peopleGridEscolhaQuestao');?></option>
+                                            <option value="0"><?=lang('peopleGridEscolhaQuestao');?></option>
                                             <option value="1"><?=lang('peopleGridQuestao1Def');?></option>
                                             <option value="2"><?=lang('peopleGridQuestao2Def');?></option>
                                             <option value="3"><?=lang('peopleGridQuestao3Def');?></option>
@@ -142,7 +142,7 @@
                                 </div>
                                 <div class="row" style="margin-left: 0px; margin-top:10px">
                                     <div class="span12">
-                                        <button class="btn btn-primary btn-large" href="#">Filtrar</button>
+                                        <button class="btn btn-primary btn-large" href="#" onClick="filtro()">Filtrar</button>
                                     </div>
                                 </div>
                                 <div class="row" style="">
@@ -179,7 +179,7 @@
             location.href = BASE_URL+'administrar/index/<?=@$pessoa->fb_id?>';
         }
     });
-    
+    /*
     function getRespostas(){
         var perguntaSelecionado, generoSelecionado, cidadeSelecionada, mapaSelecionado, ensino_sup, ensino_med, ensino_fun, idade_min, idade_max, pessoa_anonima;
         
@@ -196,6 +196,57 @@
    
         idade_min = $('#idade_min').val();
         idade_max = $('#idade_max').val();
+    }
+   */
+    function filtro() {
+        var perguntaSelecionada, generoSelecionado, cidadeSelecionada, mapaSelecionado, ensino_sup, ensino_med, ensino_fun, idade_min, idade_max, pessoa_anonima;
+        
+        perguntaSelecionada = $('#selectedPergunta option:selected').val();
+        generoSelecionado   = $('#selectGenero option:selected').val();
+        cidadeSelecionada   = $('#selectCidade option:selected').val();
+        mapaSelecionado   = $('#selectMapa option:selected').val();
+        
+        ensino_fun = $('#ensino_fun').is(':checked');
+        ensino_med = $('#ensino_med').is(':checked'); 
+        ensino_sup = $('#ensino_sup').is(':checked'); 
+
+        pessoa_anonima = $('#pessoa_anonima').is(':checked'); 
+   
+        idade_min = $('#idade_min').val();
+        idade_max = $('#idade_max').val();
+
+        
+        $.post( '<?=BASE_URL?>administrar/filtrarPesquisa',
+        {  
+            pergunta: perguntaSelecionada,
+            genero: generoSelecionado,
+            cidade: cidadeSelecionada,
+            ensinoFun: ensino_fun,
+            ensinoMed: ensino_med,
+            //ensinoGra: ensino_gra,
+            //ensinoPos: ensino_pos,
+            anonimos: pessoa_anonima,
+            idadeMin: idade_min,
+            idadeMax: idade_max
+        },
+        function(data){
+            
+            if (data.substring(0, 3) == 'l"s'){
+                data = "sucesso";
+            }
+            
+            if (data.substring(0, 3) == 'l"f'){
+                data = "falha";
+            }
+            
+            if (data == "sucesso"){   
+                alert("SUCESSO");
+            }
+            if (data == "falha"){
+                alert("FALHA");
+            }
+        });
+        
     }
 
 </script>

@@ -71,6 +71,62 @@
             return $this->db->get()->row();  
         }
         
-        
+        function getQuestionario($parametros){
+            
+            log_message('INFO',$parametros['pergunta']);
+            log_message('INFO',$parametros['genero']);
+            log_message('INFO',$parametros['cidade']);
+            log_message('INFO',$parametros['ensinoFun']);
+            log_message('INFO',$parametros['ensinoMed']);
+            log_message('INFO',$parametros['anonimos']);
+            log_message('INFO',$parametros['idadeMin']);
+            log_message('INFO',$parametros['idadeMax']);
+            
+            if ($parametros['pergunta'] != 0) {   
+            }
+            
+            if ($parametros['ensinoFun'] == 'true'){
+                $this->db->where('niveis_escolaridade','1');
+            }
+            
+            if ($parametros['ensinoMed'] == 'true'){
+                $this->db->where('niveis_escolaridade','2');
+            }
+            
+            if ($parametros['ensinoGra'] == 'true'){
+                $this->db->where('niveis_escolaridade','3');
+            }
+            
+            if ($parametros['ensinoPos'] == 'true'){
+                $this->db->where('niveis_escolaridade','4');
+            }
+            
+            if(($parametros['idadeMin'] != '') && ($parametros['idadeMax'] != '')){
+                $this->db->between($parametros['idadeMin'], $parametros['idadeMax']);
+            }
+            
+            if ($parametros['anonimos'] == 'false'){
+                $this->db->where('pessoa_id !=', $parametros['anonimos']);
+            }
+            
+            if ($parametros['cidade'] == 'J'){
+                $this->db->where('cidades','1');
+            } else {
+                if ($parametros['cidade'] == 'CN'){
+                    $this->db->where('cidades','2');
+                } else { 
+                    $this->db->where('cidades','3');
+                }    
+            }
+            
+            /*
+            $this->db->select('*', false);
+            $this->db->from('questionario');        
+            $this->db->
+            $this->db->
+            $this->db->
+            */
+            
+        }
     }
 ?>

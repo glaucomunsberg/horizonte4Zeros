@@ -11,6 +11,7 @@ class Administrar extends CI_Controller {
             $this->load->model('pessoasModel', 'pessoasModel');
             $this->load->model('programaModel','programaModel');
             $this->load->model('projetoModel','projetoModel');
+            $this->load->model('questionarioModel','questionarioModel');
         }
         /**
          * Metodo criado para checkar se o usuario é ou nao
@@ -62,8 +63,9 @@ class Administrar extends CI_Controller {
             }
         }
         
-        public function filtrar() {
-           
+        public function filtrarPesquisa() {
+            
+           $data['resultado'] = $this->questionarioModel->getQuestionario($_POST);
             
         }
         
