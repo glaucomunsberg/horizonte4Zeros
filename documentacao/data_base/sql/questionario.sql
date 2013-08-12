@@ -34,4 +34,4 @@ CREATE TABLE questionario (
      , INDEX (voce_pensou_como_id)
      , CONSTRAINT FK_questionario_3 FOREIGN KEY (voce_pensou_como_id)
                   REFERENCES voce_pensou_como (id)
-);
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
