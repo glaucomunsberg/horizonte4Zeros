@@ -116,19 +116,19 @@
                 $ne[] = 5;
             }
             
-            if ($ne[0] != '') {
+            if (isset($ne) != TRUE) {
                 $this->db->where_in('ne.id', $ne);
             }
             
             
             if(($parametros['idadeMin'] != '') && ($parametros['idadeMax'] != '')){
-                $this->db->between($parametros['idadeMin'], $parametros['idadeMax']);
+                $this->db->where('p.dt_nascimento', between($parametros['idadeMin'], $parametros['idadeMax']));   
             }
-            
+            /*
             if ($parametros['anonimos'] == 'false'){
                 $this->db->where('pessoa_id !=', $parametros['anonimos']);
             }
-            
+            */
             
             $c = array();
             if ($parametros['cidade'] == 'J'){
@@ -140,10 +140,19 @@
             if ($parametros['cidade'] == 'CI') { 
                 $c[] = 4;    
             }
-            if ($c[0] != ''){
+            if (isset($c) != TRUE){
                 $this->db->where_in('p.cidade_id', $c);
             }
+            /*
+            if ($parametros['genero'] != ''){
+                
+                
+            }
             
+            if ($parametros['anonimos'] == 'false'){
+                
+            }
+            */
             return $this->db->get()->result();
             /*
             $rf = array();
@@ -159,7 +168,7 @@
             if ($parametros['salario10Mais'] == 'true') { 
                 $rf[] = 5;    
             }
-            if ($rf[0] != ''){
+            if (isset($rf) != TRUE){
                 $this->db->where_in('p.renda_familiar_id', $rf);
             }    
             
@@ -186,7 +195,7 @@
             if ($parametros['opt7'] == 'true'){
                 $vpc[] = 7; 
             }
-            if ($vpc[0] != ''){
+            if (isset($vpc) != TRUE){
                 $this->db->where_in('q.voce_penso_como_id', $vpc);
             }    
             */
