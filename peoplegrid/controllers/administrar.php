@@ -66,7 +66,7 @@ class Administrar extends CI_Controller {
         public function filtrarPesquisa() {
             
            $data['resultado'] = $this->questionarioModel->getQuestionario($_POST);
-            
+           print json_encode($data['resultado']); 
         }
         
 }

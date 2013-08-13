@@ -105,8 +105,12 @@
                                                             Ensino Médio
                                                         </label>
                                                         <label class="checkbox">
-                                                            <input type="checkbox" id="ensino_sup" value="option3">
-                                                            Ensino Superior
+                                                            <input type="checkbox" id="ensino_gra" value="option3">
+                                                            Graduação
+                                                        </label>
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" id="ensino_pos" value="option4">
+                                                            Pós Graduação
                                                         </label>
                                                     </div>
                                                 </div>
@@ -208,7 +212,8 @@
         
         ensino_fun = $('#ensino_fun').is(':checked');
         ensino_med = $('#ensino_med').is(':checked'); 
-        ensino_sup = $('#ensino_sup').is(':checked'); 
+        ensino_gra = $('#ensino_gra').is(':checked');
+        ensino_pos = $('#ensino_pos').is(':checked');
 
         pessoa_anonima = $('#pessoa_anonima').is(':checked'); 
    
@@ -223,8 +228,8 @@
             cidade: cidadeSelecionada,
             ensinoFun: ensino_fun,
             ensinoMed: ensino_med,
-            //ensinoGra: ensino_gra,
-            //ensinoPos: ensino_pos,
+            ensinoGra: ensino_gra,
+            ensinoPos: ensino_pos,
             anonimos: pessoa_anonima,
             idadeMin: idade_min,
             idadeMax: idade_max

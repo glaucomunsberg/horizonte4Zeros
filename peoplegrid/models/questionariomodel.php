@@ -82,24 +82,44 @@
             log_message('INFO',$parametros['idadeMin']);
             log_message('INFO',$parametros['idadeMax']);
             
+          
             if ($parametros['pergunta'] != 0) {   
+                $this->db->select('questao_'.$parametros['pergunta'], false);
+            } else {
+                $this->db->select('questao_1, questao_2, questao_3, questao_4, questao_5, questao_6,
+                                    questao_7, questao_9, questao_10, questao_11, questao_12, 
+                                    questao_13, questao_14, questao_15, questao_16, questao_17, 
+                                    questao_18, questao_19, questao_20, questao_21, questao_22', false);
             }
             
+            $this->db->from('questionario AS q');
+            $this->db->join('voce_pensou_como AS vpc', 'vpc.id = q.voce_pensou_como_id');
+            $this->db->join('pessoas AS p', 'p.id = q.pessoa_id');
+            $this->db->join('cidades AS c', 'c.id = p.cidade_id');
+            $this->db->join('niveis_escolaridade AS ne','ne.id = p.nivel_escolaridade_id');
+            $this->db->join('rendas_familiares AS rf', 'rf.id = p.renda_familiar_id');
+            
+            $ne = array();
             if ($parametros['ensinoFun'] == 'true'){
-                $this->db->where('niveis_escolaridade','1');
+                $ne[] = 2;
             }
             
             if ($parametros['ensinoMed'] == 'true'){
-                $this->db->where('niveis_escolaridade','2');
+                $ne[] = 3;
             }
             
             if ($parametros['ensinoGra'] == 'true'){
-                $this->db->where('niveis_escolaridade','3');
+                $ne[] = 4;
             }
             
             if ($parametros['ensinoPos'] == 'true'){
-                $this->db->where('niveis_escolaridade','4');
+                $ne[] = 5;
             }
+            
+            if ($ne[0] != '') {
+                $this->db->where_in('ne.id', $ne);
+            }
+            
             
             if(($parametros['idadeMin'] != '') && ($parametros['idadeMax'] != '')){
                 $this->db->between($parametros['idadeMin'], $parametros['idadeMax']);
@@ -109,23 +129,68 @@
                 $this->db->where('pessoa_id !=', $parametros['anonimos']);
             }
             
+            
+            $c = array();
             if ($parametros['cidade'] == 'J'){
-                $this->db->where('cidades','1');
-            } else {
-                if ($parametros['cidade'] == 'CN'){
-                    $this->db->where('cidades','2');
-                } else { 
-                    $this->db->where('cidades','3');
-                }    
+                $c[] = 2;
+            }
+            if ($parametros['cidade'] == 'CN'){
+                $c[] = 3;
+            }
+            if ($parametros['cidade'] == 'CI') { 
+                $c[] = 4;    
+            }
+            if ($c[0] != ''){
+                $this->db->where_in('p.cidade_id', $c);
             }
             
+            return $this->db->get()->result();
             /*
-            $this->db->select('*', false);
-            $this->db->from('questionario');        
-            $this->db->
-            $this->db->
-            $this->db->
+            $rf = array();
+            if ($parametros['salario1a3'] == 'true'){
+                $rf[] = 2;
+            }
+            if ($parametros['salario3a5'] == 'true'){
+                $rf[] = 3;
+            }
+            if ($parametros['salario5a10'] == 'true') { 
+                $rf[] = 4;    
+            }
+            if ($parametros['salario10Mais'] == 'true') { 
+                $rf[] = 5;    
+            }
+            if ($rf[0] != ''){
+                $this->db->where_in('p.renda_familiar_id', $rf);
+            }    
+            
+            
+            $vpc = array();
+            if ($parametros['opt1'] == 'true'){
+                $vpc[] = 2;
+            }
+            if ($parametros['opt2'] == 'true'){
+                $vpc[] = 3;
+            }
+            if ($parametros['opt3'] == 'true') { 
+                $vpc[] = 4;    
+            }
+            if ($parametros['opt4'] == 'true') { 
+                $vpc[] = 5;    
+            }
+            if ($parametros['opt5'] == 'true'){
+                $vpc[] = 5;
+            }
+            if ($parametros['opt6'] == 'true'){
+                $vpc[] = 6;
+            }
+            if ($parametros['opt7'] == 'true'){
+                $vpc[] = 7; 
+            }
+            if ($vpc[0] != ''){
+                $this->db->where_in('q.voce_penso_como_id', $vpc);
+            }    
             */
+           
             
         }
     }
