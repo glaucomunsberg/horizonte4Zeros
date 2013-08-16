@@ -29,10 +29,10 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="peopleGrid">
-                            <div class="row" style="margin-left: 0px; margin-top:10px">
+                            <div class="row" style="margin-left: 0px; margin-top:5px">
                                 <strong>
                                     <select id="selectedPergunta" class="span12" style="height:50px; font-size:16px; " >
-                                        <option value="0"><?=lang('peopleGridEscolhaQuestao');?></option>
+                                        <option value="0"><b><?=lang('peopleGridEscolhaQuestao');?></b></option>
                                         <option value="1"><?=lang('peopleGridQuestao1Def');?></option>
                                         <option value="2"><?=lang('peopleGridQuestao2Def');?></option>
                                         <option value="3"><?=lang('peopleGridQuestao3Def');?></option>
@@ -58,43 +58,12 @@
                                     </select>
                                 </strong>
                             </div>
-                            <div class="row" style="margin-left: 0px; margin-top:10px; display: none" id="linha2">
-                                <div class="span4">
-                                    <strong>
-                                        <select id="selectGenero">
-                                            <option>Gêneros</option>
-                                            <option value="F"><?=lang('formFeminino')?></option>
-                                            <option value="M"><?=lang('formMasculino')?></option>
-                                        </select>
-                                    </strong>
-                                </div>
-                                <div class="span4" >
-                                    <strong>
-                                        <select id="selectCidade">
-                                            <option>Cidades</option>
-                                            <option value="J">Jaguarão</option>
-                                            <option value="CE">Cidades Estrangeiras</option>
-                                            <option value="CN">Cidades Nacionais</option>
-                                        </select>
-                                    </strong>
-                                </div>
-                                <div class="span4">
-                                    <strong>
-                                        <select id="selectMapa">
-                                            <option value="T">Terreno</option>
-                                            <option value="S">Satélite</option>
-                                        </select>
-                                    </strong>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-left: 0px; margin-top:10px; display:none" id="linha3">
+                            <div class="row" style="margin-left: 0px; margin-top:5px; display:none" id="linha3">
                                 <div class="span4">
                                     <from class="control-horizontal">
                                         <fieldset>
                                             <div class="control-group">
-                                                <strong>
-                                                    <label class="control-label" for="optionsCheckboxList">Respondeu como</label>
-                                                </strong>
+                                                <label class="control-label" for="optionsCheckboxList"><b>Respondeu como</b></label>
                                                 <div class="controls">
                                                     <label class="checkbox">
                                                         <input type="checkbox" id="repre_popu"  value="option1">
@@ -129,9 +98,7 @@
                                     <from class="control-horizontal">
                                         <fieldset>
                                             <div class="control-group">
-                                                <strong>
-                                                    <label class="control-label" for="optionsCheckboxList">Nível escolar</label>
-                                                </strong>
+                                                <label class="control-label" for="optionsCheckboxList"><b>Nível escolar</b></label>
                                                 <div class="controls">
                                                     <label class="checkbox">
                                                         <input type="checkbox" id="ensino_fun"  value="option1">
@@ -159,9 +126,7 @@
                                     <from class="control-horizontal">
                                         <fieldset>
                                             <div class="control-group">
-                                                <strong>
-                                                    <label class="control-label" for="optionsCheckboxList">Renda Familiar</label>
-                                                </strong>
+                                                <label class="control-label" for="optionsCheckboxList"><b>Renda Familiar</b></label>
                                                 <div class="controls">
                                                     <label class="checkbox">
                                                         <input type="checkbox" id="salario1a3"  value="option1">
@@ -185,12 +150,33 @@
                                     </from> 
                                 </div>
                             </div>
-                            <div class="row" style="margin-left: 0px; margin-top:10px; display: none" id="linha4">
+                                                        <div class="row" style="margin-left: 0px; margin-top:10px; display: none" id="linha2">
+                                <div class="span4">
+                                    <strong>
+                                        <select id="selectGenero">
+                                            <option><b>Gêneros</b></option>
+                                            <option value="F"><?=lang('formFeminino')?></option>
+                                            <option value="M"><?=lang('formMasculino')?></option>
+                                        </select>
+                                    </strong>
+                                </div>
+                                <div class="span4" >
+                                    <strong>
+                                        <select id="selectCidade">
+                                            <option><b>Cidades</b></option>
+                                            <option value="J">Jaguarão</option>
+                                            <option value="CE">Cidades Estrangeiras</option>
+                                            <option value="CN">Cidades Nacionais</option>
+                                        </select>
+                                    </strong>
+                                </div>
+                                <div class="span4">
+                                </div>
+                            </div>
+                            <div class="row" style="margin-left: 0px; margin-top:5px; display: none" id="linha4">
                                 <div class="span4">
                                     <div class="control-group">
-                                        <strong>
-                                            <label class="control-label" for="input01"><?=lang('formNascido')?></label>
-                                        </strong>
+                                        <label class="control-label" for="input01"><b><?=lang('formNascido')?></b></label>
                                         <div class="controls">
                                             <?=lang('formEntre')?>
                                             <input type="text" class="span3" id="idade_min" placeholder="ano">
@@ -202,7 +188,7 @@
                                 <div class="span4">
                                     <div class="control-group">
                                         <strong>
-                                            <label class="control-label" for="optionsCheckboxList">Pessoas</label>
+                                            <label class="control-label" for="optionsCheckboxList"><b>Pessoas</b></label>
                                         </strong>
                                         <div class="controls">
                                             <label class="checkbox">
@@ -216,20 +202,19 @@
 
                                 </div>
                             </div>
-                            <div class="row" style="margin-left: 0px; margin-top:10px">
+                            <div class="row" style="margin-left: 0px; margin-top:5px">
                                 <div class="span12">
                                     <button class="btn" href="#" onClick="esconderMostrarFiltros()" id="btnFiltros"><i class="icon-filter"></i>Mostrar Filtros</button>
                                     <button class="btn btn-primary" href="#" onClick="filtro()">Gerar</button>
                                 </div>
                             </div>
-                                
-                                <div class="row" style="display:none;margin-left: 0px; margin-top:10px">
-                                    <div class="span12" id="resultadoDiser">
+                            <div class="row" style="display:none;margin-left: 0px; margin-top:5px">
+                                <div class="span12" id="resultadoDiser">
 
-                                    </div>
                                 </div>
-                            </div>                          
-                        </div>
+                            </div>
+                        </div>                          
+                    </div>
                 </div>
             </div>
         </div>
@@ -295,17 +280,17 @@
         cidadeSelecionada   = $('#selectCidade option:selected').val();
         mapaSelecionado   = $('#selectMapa option:selected').val();
         
-        repre_popu = ('#repre_popu').is(':checked');
-        repre_lider = ('#repre_lider').is(':checked');
-        repre_pol = ('#repre_pol').is(':checked');
-        repre_tec = ('#repre_tec').is(':checked');
-        repre_inves = ('#repre_inves').is(':checked');
-        repre_outro = ('#repre_outro').is(':checked');
+        repre_popu = $('#repre_popu').is(':checked');
+        repre_lider = $('#repre_lider').is(':checked');
+        repre_pol = $('#repre_pol').is(':checked');
+        repre_tec = $('#repre_tec').is(':checked');
+        repre_inves = $('#repre_inves').is(':checked');
+        repre_outro = $('#repre_outro').is(':checked');
         
-        salario1a3 = ('#salario1a3').is(':checked');
-        salario3a6 = ('#salario3a6').is(':checked');
-        salario6a9 = ('#salario6a9').is(':checked');
-        salarioMais9 = ('#salarioMaisDe9').is(':checked');
+        salario1a3 = $('#salario1a3').is(':checked');
+        salario3a6 = $('#salario3a6').is(':checked');
+        salario6a9 = $('#salario6a9').is(':checked');
+        salarioMais9 = $('#salarioMaisDe9').is(':checked');
         
         ensino_fun = $('#ensino_fun').is(':checked');
         ensino_med = $('#ensino_med').is(':checked'); 
@@ -336,7 +321,7 @@
             idadeMin: idade_min,
             idadeMax: idade_max,
             salario1a3: salario1a3,
-            salario3a6: salario3a9,
+            salario3a6: salario3a6,
             salario6a9: salario6a9,
             salarioMaisDe9: salarioMaisDe9
         },
