@@ -73,23 +73,23 @@
         
         function getQuestionario($parametros){
             
-            log_message('INFO',$parametros['pergunta']);
-            log_message('INFO',$parametros['genero']);
-            log_message('INFO',$parametros['cidade']);
-            log_message('INFO',$parametros['ensinoFun']);
-            log_message('INFO',$parametros['ensinoMed']);
-            log_message('INFO',$parametros['anonimos']);
-            log_message('INFO',$parametros['idadeMin']);
-            log_message('INFO',$parametros['idadeMax']);
+            log_message('INFO',$parametros['salario1a3']);
+            log_message('INFO',$parametros['salario3a6']);
+            log_message('INFO',$parametros['salario6a9']);
+            log_message('INFO',$parametros['salarioMaisDe9']);
+            log_message('INFO',$parametros['repre_popu']);
+            log_message('INFO',$parametros['repre_lider']);
+            log_message('INFO',$parametros['repre_tec']);
+            log_message('INFO',$parametros['repre_inves']);
+            log_message('INFO',$parametros['repre_outro']);
             
-          
             if ($parametros['pergunta'] != 0) {   
                 $this->db->select('questao_'.$parametros['pergunta'], false);
             } else {
                 $this->db->select('questao_1, questao_2, questao_3, questao_4, questao_5, questao_6,
                                     questao_7, questao_9, questao_10, questao_11, questao_12, 
                                     questao_13, questao_14, questao_15, questao_16, questao_17, 
-                                    questao_18, questao_19, questao_20, questao_21, questao_22', false);
+                                    questao_18, questao_19, questao_20, questao_21, questao_22, p.nome', false);
             }
             
             $this->db->from('questionario AS q');
@@ -101,77 +101,74 @@
             
             $ne = array();
             if ($parametros['ensinoFun'] == 'true'){
-                $ne[] = 2;
+                array_push($ne, 2);
             }
             
             if ($parametros['ensinoMed'] == 'true'){
-                $ne[] = 3;
+                array_push($ne, 3);
             }
             
             if ($parametros['ensinoGra'] == 'true'){
-                $ne[] = 4;
+                array_push($ne, 4);
             }
             
             if ($parametros['ensinoPos'] == 'true'){
-                $ne[] = 5;
+                array_push($ne, 5);
             }
             
-            if (isset($ne) != TRUE) {
+            if (empty($ne) != TRUE) {
                 $this->db->where_in('ne.id', $ne);
             }
             
-            
-            if(($parametros['idadeMin'] != '') && ($parametros['idadeMax'] != '')){
-                $this->db->where('p.dt_nascimento', between($parametros['idadeMin'], $parametros['idadeMax']));   
-            }
-            /*
-            if ($parametros['anonimos'] == 'false'){
-                $this->db->where('pessoa_id !=', $parametros['anonimos']);
-            }
-            */
-            
             $c = array();
             if ($parametros['cidade'] == 'J'){
-                $c[] = 2;
+                $c = 2;
             }
+            
+            if ($parametros['cidade'] == 'CE') { 
+                $c = 3;    
+            }
+            
             if ($parametros['cidade'] == 'CN'){
-                $c[] = 3;
+                $c = 4;
+            }      
+            
+            if (empty($c) != TRUE){
+                $this->db->where('p.cidade_id', $c);
             }
-            if ($parametros['cidade'] == 'CI') { 
-                $c[] = 4;    
-            }
-            if (isset($c) != TRUE){
-                $this->db->where_in('p.cidade_id', $c);
-            }
-            /*
-            if ($parametros['genero'] != ''){
-                
-                
+            
+            if(($parametros['idadeMin'] != '') && ($parametros['idadeMax'] != '')){
+                $this->db->where('p.dt_nascimento >=', $parametros['idadeMin']);   
+                $this->db->where('p.dt_nascimento <=', $parametros['idadeMax']);
             }
             
             if ($parametros['anonimos'] == 'false'){
-                
+                $this->db->where('pessoa_id !=', 1);
             }
-            */
-            return $this->db->get()->result();
-            /*
+
+            
+            
             $rf = array();
             if ($parametros['salario1a3'] == 'true'){
-                $rf[] = 2;
+                array_push($rf, 2);
             }
-            if ($parametros['salario3a5'] == 'true'){
-                $rf[] = 3;
+            if ($parametros['salario3a6'] == 'true'){
+                array_push($rf, 3);
             }
-            if ($parametros['salario5a10'] == 'true') { 
-                $rf[] = 4;    
+            if ($parametros['salario6a9'] == 'true') { 
+                array_push($rf, 4);    
             }
-            if ($parametros['salario10Mais'] == 'true') { 
-                $rf[] = 5;    
+            if ($parametros['salarioMaisDe9'] == 'true') { 
+                array_push($rf, 5);    
             }
-            if (isset($rf) != TRUE){
+            if (empty($rf) != TRUE){
+                implode($rf);
                 $this->db->where_in('p.renda_familiar_id', $rf);
             }    
             
+            return $this->db->get()->result();
+            
+            /*
             
             $vpc = array();
             if ($parametros['opt1'] == 'true'){

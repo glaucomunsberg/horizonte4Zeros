@@ -273,12 +273,14 @@
     }
    */
     function filtro() {
-        var perguntaSelecionada, generoSelecionado, cidadeSelecionada, mapaSelecionado, ensino_sup, ensino_med, ensino_fun, idade_min, idade_max, pessoa_anonima;
+        var perguntaSelecionada, generoSelecionado, cidadeSelecionada, ensino_pos, ensino_gra, ensino_med, ensino_fun, idade_min, idade_max, pessoa_anonima;
+        var repre_popu, repre_lider, repre_pol, repre_tec, repre_inves, repre_outro; 
+        var salario1a3, salario3a6, salario6a9, salarioMaisDe9;
         
         perguntaSelecionada = $('#selectedPergunta option:selected').val();
         generoSelecionado   = $('#selectGenero option:selected').val();
         cidadeSelecionada   = $('#selectCidade option:selected').val();
-        mapaSelecionado   = $('#selectMapa option:selected').val();
+        
         
         repre_popu = $('#repre_popu').is(':checked');
         repre_lider = $('#repre_lider').is(':checked');
@@ -290,7 +292,7 @@
         salario1a3 = $('#salario1a3').is(':checked');
         salario3a6 = $('#salario3a6').is(':checked');
         salario6a9 = $('#salario6a9').is(':checked');
-        salarioMais9 = $('#salarioMaisDe9').is(':checked');
+        salarioMaisDe9 = $('#salarioMaisDe9').is(':checked');
         
         ensino_fun = $('#ensino_fun').is(':checked');
         ensino_med = $('#ensino_med').is(':checked'); 
@@ -307,6 +309,7 @@
         {  
             repre_popu: repre_popu,
             repre_lider: repre_lider,
+            repre_pol: repre_pol,
             repre_tec: repre_tec,
             repre_inves: repre_inves,
             repre_outro: repre_outro,
