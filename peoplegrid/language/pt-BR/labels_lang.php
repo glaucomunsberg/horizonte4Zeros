@@ -119,13 +119,13 @@ $lang['formNivelEscolaridadeOpt3'] = 'Graduação';
 $lang['formNivelEscolaridadeOpt4'] = 'Pós-Graduado';
 $lang['formRendaFamiliar'] = 'Renda Familiar';
 $lang['formRendaFamiliarOpt1'] = '1 á 3 salários mínimos.';
-$lang['formRendaFamiliarOpt2'] = '3 á 5 salários mínimos.';
-$lang['formRendaFamiliarOpt3'] = '5 á 10 salários mínimos.';
-$lang['formRendaFamiliarOpt4'] = 'Mais de 10 salários mínimos.';
+$lang['formRendaFamiliarOpt2'] = '3 á 6 salários mínimos.';
+$lang['formRendaFamiliarOpt3'] = '6 á 9 salários mínimos.';
+$lang['formRendaFamiliarOpt4'] = 'Mais de 9 salários mínimos.';
 $lang['formPerguntasObjetivas'] = 'Perguntas Objetivas';
 $lang['formVoltarAoInicio'] = 'Voltar ao Início';
 $lang['formEnviar'] = 'Enviar';
-$lang['formNascido'] = 'Nascido';
+$lang['formNascido'] = 'Nascidos';
 $lang['formEntre'] = 'Entre';
 $lang['formAte'] = 'até';
 
