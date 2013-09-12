@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title><?=lang('horizonteDoisMundos')?></title>
     <link rel="shortcut icon" href="<?=IMG?>/favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="<?=BASE_URL?>static/js/jquery-1.7.min.js"></script>
