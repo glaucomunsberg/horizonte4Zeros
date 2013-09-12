@@ -4,13 +4,11 @@
         <div class="hero-unit">
             <div class="thumbnail">
                 <img src="http://farm3.staticflickr.com/2862/8959344135_2e3e90466d.jpg" alt="">
-                <div class="caption">
-                  <h5>Flickr!</h5>
+                <h5>Flickr!</h5>
                   <p>Visite o primeiro set de imagens</p>
                   <p>   
                     <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="btn btn-success pull-right"><?=lang('peopleGridVerMais')?></a>
                   </p>
-                </div>
             </div>
         </div>
     </quadro>
@@ -19,67 +17,105 @@
         <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
             <div id="membros" class="hero-unit btn-warning">
-                <h2>
-                    Conheça a Equipe
-                </h2>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <h2>Conheça a Equipe</h2>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/ana_paula.jpg' ?>');">
                     <div  class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Ana Paula Faria</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/ana_paula_zechlinski.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Ana Paula Zechlinski</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Eduardo Rocha</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/mauricio_polidori.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Maurício Polidori</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Natalia Naoumova</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/otavio_peres.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Otávio Peres</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/andre_peil.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>André Peil</b><br>Computação - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Amanda Carvalho</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Amanda Ronca</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/estela_polidori.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Estela Polidori</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/gabriela_cavalheiro.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Gabriela Cavalheiro</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Giovana Bandeira</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/glauco_roberto.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Glauco Roberto</b><br>Computação - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/lucas_prezotto.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Lucas Prezotto</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/luciano_cerentini.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Luciano Oliveira</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/maiga_yokemura.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Maiga Youkemura</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Matheus Costa</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/otavio_vianna.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Otávio Viana</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Rafaela Pinto</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Arquiteto - UFPel
-                    </div>
-                </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
-                    <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
-                    </div>
-                </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
-                    <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
-                    </div>
-                </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/membro1.jpg' ?>');">
-                    <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Glauco Roberto</b><br>Computação - UFPel
+                        <b>Rodolfo Ribeiro</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <br style="clear:both;">
@@ -133,23 +169,6 @@
                   Gabi Cardoso # Mauricio Polidori
               </p>
             </ul>
-        </div>
-    </quadro>
-</div>
-<div class="row-fluid">
-    <quadro class="span12">
-        <img src="<?=BASE_URL?>static/img/personal.png" class="pull-left">
-        <div class="hero-unit">
-            <h3 style="padding-top:10px"><?= lang('peopleGridPessoasLigadas') ?></h3>
-                <?
-                foreach ($pessoas as $pessoa) {
-                    ?>
-                    <div title="<?= $pessoa->nome ?>" style="float:left; margin:2px; width:40px; height: 40px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?= $pessoa->fb_id ?>/picture')"></div>
-                    <?
-                }
-                ?>
-                <br style="clear:both;" />
-                <a href="<?=BASE_URL.'site/enjoy'?>" ><button class="btn btn-info" style="margin-top:10px"><?= lang('horizonteEntrar') ?></button></a>
         </div>
     </quadro>
 </div>

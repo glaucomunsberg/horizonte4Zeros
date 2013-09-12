@@ -17,9 +17,6 @@
                     <ul class="nav">
                         <div class="btn-group">
                             <button class="btn dropdown-toggle" data-toggle="dropdown"><?= lang('horizonteSuaLingua'); ?> <span class="caret"></span></button>
-                            <ul class="nav">
-                                <li><a href="#programa"><?=lang('horizonte0000')?></a></li>
-                            </ul>
                             <ul class="dropdown-menu">
                                 <li><a href="?lang=pt-br"><?= lang('horizontePortugues'); ?></a></li>
                                 <li><a href="?lang=es"><?= lang('horizonteEspanhol'); ?></a></li>

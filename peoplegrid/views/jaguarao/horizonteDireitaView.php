@@ -1,5 +1,22 @@
 <div class="row-fluid">
     <quadro class="span12">
+        <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+        <div class="hero-unit btn-danger">
+            <a class="thumbnail">
+                <img src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2013/08/dsc_8893.jpg?w=400" alt="">
+            </a>
+            <p>
+                <h3>Mateada Cultural no Cerro da Pólvora</h3>
+                Aconteceu no último domingo em Jaguarão,  dia 04 de agosto, uma mateada no Cerro da Pólvora que reuniu a população local e oportunizou a realização de diversas atividades culturais. A equipe do projeto de Desenvolvimento Urbano em Jaguarão esteve presente e desenvolveu algumas oficinas com a comunidade.
+            </p>
+            <p>
+                <a href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2013/08/07/mateada-cultural-no-cerro-da-polvora/" class="btn btn-success pull-right"><?=lang('peopleGridLeiaMais')?></a>
+            </p>
+        </div>
+    </quadro>
+</div>
+<div class="row-fluid">
+    <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/twitter.png" class="pull-left">
         <div class="hero-unit btn-warning">
             <div>
@@ -18,8 +35,8 @@
     <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
         <div class="hero-unit btn-danger">
-            <a href="#" class="thumbnail">
-                <img src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2013/06/dsc_0423.jpg?w=695" alt="">
+            <a class="thumbnail">
+                <img src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2013/06/dsc_0423.jpg?w=400" alt="">
             </a>
             <p>
                 <h3>Horizonte4Zeros+P9</h3>
@@ -87,15 +104,15 @@
 <div class="row-fluid">
     <quadro class="span12">
         <img src="<?=BASE_URL?>static/img/notification.png" class="pull-left">
-        <div class="hero-unit btn-primary">
+        <div class="hero-unit">
             <ul class="thumbnails">
               <li class="span3">
-                <a href="#" class="thumbnail">
+                <a class="thumbnail">
                   <img src="<?=BASE_URL?>static/img/logo_quatro_preta.png">
                 </a>
               </li>
               <p>
-                  Esta é nossa log, identifica o projeto como um todo.
+                  Esta é nossa logo, identifica o projeto como um todo.
               </p>
             </ul>
         </div>
