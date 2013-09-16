@@ -62,7 +62,7 @@
         }
         
         function getQuestionario($parametros){
-            
+            /*
             log_message('INFO',$parametros['salario1a3']);
             log_message('INFO',$parametros['salario3a6']);
             log_message('INFO',$parametros['salario6a9']);
@@ -72,7 +72,7 @@
             log_message('INFO',$parametros['repre_tec']);
             log_message('INFO',$parametros['repre_inves']);
             log_message('INFO',$parametros['repre_outro']);
-            
+            */
             if ($parametros['pergunta'] != 0) {   
                 $this->db->select('questao_'.$parametros['pergunta'], false);
             } else {
@@ -157,33 +157,30 @@
             }    
             
             
-   /*            
+              
             $vpc = array();
-            if ($parametros['opt1'] == 'true'){
-                $vpc[] = 2;
+            if ($parametros['repre_popu'] == 'true'){
+                array_push($vpc, 2);
             }
-            if ($parametros['opt2'] == 'true'){
-                $vpc[] = 3;
+            if ($parametros['repre_lider'] == 'true'){
+                array_push($vpc, 3);
             }
-            if ($parametros['opt3'] == 'true') { 
-                $vpc[] = 4;    
+            if ($parametros['repre_pol'] == 'true') { 
+                array_push($vpc, 4);    
             }
-            if ($parametros['opt4'] == 'true') { 
-                $vpc[] = 5;    
+            if ($parametros['repre_tec'] == 'true') { 
+                array_push($vpc, 5);    
             }
-            if ($parametros['opt5'] == 'true'){
-                $vpc[] = 5;
+            if ($parametros['repre_inves'] == 'true'){
+                array_push($vpc, 6);
             }
-            if ($parametros['opt6'] == 'true'){
-                $vpc[] = 6;
+            if ($parametros['repre_outro'] == 'true'){
+                array_push($vpc, 7);
             }
-            if ($parametros['opt7'] == 'true'){
-                $vpc[] = 7; 
-            }
-            if (isset($vpc) != TRUE){
-                $this->db->where_in('q.voce_penso_como_id', $vpc);
+            if (empty($vpc) != TRUE){
+                $this->db->where_in('q.voce_pensou_como_id', $vpc);
             }    
-           */
+          
            return $this->db->get()->result(); 
         }
     }
