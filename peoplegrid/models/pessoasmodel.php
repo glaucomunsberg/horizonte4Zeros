@@ -38,12 +38,11 @@
                 $this->db->set('nome', $identifiquese['0']);
                 $this->db->set('email', $identifiquese['1']);
                 $this->db->set('genero',$identifiquese['2']);
-                $this->db->set('cidade',$identifiquese['3']);
-                $this->db->set('nivel_escolaridade', $identifiquese['4']);
-                $this->db->set('renda_familiar', $identifiquese['5']);
+                $this->db->set('cidade_id',$identifiquese['3']);
+                $this->db->set('nivel_escolaridade_id', $identifiquese['4']);
+                $this->db->set('renda_familiar_id', $identifiquese['5']);
                 $this->db->set('dt_nascimento',$identifiquese['6']);
                 $this->db->set('equipe', 'N');
-                $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP'); 
                 $this->db->insert('pessoas'); 
                 $id = $this->db->insert_id();
            $this->db->trans_complete();

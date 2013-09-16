@@ -11,25 +11,25 @@ CREATE TABLE rendas_familiar (
        id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT
      , descricao VARCHAR(255)
      , PRIMARY KEY (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE cidades (
        id INT UNSIGNED NOT NULL AUTO_INCREMENT
      , nome VARCHAR(255)
      , PRIMARY KEY (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE niveis_escolaridade (
        id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT
      , descricao VARCHAR(255)
      , PRIMARY KEY (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE voce_pensou_como (
        id INT UNSIGNED NOT NULL AUTO_INCREMENT
      , descricao VARCHAR(255)
      , PRIMARY KEY (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE programas (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
@@ -40,7 +40,7 @@ CREATE TABLE programas (
      , ativo CHAR(1) DEFAULT 'S'
      , dt_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
      , PRIMARY KEY (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE pessoas (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
@@ -64,7 +64,7 @@ CREATE TABLE pessoas (
      , INDEX (cidade_id)
      , CONSTRAINT FK_pessoas_3 FOREIGN KEY (cidade_id)
                   REFERENCES cidades (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE projetos (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
@@ -81,7 +81,7 @@ CREATE TABLE projetos (
      , INDEX (programa_id)
      , CONSTRAINT FK_projetos_1 FOREIGN KEY (programa_id)
                   REFERENCES programas (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 
 CREATE TABLE questionario (
        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT
@@ -119,5 +119,5 @@ CREATE TABLE questionario (
      , INDEX (voce_pensou_como_id)
      , CONSTRAINT FK_questionario_3 FOREIGN KEY (voce_pensou_como_id)
                   REFERENCES voce_pensou_como (id)
-);
+)ENGINE=MyISAM  DEFAULT CHARSET=latin1;
 

@@ -82,7 +82,7 @@ class PeopleGrid extends CI_Controller {
        $identifiquese = $_POST['identifiquese']; 
        
        if (($identifiquese['0'] == ''))
-           $pessoa_id = 8; // numero do não identificado
+           $pessoa_id = 1; // numero do não identificado
        else {
            $pessoa_id = $this->pessoasModel->inserir_new($_POST);    
        }

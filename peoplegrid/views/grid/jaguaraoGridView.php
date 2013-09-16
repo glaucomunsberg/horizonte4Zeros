@@ -95,22 +95,22 @@
                             <label class="radio-label"><?= lang('formPensouComo') ?></label>
                             <div class="controls">
                                 <label class="radio">
-                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt1')?>"><?= lang('formPensouComoOpt1')?>
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="2"><?= lang('formPensouComoOpt1')?>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt2')?>"><?= lang('formPensouComoOpt2')?>
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="3"><?= lang('formPensouComoOpt2')?>
                                 </label>        
                                 <label class="radio">
-                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt3')?>"><?= lang('formPensouComoOpt3')?>
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="4"><?= lang('formPensouComoOpt3')?>
                                 </label>         
                                 <label class="radio">
-                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt4')?>"><?= lang('formPensouComoOpt4')?>
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="5"><?= lang('formPensouComoOpt4')?>
                                 </label>  
                                 <label class="radio">
-                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt5')?>"><?= lang('formPensouComoOpt5')?>
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="6"><?= lang('formPensouComoOpt5')?>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="pensouComo" id="pensouComo" value="<?= lang('formPensouComoOpt6')?>"><?= lang('formPensouComoOpt6')?>
+                                    <input type="radio" name="pensouComo" id="pensouComo" value="7"><?= lang('formPensouComoOpt6')?>
                                 </label>
                             </div>
                         </div>
@@ -171,11 +171,18 @@
                               </script>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="input05"><?=lang('formCidade')?></label>
-                            <div class="controls">
-                              <input type="text" class="span3" id="txtCidade" placeholder="Digite sua cidade">
+                            <label class="control-label"><?=lang('formCidade')?></label>
+                                <div class='controls'>
+                                    <strong>
+                                        <select id="selectCidade">
+                                            <option value="1"></option>
+                                            <option value="2">Jaguarão</option>
+                                            <option value="3">Cidades Estrangeiras</option>
+                                            <option value="4">Cidades Nacionais</option>
+                                        </select>
+                                    </strong>
+                                </div>
                             </div>
-                        </div>
                     </fieldset>
                 </form>
             </div>
@@ -186,16 +193,16 @@
                             <label class="control-label"><?=lang('formNivelEscolaridade')?></label>
                             <div class='controls'>
                                 <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt1')?>"><?=lang('formNivelEscolaridadeOpt1') ?>
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="2"><?=lang('formNivelEscolaridadeOpt1') ?>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt2')?>"><?=lang('formNivelEscolaridadeOpt2') ?>
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="3"><?=lang('formNivelEscolaridadeOpt2') ?>
                                 </label>        
                                 <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt3')?>"><?=lang('formNivelEscolaridadeOpt3') ?>
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="4"><?=lang('formNivelEscolaridadeOpt3') ?>
                                 </label>         
                                 <label class="radio">
-                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="<?=lang('formNivelEscolaridadeOpt4')?>"><?=lang('formNivelEscolaridadeOpt4') ?>
+                                    <input type="radio" name="nivelEscolaridade" id="nivelEscolaridade" value="5"><?=lang('formNivelEscolaridadeOpt4') ?>
                                 </label>
                             </div>
                         </div>
@@ -203,16 +210,16 @@
                             <label class="control-label"><?= lang('formRendaFamiliar') ?></label>
                             <div class='controls'>
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt1')?>"><?= lang('formRendaFamiliarOpt1') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="2"><?= lang('formRendaFamiliarOpt1') ?>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt2')?>"><?= lang('formRendaFamiliarOpt2') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="3"><?= lang('formRendaFamiliarOpt2') ?>
                                 </label>        
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt3')?>"><?= lang('formRendaFamiliarOpt3') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="4"><?= lang('formRendaFamiliarOpt3') ?>
                                 </label>         
                                 <label class="radio">
-                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="<?=lang('formRendaFamiliarOpt4')?>"><?= lang('formRendaFamiliarOpt4') ?>
+                                    <input type="radio" name="rendaFamiliar" id="rendaFamiliar" value="5"><?= lang('formRendaFamiliarOpt4') ?>
                                 </label>
 
                             </div> 
@@ -434,12 +441,19 @@
                
         questoesIdentifiqueSe[0] = document.getElementById("txtNome").value;
         questoesIdentifiqueSe[1] = document.getElementById("txtEmail").value;
-        questoesIdentifiqueSe[2] = document.getElementById("genero").value;
-        questoesIdentifiqueSe[3] = document.getElementById("txtCidade").value;
-        questoesIdentifiqueSe[4] = $('input[name=nivelEscolaridade]:checked').val();
-        questoesIdentifiqueSe[5] = $('input[name=rendaFamiliar]:checked').val();
-        questoesIdentifiqueSe[6] = $("#data").val();
-       
+        
+        if (document.getElementById("genero").value == "Masculino"){    
+            questoesIdentifiqueSe[2] = 'M';  
+        }
+        if (document.getElementById("genero").value == "Feminino"){
+            questoesIdentifiqueSe[2] = 'F';
+        }
+        questoesIdentifiqueSe[3] = $('#selectCidade option:selected').val();
+        questoesIdentifiqueSe[4] = $('input[id=nivelEscolaridade]:checked').val();
+        questoesIdentifiqueSe[5] = $('input[id=rendaFamiliar]:checked').val();
+        var data = $("#data").val().split('/');
+        var ano = data[2];
+        questoesIdentifiqueSe[6] = ano;
     }
   
     /**
