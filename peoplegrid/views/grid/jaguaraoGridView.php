@@ -139,7 +139,7 @@
                         <div class="control-group">
                             <label class="control-label" for="input02"><?=lang('formEmail')?></label>
                             <div class="controls">
-                              <input type="text" class="span3" id="txtEmail" placeholder="Digite sua cidade">
+                              <input type="text" class="span3" id="txtEmail" placeholder="Digite seu email">
                             </div>
                         </div>
                         <div class="control-group">
