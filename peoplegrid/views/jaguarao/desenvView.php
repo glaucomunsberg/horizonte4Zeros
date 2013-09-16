@@ -117,72 +117,71 @@
         <div class="page-header">
             <h1><?= lang('horizonteLastNews') ?> <small> <?= lang('horizonteLastNewsMensagem') ?></small></h1>
         </div>
-        <div class="row">
-            <div class="span12">
-                <ul class="thumbnails">
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2013/06/fundo4.jpg?w=695" alt="">
-                        </a>
-                    </li>
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://farm9.staticflickr.com/8268/8959379603_ffbc523893_s.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://farm6.staticflickr.com/5450/8959373489_e3d6b0a31f_s.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://farm8.staticflickr.com/7308/8960580514_14cd6b9a2e_s.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://farm8.staticflickr.com/7451/8959381343_eb69e46cfc_t.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://farm9.staticflickr.com/8402/8959378043_571a2e4826_t.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="span2">
-                        <a href="http://www.flickr.com/photos/horizonte4zeros/sets/72157633950110234/" class="thumbnail">
-                            <img src="http://farm9.staticflickr.com/8557/8959375415_a832f121cb_s.jpg" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="row-fluid">
-        <div class="span6">
-            <p>
-            <dt><?= lang('horizonteViagensDesc') ?></dt>
-            <dl class="dl-horizontal">
-                <dt><?= lang('horizonteViagensFeitas') ?></dt>
-                <dd>28/06 nos estaremos em Jaguarão!</dd>
-                <dd>12/07 nos estaremos em Jaguarão!</dd>
-                <dd>09/08 nos estaremos em Jaguarão!</dd>
-                <dd>23/08 nos estaremos em Jaguarão!</dd>
-                <dd>23/08 nos estaremos em Jaguarão!</dd>
-                <dd>23/08 nos estaremos em Jaguarão!</dd>
-                <dd>23/08 nos estaremos em Jaguarão!</dd>
-                <dt><?= lang('horizonteViagens') ?></dt>
-                <dd>28/06 nos estaremos em Jaguarão!</dd>
-                <dd>12/07 nos estaremos em Jaguarão!</dd>
-                <dd>09/08 nos estaremos em Jaguarão!</dd>
-                <dd>23/08 nos estaremos em Jaguarão!</dd>
-            </dl>
-            </p>
-            <p>
-                <span class="label label-info"><?= lang('horizonteNews') ?></span>
-                <?= lang('horizonteNewsMensagem') ?>
-            </p>
-        </div>
+            <div class="span6">
+                <div id="myCarousel" class="carousel slide">
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg"  width="400" heigth="auto"alt="">
+                            <div class="carousel-caption">
+
+                                <h4>Bem-vindo ao PROEXT</h4> 
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
+                            <div class="carousel-caption">
+                                <h4>Bem-vindo ao PROEXT</h4>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
+                            <div class="carousel-caption">
+                                <h4>Bem-vindo ao PROEXT</h4>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
+                            <div class="carousel-caption">
+                                <h4>Bem-vindo ao PROEXT</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                </div>
+
+            </div>
+            <div class="span6">
+                <p>
+                <dt><?= lang('horizonteViagensDesc') ?></dt>
+                <dl class="dl-horizontal">
+                    <dt><?= lang('horizonteViagensFeitas') ?></dt>
+                    <dd>28/06 nos estaremos em Jaguarão!</dd>
+                    <dd>12/07 nos estaremos em Jaguarão!</dd>
+                    <dd>09/08 nos estaremos em Jaguarão!</dd>
+                    <dd>23/08 nos estaremos em Jaguarão!</dd>
+                    <dd>23/08 nos estaremos em Jaguarão!</dd>
+                    <dd>23/08 nos estaremos em Jaguarão!</dd>
+                    <dd>23/08 nos estaremos em Jaguarão!</dd>
+                    <dt><?= lang('horizonteViagens') ?></dt>
+                    <dd>28/06 nos estaremos em Jaguarão!</dd>
+                    <dd>12/07 nos estaremos em Jaguarão!</dd>
+                    <dd>09/08 nos estaremos em Jaguarão!</dd>
+                    <dd>23/08 nos estaremos em Jaguarão!</dd>
+                </dl>
+                </p>
+                <p>
+                    <span class="label label-info"><?= lang('horizonteNews') ?></span>
+                    <?= lang('horizonteNewsMensagem') ?>
+                </p>
+            </div>
         </div>    
     </section>
     
@@ -207,6 +206,7 @@
                             <?
                         }
                         ?>
+                        <br style="clear:both;" />
                     </div>
             </div>
         </div>
@@ -365,14 +365,6 @@
             <p>
             <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>.
             <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
-            <!--<br><?= lang('horizonteVisitantes') ?>
-                <a href="#" target="blank" >
-                   <img alt="Website counter" hspace="0" vspace="0" border="0" src="http://legitfreecounters.com/6554002-EE2D826E78DDFC18F85ACE62DA35116F/counter.img?theme=7&digits=5&siteId=6"/>
-                </a>
-                <noscript> 
-                <br/>
-                <a href="#"></a><br><a href="http://www.alexa.com/siteinfo/ireel.com" target="_blank">ireel</a>
-                </noscript>-->
             </p>
             <br>
         </div>
@@ -381,7 +373,9 @@
     
 </div>
 <script>
-
+        $('#myCarousel').carousel({
+            interval: 2500
+        });
         $('#membros div').mouseenter(function() {
             $(this).find('div').show();
         });
