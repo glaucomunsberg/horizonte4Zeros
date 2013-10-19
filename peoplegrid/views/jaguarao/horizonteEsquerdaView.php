@@ -16,8 +16,7 @@
 <div class="row-fluid">
         <quadro class="span12">
             <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
-            <div id="membros" class="hero-unit btn-warning">
-                <h2>Conheça a Equipe</h2>
+            <div id="membros" class="span12">
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/ana_paula.jpg' ?>');">
                     <div  class="transparecia caixaDescricaoMembroEquipe">
                         <b>Ana Paula Faria</b><br>FaUrb - UFPel
@@ -28,7 +27,7 @@
                         <b>Ana Paula Zechlinski</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/eduardo_rocha.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Eduardo Rocha</b><br>FaUrb - UFPel
                     </div>
@@ -53,19 +52,19 @@
                         <b>André Peil</b><br>Computação - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/amanda_carvalho.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Amanda Carvalho</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/amanda_ranca.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Amanda Ronca</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/estela_polidori.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Estela Polidori</b><br>FaUrb - UFPel
+                        <b>Estela Polidori</b><br>Design Gráfico - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/gabriela_cavalheiro.jpg' ?>');">
@@ -73,7 +72,7 @@
                         <b>Gabriela Cavalheiro</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/giovane_matos.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Giovana Bandeira</b><br>FaUrb - UFPel
                     </div>
@@ -98,7 +97,7 @@
                         <b>Maiga Youkemura</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/matheus_costa.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Matheus Costa</b><br>FaUrb - UFPel
                     </div>
@@ -110,15 +109,19 @@
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Rafaela Pinto</b><br>FaUrb - UFPel
+                        <b>Paula Machado</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/rafaela_pinho.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Rafaela Pinho</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/rodolfo_ribeiro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Rodolfo Ribeiro</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <br style="clear:both;">
             </div>
         </quadro>
 </div>

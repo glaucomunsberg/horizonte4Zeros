@@ -11,7 +11,6 @@
                         <li class=""><a href="#news"><?= lang('horizonteLastNews') ?></a></li>
                         <li class=""><a href="#enjoy"><?= lang('horizonteEnjoy') ?></a></li>
                         <li class=""><a href="#equipe"><?= lang('horizonteEquipe') ?></a></li>
-                        <li class=""><a href="http://horizonte4zeros.wordpress.com" target="_blank"><?= lang('horizonteBlog') ?></a></li>
                         <div class="btn-group">
                             <button class="btn dropdown-toggle" data-toggle="dropdown"><?= lang('horizonteSuaLingua'); ?> <span class="caret"></span></button>
                             <ul class="dropdown-menu">
@@ -141,14 +140,14 @@
                         <div class="item">
                             <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
                             <div class="carousel-caption">
-                                <h4>Bem-vindo ao PROEXT</h4>
+                                <h4>PROEXT</h4>
                             </div>
 
                         </div>
                         <div class="item">
                             <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
                             <div class="carousel-caption">
-                                <h4>Bem-vindo ao PROEXT</h4>
+                                <h4>PROEXT</h4>
                             </div>
                         </div>
                     </div>
@@ -156,7 +155,12 @@
                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
                 </div>
-
+                <h3>Links</h3>
+                <div class="btn-group">
+                    <a type="button" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/" class="btn btn-large btn-default">Blog</a>
+                    <a style="margin-left:4px" type="button" href="https://www.facebook.com/Horizonte4Zeros" class="btn btn-large btn-primary">Facebook</a>
+                    <a style="margin-left:4px" type="button" href="http://www.flickr.com/photos/horizonte4zeros/"class="btn  btn-large btn-warning">Flickr</a>
+                  </div>
             </div>
             <div class="span6">
                 <p>
@@ -229,7 +233,7 @@
                         <b>Ana Paula Zechlinski</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/eduardo_rocha.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Eduardo Rocha</b><br>FaUrb - UFPel
                     </div>
@@ -254,19 +258,19 @@
                         <b>André Peil</b><br>Computação - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/amanda_carvalho.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Amanda Carvalho</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/amanda_ranca.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Amanda Ronca</b><br>FaUrb - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/estela_polidori.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Estela Polidori</b><br>FaUrb - UFPel
+                        <b>Estela Polidori</b><br>Design Gráfico - UFPel
                     </div>
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/gabriela_cavalheiro.jpg' ?>');">
@@ -274,7 +278,7 @@
                         <b>Gabriela Cavalheiro</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/giovane_matos.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Giovana Bandeira</b><br>FaUrb - UFPel
                     </div>
@@ -299,7 +303,7 @@
                         <b>Maiga Youkemura</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/matheus_costa.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Matheus Costa</b><br>FaUrb - UFPel
                     </div>
@@ -311,10 +315,15 @@
                 </div>
                 <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
-                        <b>Rafaela Pinto</b><br>FaUrb - UFPel
+                        <b>Paula Machado</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/rafaela_pinho.jpg' ?>');">
+                    <div class="transparecia caixaDescricaoMembroEquipe">
+                        <b>Rafaela Pinho</b><br>FaUrb - UFPel
+                    </div>
+                </div>
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/rodolfo_ribeiro.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Rodolfo Ribeiro</b><br>FaUrb - UFPel
                     </div>
