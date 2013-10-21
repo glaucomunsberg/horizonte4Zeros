@@ -9,11 +9,10 @@
             $this->db->trans_start();
                 $this->db->set('nome', $parametros['name']);
                 $this->db->set('email', $parametros['email']);
-                $this->db->set('dt_nascimento',$parametros['birthday']);
-                $this->db->set('sexo',$parametros['gender']);
-                $cidade = $parametros['location'];
-                $this->db->set('cidade_atual',$cidade['name']);
-                $this->db->set('cidade_natal',$cidade['name']);
+                $ano = explode('/', $parametros['birthday']);
+                $this->db->set('dt_nascimento',$ano[2]);
+                $this->db->set('genero',$parametros['gender']);
+                $this->db->set('cidade_id','4');
                 $this->db->set('fb_id', $user_id);
                 $this->db->set('equipe', 'N');
                 $this->db->set('dt_cadastro', 'CURRENT_TIMESTAMP'); 
