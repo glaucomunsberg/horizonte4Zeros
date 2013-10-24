@@ -313,7 +313,7 @@
                         <b>Otávio Viana</b><br>FaUrb - UFPel
                     </div>
                 </div>
-                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/paula_oliveira.jpg' ?>');">
                     <div class="transparecia caixaDescricaoMembroEquipe">
                         <b>Paula Machado</b><br>FaUrb - UFPel
                     </div>
