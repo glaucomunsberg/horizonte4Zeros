@@ -36,7 +36,7 @@
         <div class="row-fluid">
             <div class="row" style="margin-left: 30px !important;margin-right: 30px">
                 <div class="span6">
-                    <p>
+                    <p align="justify">
                         <?= $programa->resumo ?>
                     </p>
                 </div>
@@ -196,7 +196,7 @@
         </div>
         <div class="row-fluid">
             <div class="span7">
-                <p><?= lang('horizonteEnjoyConhecendo') ?></p>
+                <p align="justify"><?= lang('horizonteEnjoyConhecendo') ?></p>
                 <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
             </div>
             <div class="span5">
@@ -341,25 +341,25 @@
                 <h1><?= $projeto->nome ?><small></small></h1>
             </div>
             <? if ($projeto->objetivos != '') {
-                ?><p><?= $projeto->objetivos ?></p><?
+                ?><p align="justify"><?= $projeto->objetivos ?></p><?
             }
             ?>
 
             <? if ($projeto->problemajustificacao != '') {
                 ?>  <h3><?= lang('horizonteProjetoProblemaJustificacao') ?></h3>
-                <p><?= $projeto->problemajustificacao ?></p><?
+                <p align="justify"><?= $projeto->problemajustificacao ?></p><?
             }
             ?>
 
             <? if ($projeto->fundamentos != '') {
                 ?>  <h3><?= lang('horizonteProjetoFundamentos') ?></h3>
-                <p><?= $projeto->fundamentos ?></p><?
+                <p align="justify"><?= $projeto->fundamentos ?></p><?
             }
             ?>
 
             <? if ($projeto->resultados != '') {
                 ?>  <h3><?= lang('horizonteProjetoResultados') ?></h3>
-                <p><?= $projeto->resultados ?></p><?
+                <p align="justify"><?= $projeto->resultados ?></p><?
             }
             ?>
         </section>
@@ -371,7 +371,7 @@
     <footer class="footer" style="font-size:11px" align="center" >
         <div class="container">
             <hr>
-            <p>
+            <p align="justify">
             <?= lang('horizonteO') ?><a href="<?= BASE_URL ?>" target="_blank"><?= ' ' . $programa->nome ?></a> <?= lang('horizonteProducaoDe') ?> <a href="http://www.ufpel.edu.br/faurb/laburb/" target="_blank">LabUrb</a>, <a href="http://faurb.ufpel.edu.br/" target="_blank">FAUrb</a> e <a href="http://ufpel.edu.com/" target="_blank">UFPel</a>.
             <?= lang('horizonteEntreEmContato') ?> <a href="mailto:horizonte4zeros@gmail.com"><?= lang('horizonteContato') ?></a>. 
             </p>

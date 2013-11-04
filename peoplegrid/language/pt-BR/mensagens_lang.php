@@ -40,7 +40,7 @@ $lang['peopleGridMundoDiferenteJaguarao'] = ' Jaguarão por um mundo diferente';
 $lang['peopleGridIntroducao'] = 'É muito importante sua participação nas nossas pesquisas urbanas. Note que nos pesquisas são feitas através de grids, nas quais você desenhará ou apontará qual é a melhor região para determinadas atividades como novas escolas,hospitais, áreas públicas etc. Diferente neh?! Que tal experimentar?';
 $lang['peopleGridLembreSeInfo'] = 'Essas informações serão usadas para o diagnostico de Jagurão e fazem parte do projeto <a href="'.BASE_URL.'">Horizonte4Zeros</a>.';
 $lang['peopleGridUsuarioPraComecar'] = 'Para fazer parte da nossa pesquisa é necessário que esteja fazendo parte do <a href="'.BASE_URL.'site/enjoy"> enjoy</a>, nosso banco de dados, logando com sua conta da rede social Facebook. Isso é necessário para que possamos saber um pouco mais de você.';
-$lang['peopleGridBomTever'] = ' é muito bom te ver aqui!';
+$lang['peopleGridBomTever'] = ' É muito bom te ver aqui!';
 $lang['peopleGridAntesDe1'] = ' Antes de começarmos precisamos de algumas informações para a pesquisa. Ao total são <strong>';
 $lang['peopleGridAntesDe2'] = '</strong> questões a respeito da cidade de <strong>Jaguarão</strong> que você pode responder.';
 $lang['peopleGridQuestao'] = '';

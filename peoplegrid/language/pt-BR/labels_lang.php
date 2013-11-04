@@ -1,15 +1,15 @@
 <?php
 $lang['horizonte0000']='Horizonte4Zeros';
 $lang['horizonteProjetos'] = 'Projetos';
-$lang['horizonteProjeto1'] = 'Projeto drup';
+$lang['horizonteProjeto1'] = 'Projeto DRUP';
 $lang['horizonteProjeto2'] = 'Projeto Orden. Urb.';
 $lang['horizonteProjeto3'] = 'Projeto Cid. Paraformal';
 $lang['horizonteProjeto4'] = 'Projeto Cromática';
-$lang['horizonteInicio'] = 'início';
+$lang['horizonteInicio'] = 'Início';
 $lang['horizonteLerMais'] = 'Ler Mais';
 $lang['horizonteNews'] = 'Acompanhe!';
 $lang['horizonteLastNews'] = 'Acompanhe';
-$lang['horizonteProducaoDe'] = ' é um projeto de extensão do PROEXT2013 MEC/SESu produzido por ';
+$lang['horizonteProducaoDe'] = 'É um projeto de extensão do PROEXT2013 MEC/SESu produzido por ';
 $lang['horizonteEntreEmContato'] = 'Entrar em ';
 $lang['horizonteEnjoy'] = 'Enjoy';
 $lang['horizonteOops'] = 'Oops!';
