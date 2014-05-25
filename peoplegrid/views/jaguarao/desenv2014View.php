@@ -102,7 +102,7 @@
     
     
 
-    <section id="equipe">
+    <section id="equipe" >
         <div style="padding-top:55px"></div>
         <div class="page-header">
             <h1><?= lang('horizonteEquipe') ?><small></small></h1>
