@@ -15,15 +15,7 @@
                 <a class="brand active" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?= lang('horizonteInicio') ?></a>
                 <div class="nav-collapse collapse" >
                     <ul class="nav">
-                        <div class="btn-group">
-                            <button class="btn dropdown-toggle" data-toggle="dropdown"><?= lang('horizonteSuaLingua'); ?> <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="?lang=pt-br"><?= lang('horizontePortugues'); ?></a></li>
-                                <li><a href="?lang=es"><?= lang('horizonteEspanhol'); ?></a></li>
-                                <li><a href="?lang=en"><?= lang('horizonteIngles'); ?></a></li>
-                                <li><a href="?lang=mandarim"><?= lang('horizonteMandarim'); ?></a></li>
-                            </ul>
-                        </div>
+                        <li class=""><a href="http://localhost/horizonte4Zeros/site/site_horizonte">Em 2014</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,10 +32,10 @@
     </div>
     <div id="conteudo" class="row-fluid" style="text-align: center">
         <div class="span6" id="esquerda">
-            <? $this->load->view('jaguarao/horizonteEsquerdaView') ?>
+            <? $this->load->view('jaguarao/horizonte2013EsquerdaView') ?>
         </div>
         <div class="span6" id="direita">
-            <? $this->load->view('jaguarao/horizonteDireitaView') ?>
+            <? $this->load->view('jaguarao/horizonte2013DireitaView') ?>
         </div>
     </div>
 </div>

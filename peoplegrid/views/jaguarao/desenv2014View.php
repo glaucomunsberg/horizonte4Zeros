@@ -11,15 +11,7 @@
                         <li class=""><a href="#news"><?= lang('horizonteLastNews') ?></a></li>
                         <li class=""><a href="#enjoy"><?= lang('horizonteEnjoy') ?></a></li>
                         <li class=""><a href="#equipe"><?= lang('horizonteEquipe') ?></a></li>
-                        <div class="btn-group">
-                            <button class="btn dropdown-toggle" data-toggle="dropdown"><?= lang('horizonteSuaLingua'); ?> <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="?lang=pt-br"><?= lang('horizontePortugues'); ?></a></li>
-                                <li><a href="?lang=es"><?= lang('horizonteEspanhol'); ?></a></li>
-                                <li><a href="?lang=en"><?= lang('horizonteIngles'); ?></a></li>
-                                <li><a href="?lang=mandarim"><?= lang('horizonteMandarim'); ?></a></li>
-                            </ul>
-                        </div>
+                        <li class=""><a href="http://localhost/horizonte4Zeros/site/projeto2013_desenv">Em 2013</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,8 +55,8 @@
                 </div>
                 <!-- TITULO DOS PROJETOS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
-                    <? foreach ($projetos as $projeto) { ?>
-                        <div class="span3 ">
+                    <? foreach ($projetos as $projeto) {?>
+                        <div class="span4 ">
                             <h3><?= $projeto->nome ?></h3>
                         </div>  
                     <? } ?>
@@ -72,35 +64,28 @@
 
                 <!-- RESUMO DOS PROJETOS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
-                    <div class="span3 ">
+                    <div class="span4 ">
                         <p style="text-align: justify"><?= $projeto1->resumo ?></p>
                     </div>
-                    <div class="span3 ">
+                    <div class="span4 ">
                         <p style="text-align: justify"><?= $projeto2->resumo ?></p>
                     </div>
-                    <div class="span3 ">
+                    <div class="span4 ">
                         <p style="text-align: justify"><?= $projeto3->resumo ?></p>
-                    </div>
-                    <div class="span3 ">
-                        <p style="text-align: justify"><?= $projeto4->resumo ?></p>
                     </div>
                 </div>
 
                 <!-- BOTOES LEIA MAIS-->
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
                     <? foreach ($projetos as $projeto) { ?>
-                        <div class="span3 ">
+                        <div class="span4 ">
                             <a href="#projeto<?= $projeto->id ?>"><?
                                 switch ($projeto->id) {
-                                    case 1:
-                                        echo '<button class="btn btn-success">'.lang('horizonteLerMais').'</button>';
-                                        echo '<button onClick="participarPeopleGrid()" class="btn btn-primary pull-right">'.lang('horizonteParticipar').'</button>';
+                                    case 5: echo '<button class="btn btn-warning">'.lang('horizonteLerMais').'</button>';
                                         break;
-                                    case 2: echo '<button class="btn btn-warning">'.lang('horizonteLerMais').'</button>';
+                                    case 6: echo '<button class="btn btn-danger">'.lang('horizonteLerMais').'</button>';
                                         break;
-                                    case 3: echo '<button class="btn btn-danger">'.lang('horizonteLerMais').'</button>';
-                                        break;
-                                    case 4: echo '<button class="btn">'.lang('horizonteLerMais').'</button>';
+                                    case 7: echo '<button class="btn">'.lang('horizonteLerMais').'</button>';
                                         break;
                                 }
                                 ?></a>
@@ -112,109 +97,10 @@
     </section>
 
     <section id="news">
-        <div style="padding-top:55px"></div>
-        <div class="page-header">
-            <h1><?= lang('horizonteLastNews') ?> <small> <?= lang('horizonteLastNewsMensagem') ?></small></h1>
-        </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <div id="myCarousel" class="carousel slide">
-
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg"  width="400" heigth="auto"alt="">
-                            <div class="carousel-caption">
-
-                                <h4>Bem-vindo ao PROEXT</h4> 
-                            </div>
-
-                        </div>
-                        <div class="item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
-                            <div class="carousel-caption">
-                                <h4>Bem-vindo ao PROEXT</h4>
-                            </div>
-
-                        </div>
-                        <div class="item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
-                            <div class="carousel-caption">
-                                <h4>PROEXT</h4>
-                            </div>
-
-                        </div>
-                        <div class="item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
-                            <div class="carousel-caption">
-                                <h4>PROEXT</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-                </div>
-                <h3>Links</h3>
-                <div class="btn-group">
-                    <a type="button" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/" class="btn btn-large btn-default">Blog</a>
-                    <a style="margin-left:4px" type="button" href="https://www.facebook.com/Horizonte4Zeros" class="btn btn-large btn-primary">Facebook</a>
-                    <a style="margin-left:4px" type="button" href="http://www.flickr.com/photos/horizonte4zeros/"class="btn  btn-large btn-warning">Flickr</a>
-                  </div>
-            </div>
-            <div class="span6">
-                <p>
-                <dt><?= lang('horizonteViagensDesc') ?></dt>
-                <dl class="dl-horizontal">
-                    <dt><?= lang('horizonteViagensFeitas') ?></dt>
-                    <dd>28/06 nos estaremos em Jaguarão!</dd>
-                    <dd>12/07 nos estaremos em Jaguarão!</dd>
-                    <dd>09/08 nos estaremos em Jaguarão!</dd>
-                    <dd>23/08 nos estaremos em Jaguarão!</dd>
-                    <dd>23/08 nos estaremos em Jaguarão!</dd>
-                    <dd>23/08 nos estaremos em Jaguarão!</dd>
-                    <dd>23/08 nos estaremos em Jaguarão!</dd>
-                    <dt><?= lang('horizonteViagens') ?></dt>
-                    <dd>28/06 nos estaremos em Jaguarão!</dd>
-                    <dd>12/07 nos estaremos em Jaguarão!</dd>
-                    <dd>09/08 nos estaremos em Jaguarão!</dd>
-                    <dd>23/08 nos estaremos em Jaguarão!</dd>
-                </dl>
-                </p>
-                <p>
-                    <span class="label label-info"><?= lang('horizonteNews') ?></span>
-                    <?= lang('horizonteNewsMensagem') ?>
-                </p>
-            </div>
-        </div>    
+        
     </section>
     
-    <section id="enjoy">
-        <div style="padding-top:55px"></div>
-        <div class="page-header">
-            <h1><?= lang('horizonteEnjoy') ?> <small><?= lang('horizonteEnjoySimple') ?></small></h1>
-        </div>
-        <div class="row-fluid">
-            <div class="span7">
-                <p align="justify"><?= lang('horizonteEnjoyConhecendo') ?></p>
-                <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
-            </div>
-            <div class="span5">
-                
-                <div class="hero-unit">
-                        <h3 style="padding-top:10px"><?= lang('horizontePessoas') ?></h3>
-                        <?
-                        foreach ($pessoas as $pessoa) {
-                            ?>
-                            <div title="<?= $pessoa->nome ?>" style="float:left; margin:2px; width:40px; height: 40px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?= $pessoa->fb_id ?>/picture')"></div>
-                            <?
-                        }
-                        ?>
-                        <br style="clear:both;" />
-                    </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section id="equipe">
         <div style="padding-top:55px"></div>
@@ -366,7 +252,32 @@
         <?
     }
     ?>
-    
+    <section id="enjoy">
+        <div style="padding-top:55px"></div>
+        <div class="page-header">
+            <h1><?= lang('horizonteEnjoy') ?> <small><?= lang('horizonteEnjoySimple') ?></small></h1>
+        </div>
+        <div class="row-fluid">
+            <div class="span7">
+                <p align="justify"><?= lang('horizonteEnjoyConhecendo') ?></p>
+                <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
+            </div>
+            <div class="span5">
+                
+                <div class="hero-unit">
+                        <h3 style="padding-top:10px"><?= lang('horizontePessoas') ?></h3>
+                        <?
+                        foreach ($pessoas as $pessoa) {
+                            ?>
+                            <div title="<?= $pessoa->nome ?>" style="float:left; margin:2px; width:40px; height: 40px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?= $pessoa->fb_id ?>/picture')"></div>
+                            <?
+                        }
+                        ?>
+                        <br style="clear:both;" />
+                    </div>
+            </div>
+        </div>
+    </section>
 </div>    
     <footer class="footer" style="font-size:11px" align="center" >
         <div class="container">

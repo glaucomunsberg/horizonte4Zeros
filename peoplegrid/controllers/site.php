@@ -21,16 +21,26 @@ class Site extends CI_Controller {
         public function site_desenv(){
             $this->loadLanguage();
             $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
-            $data['programa'] = $this->programaModel->getPrograma(1);
-            $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
-            $data['projeto1'] = $this->projetoModel->getProjeto(1);
-            $data['projeto2'] = $this->projetoModel->getProjeto(2);
-            $data['projeto3'] = $this->projetoModel->getProjeto(3);
-            $data['projeto4'] = $this->projetoModel->getProjeto(4);
-            $this->load->view('jaguarao/desenvView',$data);
+            $data['programa'] = $this->programaModel->getPrograma(2);
+            $data['projetos'] = $this->projetoModel->getProjetosByPrograma(2);
+            $data['projeto1'] = $this->projetoModel->getProjeto(5);
+            $data['projeto2'] = $this->projetoModel->getProjeto(6);
+            $data['projeto3'] = $this->projetoModel->getProjeto(7);
+            $this->load->view('jaguarao/desenv2014View',$data);
         }
         
         public function site_horizonte(){
+            $this->loadLanguage();
+            $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
+            $data['programa'] = $this->programaModel->getPrograma(2);
+            $data['projetos'] = $this->projetoModel->getProjetosByPrograma(2);
+            $data['projeto1'] = $this->projetoModel->getProjeto(5);
+            $data['projeto2'] = $this->projetoModel->getProjeto(6);
+            $data['projeto3'] = $this->projetoModel->getProjeto(7);
+            $this->load->view('jaguarao/horizonte2014View',$data);
+        }
+        
+        public function projeto2013_desenv(){
             $this->loadLanguage();
             $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
             $data['programa'] = $this->programaModel->getPrograma(1);
@@ -39,7 +49,19 @@ class Site extends CI_Controller {
             $data['projeto2'] = $this->projetoModel->getProjeto(2);
             $data['projeto3'] = $this->projetoModel->getProjeto(3);
             $data['projeto4'] = $this->projetoModel->getProjeto(4);
-            $this->load->view('jaguarao/horizonteView',$data);
+            $this->load->view('jaguarao/desenv2013View',$data);
+        }
+        
+        public function projeto2013_horizonte(){
+            $this->loadLanguage();
+            $data['pessoas'] = $this->pessoasModel->getPessoasOnFacebook();
+            $data['programa'] = $this->programaModel->getPrograma(1);
+            $data['projetos'] = $this->projetoModel->getProjetosByPrograma(1);
+            $data['projeto1'] = $this->projetoModel->getProjeto(1);
+            $data['projeto2'] = $this->projetoModel->getProjeto(2);
+            $data['projeto3'] = $this->projetoModel->getProjeto(3);
+            $data['projeto4'] = $this->projetoModel->getProjeto(4);
+            $this->load->view('jaguarao/horizonte2013View',$data);
         }
         public function enjoy(){
                 $this->load->view('enjoy/enjoyFiltroView');
