@@ -23,7 +23,7 @@
     <section id="home">
         <div style="padding-top:35px"></div>
         <div class="page-header">
-            <h2><?= $programa->nome ?><small><?= $programa->subtitulo ?></small></h2>
+            <h2>2013: <?= $programa->nome ?><small><?= $programa->subtitulo ?></small></h2>
         </div>
         <div class="row-fluid">
             <div class="row" style="margin-left: 30px !important;margin-right: 30px">
@@ -92,7 +92,7 @@
                                         break;
                                     case 3: echo '<button class="btn btn-danger">'.lang('horizonteLerMais').'</button>';
                                         break;
-                                    case 4: echo '<button class="btn">'.lang('horizonteLerMais').'</button>';
+                                    case 4: echo '<button class="btn btn">'.lang('horizonteLerMais').'</button>';
                                         break;
                                 }
                                 ?></a>

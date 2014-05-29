@@ -36,7 +36,7 @@ $lang['horizonteProjetoFundamentos'] = 'Fundamentos';
 $lang['horizonteProjetoResultados'] = 'Resultados';
 $lang['horizonteParticipar'] = 'Participar!';
 $lang['horizonteCarregando'] = 'Carregando...';
-$lang['horizonte'] = '';
+$lang['horizonteHome'] = 'Apresentação';
 $lang['horizonte'] = '';
 $lang['horizonte'] = '';
 
