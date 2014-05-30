@@ -11,7 +11,7 @@
                         <li class=""><a href="#projetos"><?= lang('horizonteProjetos') ?></a> </li>
                         <li class=""><a href="#enjoy"><?= lang('horizonteEnjoy') ?></a></li>
                         <li class=""><a href="#equipe"><?= lang('horizonteEquipe') ?></a></li>
-                        <li class=""><a href="http://localhost/horizonte4Zeros/site/projeto2013_desenv">Em 2013</a></li>
+                        <li class=""><a href="<?= BASE_URL ?>site/projeto2013_desenv">Em 2013</a></li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +27,7 @@
         <section id="home">
             <div style="padding-top:55px"></div>
             <div class="page-header">
-                <h2>2014: <?= $programa->nome ?> <small><?= $programa->subtitulo ?></small></h2>
+                <h2><?= $programa->nome ?> <small><?= $programa->subtitulo ?></small></h2>
             </div>
             <div class="row-fluid">
                 <div class="row" style="margin-left: 30px !important;margin-right: 30px">
@@ -189,7 +189,7 @@
                 <h2><?= lang('horizonteEquipe') ?><small></small></h2>
             </div>
             <div class="container">
-                <h2><small> professores </small></h2>
+                <h3>Docentes</h3>
                 <div id="membros" class="span8">
                     <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/ana_paula.jpg' ?>');">
                         <div  class="transparecia caixaDescricaoMembroEquipe">
@@ -219,7 +219,7 @@
                 </div>
             </div>
             <div class="container">
-                <h2><small> alunos </small></h2>
+                <h3>Discentes</h3>
                 <div id="membros" class="span12">
                     <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/andre_peil.jpg' ?>');">
                         <div class="transparecia caixaDescricaoMembroEquipe">

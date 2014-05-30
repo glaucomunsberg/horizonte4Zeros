@@ -11,7 +11,7 @@
                         <li class=""><a href="#news"><?= lang('horizonteLastNews') ?></a></li>
                         <li class=""><a href="#enjoy"><?= lang('horizonteEnjoy') ?></a></li>
                         <li class=""><a href="#equipe"><?= lang('horizonteEquipe') ?></a></li>
-                        <li class=""><a href="http://localhost/horizonte4Zeros/site/site_desenv">Em 2014</a></li>
+                        <li class=""><a href="<?= BASE_URL ?>site/site_desenv">Em 2014</a></li>
                     </ul>
                 </div>
             </div>

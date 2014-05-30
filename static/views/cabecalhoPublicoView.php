@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
+      xmlns:fb="http://www.facebook.net/en_US/all.js">
     <head>
       <link rel="shortcut icon" href="<?=IMG?>/favicon.ico" type="image/x-icon" />
       <meta name="author" content="Glauco Roberto Munsberg">

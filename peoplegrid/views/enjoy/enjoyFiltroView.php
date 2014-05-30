@@ -49,18 +49,40 @@
     </section>
 </div>
         <script>
-            FB.init({
-                appId      : '<?=$this->config->item('app_fb_id')?>',                        // App ID from the app dashboard
-                status : true, // check login status
-                cookie : true, // enable cookies to allow the server to access the session
-                xfbml  : true  // parse XFBML
-            });
+            
+            function logar(){
+                FB.init({ 
+                    appId: '<?= $this->config->item('app_fb_id') ?>', 
+                    cookie: true, 
+                    xfbml: true, 
+                    status: true });
+
+                FB.getLoginStatus(function (response) {
+                    if (response.authResponse) {
+                        $('#AccessToken').val(response.authResponse.accessToken);
+                    } else {
+                        log.console('erro ao usar o login');
+                    }
+                });
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') {
+                      alert ("Your UID is " + response.authResponse.userID);
+                    }
+                  });
+            }
             
             function logarComFacebookId(){
-                FB.api('/me', function(response) {
-                  console.log(response);
-                  location.href = '<?=BASE_URL?>site/logarComFacebook/'+response.id;
-                
+                FB.init({ 
+                    appId: '<?= $this->config->item('app_fb_id') ?>', 
+                    cookie: true, 
+                    xfbml: true, 
+                    status: true
+                });
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') {
+                        location.href = '<?=BASE_URL?>site/logarComFacebook/'+response.authResponse.userID;
+                    
+                    }
                 });
             }
         </script>

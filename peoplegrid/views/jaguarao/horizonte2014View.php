@@ -10,7 +10,7 @@
                     <ul class="nav">
                         <li><a href="#home">Contéudo</a></li>
                         <li><a href="#about">Informações</a></li>
-                        <li herf=""><a href="http://localhost/horizonte4Zeros/site/projeto2013_horizonte">Em 2013</a></li>
+                        <li herf=""><a href="<?= BASE_URL ?>site/projeto2013_horizonte">Em 2013</a></li>
                     </ul>
                 </div>
             </div>
@@ -167,11 +167,6 @@
                     </div>
                     <div class="media">
                         <a class="pull-left" href="#">
-                            <img class="media-object" src="<?= IMG . '/profiles/natalia_naoumov.jpg' ?>">
-                        </a>
-                    </div>
-                    <div class="media">
-                        <a class="pull-left" href="#">
                             <img class="media-object" src="<?= IMG . '/profiles/otavio_peres.jpg' ?>">
                         </a>
                     </div>
@@ -182,12 +177,17 @@
                     </div>
                     <div class="media">
                         <a class="pull-left" href="#">
+                            <img class="media-object" style="-webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); filter: grayscale(100%);" src="<?= IMG . '/profiles/membro.jpg' ?>">
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
                             <img class="media-object" src="<?= IMG . '/profiles/glauco_roberto.jpg' ?>">
                         </a>
                     </div>
                     <div class="media">
                         <a class="pull-left" href="#">
-                            <img class="media-object" src="<?= IMG . '/profiles/luciano_cerentini.jpg' ?>">
+                            <img class="media-object" src="<?= IMG . '/profiles/otavio_vianna.jpg' ?>">
                         </a>
                     </div>
                     <div class="media">

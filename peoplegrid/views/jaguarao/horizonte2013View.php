@@ -15,7 +15,7 @@
                 <a class="brand active" style="margin-top: 3px; font-size: 25px" href="<?=BASE_URL?>"><?= lang('horizonteInicio') ?></a>
                 <div class="nav-collapse collapse" >
                     <ul class="nav">
-                        <li class=""><a href="http://localhost/horizonte4Zeros/site/site_horizonte">Em 2014</a></li>
+                        <li class=""><a href="<?= BASE_URL ?>site/site_horizonte">Em 2014</a></li>
                     </ul>
                 </div>
             </div>
