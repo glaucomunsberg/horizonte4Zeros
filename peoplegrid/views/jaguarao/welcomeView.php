@@ -17,6 +17,7 @@
     <div id="shell">
       <img src="<?=BASE_URL?>static/img/logo_horizonte.png" onClick="paraOMundo('site_horizonte')" width="200" height="auto" data-xrange="90" data-yrange="90" id="plax-horizonte"/>
       <img src="<?=BASE_URL?>static/img/logo_quatro.png" width="100" height="100" data-xrange="10" data-yrange="10" id="plax-logo"/>
+      <img src="<?=BASE_URL?>static/img/logo_digital.png" onClick="paraOMundo('site_digital')" width="200" height="auto" data-xrange="200" data-yrange="110" data-invert="true" id="plax-digital"/>
       <img src="<?=BASE_URL?>static/img/logo_desenv_jaguarao.png" onClick="paraOMundo('site_desenv')" width="200" height="auto" data-xrange="90" data-yrange="90" data-invert="true" id="plax-desenv"/>
     </div>
     <style type="text/css">
@@ -47,6 +48,13 @@
         top: 94px;
         left: 93px;
       }
+      img#plax-digital {
+        position: absolute;
+        z-index: 3;
+        top: 20px;
+        left: -90px;
+        cursor: pointer;
+      }
       img#plax-desenv {
         position: absolute;
         top: 185px;
@@ -72,7 +80,16 @@
         setTimeout( vaiAoMundo, 1000 );         
       }
       function vaiAoMundo() {
-          location.href = '<?=BASE_URL?>site/'+mundoEscolhido;
+          if(mundoEscolhido == 'site_horizonte'){
+              location.href = '<?=BASE_URL?>site/'+mundoEscolhido;
+          }
+          if(mundoEscolhido == 'site_digital'){
+              location.href = '<?=BASE_URL?>site/site_desenv';
+          }
+          if(mundoEscolhido == 'site_desenv'){
+              location.href = '<?=BASE_URL?>site/projeto2013_desenv';
+          }
+          
       }
     </script>
   </body>

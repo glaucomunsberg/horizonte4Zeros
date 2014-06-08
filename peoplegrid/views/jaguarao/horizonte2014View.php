@@ -177,7 +177,7 @@
                     </div>
                     <div class="media">
                         <a class="pull-left" href="#">
-                            <img class="media-object" style="-webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); filter: grayscale(100%);" src="<?= IMG . '/profiles/membro.jpg' ?>">
+                            <img class="media-object" style="-webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); filter: grayscale(100%);" src="<?= IMG . '/profiles/clarissa_neutzling.jpg' ?>">
                         </a>
                     </div>
                     <div class="media">

@@ -42,39 +42,40 @@
                             <!-- Carousel items -->
                             <div class="carousel-inner">
                                 <div class="active item">
-                                    <img src="<?= IMG . '/carrousel/01.jpg' ?>"  width="640" heigth="425" alt="">
-                                    <div class="carousel-caption">
-
-                                        <h4>Professor Maurício Polidori ministrando a oficina de planejamento urbano.</h4> 
-                                    </div>
-
+                                    <img src="<?= IMG . '/carrousel/2014_10.jpg' ?>"  width="640" heigth="425" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="<?= IMG . '/carrousel/02.jpg' ?>"  width="640" heigth="425" alt="">
-                                    <div class="carousel-caption">
-                                        <h4>População de Jaguarão participa das oficinas da equipe horizonte4zeros.</h4>
-                                    </div>
-
+                                    <img src="<?= IMG . '/carrousel/2014_11.jpg' ?>"  width="640" heigth="425" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="<?= IMG . '/carrousel/03.jpg' ?>"  width="640" heigth="auto" alt="">
+                                    <img src="<?= IMG . '/carrousel/2014_00.jpg' ?>"  width="640" heigth="425" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="<?= IMG . '/carrousel/04.jpg' ?>"  width="640" heigth="auto" alt="">
+                                    <img src="<?= IMG . '/carrousel/2014_01.jpg' ?>"  width="640" heigth="auto" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="<?= IMG . '/carrousel/05.jpg' ?>"  width="640" heigth="auto" alt="">
-                                    <div class="carousel-caption">
-                                        <h4>Oficinas ao ar livre foi um dos eventos da equipe horizonte4zeros.</h4>
-                                    </div>
-
+                                    <img src="<?= IMG . '/carrousel/2014_02.jpg' ?>"  width="640" heigth="auto" alt="">
                                 </div>
                                 <div class="item">
-                                    <img src="<?= IMG . '/carrousel/06.jpg' ?>"  width="640" heigth="auto" alt="">
-                                    <div class="carousel-caption">
-                                        <h4>Mateada realizada no Cerro da Pólvora em 2013.</h4>
-                                    </div>
-
+                                    <img src="<?= IMG . '/carrousel/2014_03.jpg' ?>"  width="640" heigth="auto" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="<?= IMG . '/carrousel/2014_04.jpg' ?>"  width="640" heigth="auto" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="<?= IMG . '/carrousel/2014_05.jpg' ?>"  width="640" heigth="auto" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="<?= IMG . '/carrousel/2014_06.jpg' ?>"  width="640" heigth="auto" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="<?= IMG . '/carrousel/2014_07.jpg' ?>"  width="640" heigth="auto" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="<?= IMG . '/carrousel/2014_08.jpg' ?>"  width="640" heigth="auto" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="<?= IMG . '/carrousel/2014_09.jpg' ?>"  width="640" heigth="auto" alt="">
                                 </div>
                             </div>
                             <!-- Carousel nav -->
@@ -136,55 +137,43 @@
                 </div>
             </div>
         </section>
-
-
-
-        <!-- ENJOY -->
-        <!-- =========================================================== -->
-        <!-- =========================================================== -->
-        <!-- =========================================================== -->
         <section id="enjoy">
-            <div style="padding-top:55px"></div>
-            <div class="page-header">
-                <h2><?= lang('horizonteEnjoy') ?> <small><?= lang('horizonteEnjoySimple') ?></small></h2>
-            </div>
             <div class="row-fluid">
-                <div class="span7">
-                    <p align="justify"><?= lang('horizonteEnjoyConhecendo') ?></p>
-                    <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
+                <div class="span6">
+                    <div class="page-header">
+                        <h2>Zoneamento Ambiental <small></h2>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="<?= BASE_URL . 'static/files/zoneamento_ambiental.gif' ?>" data-src="holder.js/64x64">
+                        </a>
+                    </div>
                 </div>
-                <div class="span5">
-
-                    <div class="hero-unit">
-                        <h3 style="padding-top:10px"><?= lang('horizontePessoas') ?></h3>
-                        <?
-                        foreach ($pessoas as $pessoa) {
-                            ?>
-                            <div title="<?= $pessoa->nome ?>" style="float:left; margin:2px; width:40px; height: 40px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?= $pessoa->fb_id ?>/picture')"></div>
-                            <?
-                        }
-                        ?>
-                        <br style="clear:both;" />
+                <div class="span6">
+                    <div class="page-header">
+                        <h2><?= lang('horizonteEnjoy') ?> <small><?= lang('horizonteEnjoySimple') ?></small></h2>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <p align="justify"><?= lang('horizonteEnjoyConhecendo') ?></p>
+                            <button onClick="irEnjoy()" class="btn btn-large btn-info pull-right" href="#"><?= lang('horizonteParticipar') ?></button>
+                            <div class="hero-unit">
+                                <h3 style="padding-top:10px"><?= lang('horizontePessoas') ?></h3>
+                                <?
+                                foreach ($pessoas as $pessoa) {
+                                    ?>
+                                    <div title="<?= $pessoa->nome ?>" style="float:left; margin:2px; width:40px; height: 40px;background-repeat: no-repeat;background-size: auto;background-image: url('http://graph.facebook.com/<?= $pessoa->fb_id ?>/picture')"></div>
+                                    <?
+                                }
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--NOTICIAS -->
-        <!-- =========================================================== -->
-        <!-- =========================================================== -->
-        <!-- =========================================================== --> 
-        <section id="news">
-
-        </section>
-
-        <!-- EQUIPE -->
-        <!-- =========================================================== -->
-        <!-- =========================================================== -->
-        <!-- =========================================================== -->    
-
         <section id="equipe" >
-            <div style="padding-top:55px"></div>
             <div class="page-header">
                 <h2><?= lang('horizonteEquipe') ?><small></small></h2>
             </div>
@@ -226,7 +215,7 @@
                             <b>André Peil</b><br>Computação - UFPel
                         </div>
                     </div>
-                    <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/membro.jpg' ?>');">
+                    <div class="caixaFotoMembroEquipe" style="background-image: url('<?= IMG . '/profiles/clarissa_neutzling.jpg' ?>');">
                         <div class="transparecia caixaDescricaoMembroEquipe">
                             <b>Clarissa Neutzling</b><br>FAUrb - UFPel
                         </div>

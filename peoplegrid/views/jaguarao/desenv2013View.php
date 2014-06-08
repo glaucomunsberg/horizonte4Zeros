@@ -115,32 +115,39 @@
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg"  width="400" heigth="auto"alt="">
+                            <img src="<?= IMG . '/carrousel/01.jpg' ?>"  width="640" heigth="425" alt="">
                             <div class="carousel-caption">
 
-                                <h4>Bem-vindo ao PROEXT</h4> 
+                                <h4>Professor Maurício Polidori ministrando a oficina de planejamento urbano.</h4> 
                             </div>
 
                         </div>
                         <div class="item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
+                            <img src="<?= IMG . '/carrousel/02.jpg' ?>"  width="640" heigth="425" alt="">
                             <div class="carousel-caption">
-                                <h4>Bem-vindo ao PROEXT</h4>
+                                <h4>População de Jaguarão participa das oficinas da equipe horizonte4zeros.</h4>
                             </div>
 
                         </div>
                         <div class="item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
+                            <img src="<?= IMG . '/carrousel/03.jpg' ?>"  width="640" heigth="auto" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="<?= IMG . '/carrousel/04.jpg' ?>"  width="640" heigth="auto" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="<?= IMG . '/carrousel/05.jpg' ?>"  width="640" heigth="auto" alt="">
                             <div class="carousel-caption">
-                                <h4>PROEXT</h4>
+                                <h4>Oficinas ao ar livre foi um dos eventos da equipe horizonte4zeros.</h4>
                             </div>
 
                         </div>
                         <div class="item">
-                            <img src="http://farm8.staticflickr.com/7415/8959422907_8eb0f01e5b_b.jpg" width="400" heigth="auto" alt="">
+                            <img src="<?= IMG . '/carrousel/06.jpg' ?>"  width="640" heigth="auto" alt="">
                             <div class="carousel-caption">
-                                <h4>PROEXT</h4>
+                                <h4>Mateada realizada no Cerro da Pólvora em 2013.</h4>
                             </div>
+
                         </div>
                     </div>
                     <!-- Carousel nav -->
@@ -332,33 +339,46 @@
             <div class="page-header">
                 <h1><?= $projeto->nome ?><small></small></h1>
             </div>
-            <? if ($projeto->objetivos != '') {
-                ?><p align="justify"><?= $projeto->objetivos ?></p><?
-            }
-            ?>
-
             <? if ($projeto->problemajustificacao != '') {
                 ?>  <h3><?= lang('horizonteProjetoProblemaJustificacao') ?></h3>
                 <p align="justify"><?= $projeto->problemajustificacao ?></p><?
-            }
-            ?>
-
-            <? if ($projeto->fundamentos != '') {
-                ?>  <h3><?= lang('horizonteProjetoFundamentos') ?></h3>
-                <p align="justify"><?= $projeto->fundamentos ?></p><?
-            }
-            ?>
-
-            <? if ($projeto->resultados != '') {
-                ?>  <h3><?= lang('horizonteProjetoResultados') ?></h3>
-                <p align="justify"><?= $projeto->resultados ?></p><?
             }
             ?>
         </section>
         <?
     }
     ?>
-    
+    <section id="resultado">
+        <div style="padding-top:35px"></div>
+        <div class="page-header">
+            <h1>Resultado</h1>
+        </div>
+        <p>O programa trabalha com o espaço urbano da cidade e se organiza
+            em quatro projetos: 1) Diagnóstico Rápido Participativo Urbano -
+            DRUP em Jaguarão; 2) Ordenamento do núcleo urbano
+            consolidado; 3) Jaguarão cidade paraformal; 4) Estrutura cromática
+            de Jaguarão. Está dedicado à temática do desenvolvimento urbano
+            numa cidade de fronteira do Brasil com o Uruguai, no sul do Rio
+            Grande do Sul, a qual experimenta as tensões do crescimento
+            provocado por novos e grandes pólos de atração e do tombamento
+            federal de toda a área central, com cerca de 650 prédios
+            preservados, numa área de aproximadamente 150 hectares. Para
+            isso estão concebidos os quatro projetos citados anteriormente,
+            compondo um conjunto encadeado e interagente, com as seguintes
+            propostas específicas: a) realizar diagnóstico participativo dedicado
+            a questões sócio-espaciais, identificando potenciais, problemas,
+            condicionantes e recomendações, extraindo prioridades e
+            socializando conceitos sobre a cidade; b) identificar princípios
+            ordenadores do espaço intraurbano, considerando a necessidade de
+            conciliação entre o Plano Diretor e o tombamento federal do
+            Conjunto Histórico e Paisagístico de Jaguarão; c) mapear,
+            representar e analisar situações urbanas públicas chamadas de
+            paraformais, valorizando diferentes modos de apropriação territorial;
+            d) apreender e representar a estrutura cromática da cidade
+            preexistente, instrumentando a preservação e a mudança.
+        </p>
+        <a clas="btn btn-link" href="<?=BASE_URL.'static/files/Relatorio_final_SIGPROJ.pdf'?>">Leia o relatório</a>
+    </section>
 </div>    
     <footer class="footer" style="font-size:11px" align="center" >
         <div class="container">
