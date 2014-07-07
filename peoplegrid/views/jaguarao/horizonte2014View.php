@@ -36,6 +36,122 @@
     <section id="home" data-speed="4" data-type="background">
         <div class="container">
             <div class="row-fluid">
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> Encontro pré-Congresso de Iniciação Científica-CIC</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/07/aa.jpg">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/07/03/encontro-pre-congresso-de-iniciacao-cientifica-cic/">Leia mais &raquo;</a></p>
+                </div>
+
+
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/youtube.png" class="pull-left">
+                    <h2> O QUE É O PROEXT?</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="http://desenvolvimentourbanoemjaguarao.wordpress.com/type/video/">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/06/24/o-que-e-o-proext/">Leia mais &raquo;</a></p>
+                </div>
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> Reunião com a Prefeitura de Jaguarão</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/06/28/reuniao-com-a-prefeitura-de-jaguarao/">Leia mais &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> Oficinas do PROEXT 2014 – Introdução ao Geoprocessamento e Zoneamento Ambiental</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/06/aaa.png">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/06/23/oficinas-do-proext-2014-introducao-ao-geoprocessamento-e-zoneamento-ambiental/">Leia mais &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span8 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> LEVANTAMENTO FOTOGRÁFICO EM JAGUARÃO PARA O SIG-WEB</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="<?=BASE_URL?>/static/img/temp/jaguarc3a3o.jpg">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/06/18/levantamento-fotografico-em-jaguarao-para-o-sig-web/">Leia mais &raquo;</a></p>
+                </div>
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> Seminário de Integração Cultural Brasil-Uruguai</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/06/seminario1.jpg">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/06/04/seminario-de-integracao-cultural-brasil-uruguai/">Veja mais &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span6 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> O QUE É HABITAÇÃO DE INTERESSE SOCIAL?</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="https://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/05/andre.jpg">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/05/29/o-que-e-habitacao-de-interesse-social/">Leia mais &raquo;</a></p>
+                </div>
+                <div class="span6 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> As ruas de Jaguarão</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="https://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/05/pedestres1.png">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/05/29/as-ruas-de-jaguarao/ ">Veja mais &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row-fluid">
                 <div class="span8 well">
                     <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
                     <h2>Vídeo PROEXT</h2>
