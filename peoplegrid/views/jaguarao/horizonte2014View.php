@@ -32,8 +32,70 @@
         </div>
     </section>
 
+     
     <!-- Section #2 -->
     <section id="home" data-speed="4" data-type="background">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span8 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> congresso de iniciação científica - cic 2014</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="<?=BASE_URL?>static/img/cic-2014.jpg">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/08/26/pre-apresentacoes-cic-e-cec/">Leia mais &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> Oficinas do PROEXT</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="http://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/07/post_9_mapa-de-apps_e_amor.png">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/07/11/oficinas-proext/">Leia mais &raquo;</a></p>
+                </div>
+
+
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/info.png" class="pull-left">
+                    <h2> congresso de extensao (ufpel) - 2014 </h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="https://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/08/cec.jpg">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/08/06/cec-2014/">Leia mais &raquo;</a></p>
+                </div>
+                <div class="span4 well">
+                    <img src="<?=BASE_URL?>static/img/wordpress.png" class="pull-left">
+                    <h2> Levantamento fotográfico em jaguarão</h2>
+                    <p>
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img  src="https://desenvolvimentourbanoemjaguarao.files.wordpress.com/2014/08/delineamento_lev.png">
+                            </a>
+                        </div>
+                    </p>
+                    <p><a class="btn btn-success" style="margin-top:10px" href="http://desenvolvimentourbanoemjaguarao.wordpress.com/2014/08/12/levantamento-fotografico-em-jaguarao/">Leia mais &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        
+        
         <div class="container">
             <div class="row-fluid">
                 <div class="span4 well">
